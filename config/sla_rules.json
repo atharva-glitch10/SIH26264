@@ -1,0 +1,12 @@
+{
+  "sla_days_by_priority": {
+    "URGENT": 15,
+    "HIGH": 30,
+    "MEDIUM": 45,
+    "LOW": 60
+  },
+  "reminder_windows_days": [7, 3, 1],
+  "stagnant_case_threshold_days": 14,
+  "transfer_acknowledgment_days": 5,
+  "escalation_threshold_ratio": 1.0
+}

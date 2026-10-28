@@ -1,0 +1,33 @@
+{
+  "active_statuses": ["RECEIVED", "PENDING", "UNDER_PROCESS", "ESCALATED", "TRANSFERRED"],
+  "rules": {
+    "rule_a_multi_bureau": {
+      "name": "Cross-Bureau Active Cases on Same Institution",
+      "enabled": true,
+      "min_bureaus": 2,
+      "min_cases": 2,
+      "base_severity": "MEDIUM"
+    },
+    "rule_b_category_overlap": {
+      "name": "Same Institution with Shared/Related Complaint Categories",
+      "enabled": true,
+      "category_clusters": [
+        ["Regulatory Compliance", "Infrastructure and Facilities"],
+        ["Fee Related Grievances", "Admission Grievances", "General Institutional"],
+        ["Academic and Examination", "Faculty and Staffing"]
+      ],
+      "severity_boost": "HIGH"
+    },
+    "rule_c_description_similarity": {
+      "name": "Description Semantic / Fuzzy Token Overlap",
+      "enabled": true,
+      "similarity_threshold": 75,
+      "severity_boost": "CRITICAL"
+    }
+  },
+  "matching_thresholds": {
+    "auto_match_min_score": 90.0,
+    "ambiguity_safety_margin": 10.0,
+    "manual_review_min_score": 75.0
+  }
+}

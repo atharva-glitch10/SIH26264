@@ -1,0 +1,61 @@
+institution_id,aicte_permanent_id,canonical_name,institution_type,region,state,district,created_at
+INST-1001,1-4329811,Fictional Institution Alpha Institute of Technology,Autonomous Engineering College,Northern,Uttar Pradesh,Kanpur,2025-09-21T04:24:05.038517
+INST-1002,1-2867825,Aryabhata Institute of Technology and Management,Affiliated Engineering College,Northern,Uttar Pradesh,Kanpur,2024-12-18T04:24:05.038517
+INST-1003,1-2458591,CV Raman Institute of Technology and Management,Polytechnic Institute,Central,Madhya Pradesh,Indore,2025-09-10T04:24:05.038517
+INST-1004,1-9478454,Visvesvaraya College of Engineering and Polytechnic,Technical University,Central,Chhattisgarh,Raipur,2025-02-01T04:24:05.038517
+INST-1005,1-8038374,Bhabha Technical University Campus,Polytechnic Institute,Eastern,Bihar,Patna,2024-10-11T04:24:05.038517
+INST-1006,1-3678638,APJ Abdul Kalam Institute of Technology and Management,Affiliated Engineering College,Southern,Andhra Pradesh,Visakhapatnam,2024-08-27T04:24:05.038517
+INST-1007,1-6647119,Srinivasa Ramanujan Institute of Technology and Management,Technical University,North-West,Haryana,Gurugram,2024-10-23T04:24:05.038517
+INST-1008,1-5437923,Sardar Patel College of Engineering and Polytechnic,Polytechnic Institute,Northern,Uttarakhand,Dehradun,2025-11-20T04:24:05.038517
+INST-1009,1-5918715,Tagore Institute of Technology and Management,Affiliated Engineering College,Central,Chhattisgarh,Raipur,2025-11-25T04:24:05.038517
+INST-1010,1-4823498,Vikram Sarabhai Technical University Campus,Technical University,Western,Maharashtra,Mumbai,2025-08-10T04:24:05.038517
+INST-1011,1-7120868,Homi Bhabha Institute of Technology and Management,Affiliated Engineering College,Eastern,West Bengal,Kolkata,2025-08-16T04:24:05.038517
+INST-1012,1-2197935,National College of Engineering and Polytechnic,Autonomous Engineering College,Central,Chhattisgarh,Raipur,2025-05-08T04:24:05.038517
+INST-1013,1-5528972,Premier Institute of Technology and Management,Autonomous Engineering College,Central,Madhya Pradesh,Bhopal,2024-11-28T04:24:05.038517
+INST-1014,1-4842788,Apex Institute of Technology and Management,Affiliated Engineering College,Northern,Uttarakhand,Dehradun,2025-09-13T04:24:05.038517
+INST-1015,1-6279418,Horizon Technical University Campus,Polytechnic Institute,Eastern,Odisha,Bhubaneswar,2025-08-17T04:24:05.038517
+INST-1016,1-5137722,Pioneer College of Engineering and Polytechnic,Management and Technology Institute,Central,Madhya Pradesh,Bhopal,2025-06-09T04:24:05.038517
+INST-1017,1-4679591,Zenith Institute of Technology and Management,Management and Technology Institute,North-West,Delhi,New Delhi,2025-12-06T04:24:05.038517
+INST-1018,1-2839607,Sterling Institute of Technology and Management,Autonomous Engineering College,North-West,Delhi,New Delhi,2025-11-28T04:24:05.038517
+INST-1019,1-7402509,Imperial Institute of Technology and Management,Polytechnic Institute,Central,Chhattisgarh,Raipur,2024-10-16T04:24:05.038517
+INST-1020,1-2921859,Heritage College of Engineering and Polytechnic,Affiliated Engineering College,Central,Madhya Pradesh,Bhopal,2025-08-02T04:24:05.038517
+INST-1021,1-3653446,Global Institute of Technology and Management,Technical University,South-West,Karnataka,Bengaluru,2024-12-05T04:24:05.038517
+INST-1022,1-9517485,Metro Institute of Technology and Management,Affiliated Engineering College,North-West,Haryana,Gurugram,2025-09-20T04:24:05.038517
+INST-1023,1-7273233,Cosmos Institute of Technology and Management,Management and Technology Institute,Eastern,West Bengal,Kolkata,2025-07-18T04:24:05.038517
+INST-1024,1-1326765,Vanguard College of Engineering and Polytechnic,Affiliated Engineering College,North-West,Haryana,Gurugram,2025-08-29T04:24:05.038517
+INST-1025,1-2321324,Beacon Technical University Campus,Polytechnic Institute,North-West,Punjab,Ludhiana,2025-10-27T04:24:05.038517
+INST-1026,1-8973915,Radiant Institute of Technology and Management,Autonomous Engineering College,Central,Madhya Pradesh,Bhopal,2025-05-28T04:24:05.038517
+INST-1027,1-4374754,Summit Institute of Technology and Management,Polytechnic Institute,Western,Maharashtra,Mumbai,2024-09-26T04:24:05.038517
+INST-1028,1-8574680,Everest College of Engineering and Polytechnic,Autonomous Engineering College,North-West,Haryana,Gurugram,2025-12-20T04:24:05.038517
+INST-1029,1-4860684,Galaxy Institute of Technology and Management,Autonomous Engineering College,Central,Madhya Pradesh,Indore,2025-02-10T04:24:05.038517
+INST-1030,1-4841005,Trinity Technical University Campus,Technical University,North-West,Punjab,Ludhiana,2025-08-31T04:24:05.038517
+INST-1031,1-9143903,Universal Institute of Technology and Management,Management and Technology Institute,Eastern,Odisha,Bhubaneswar,2024-11-24T04:24:05.038517
+INST-1032,1-7829332,Navodaya College of Engineering and Polytechnic,Technical University,Eastern,Odisha,Bhubaneswar,2025-05-28T04:24:05.038517
+INST-1033,1-8835373,Pratibha Institute of Technology and Management,Technical University,Northern,Uttarakhand,Dehradun,2025-07-10T04:24:05.038517
+INST-1034,1-2833230,Vidya Institute of Technology and Management,Autonomous Engineering College,Eastern,Bihar,Patna,2025-10-20T04:24:05.038517
+INST-1035,1-4078418,Gyan Technical University Campus,Polytechnic Institute,Western,Maharashtra,Pune,2024-11-12T04:24:05.038517
+INST-1036,1-2642635,Pragathi College of Engineering and Polytechnic,Management and Technology Institute,Northern,Uttarakhand,Dehradun,2024-10-22T04:24:05.038517
+INST-1037,1-3790237,Shiksha Institute of Technology and Management,Polytechnic Institute,Southern,Andhra Pradesh,Visakhapatnam,2024-09-24T04:24:05.038517
+INST-1038,1-3762152,Vishwa Institute of Technology and Management,Technical University,Southern,Tamil Nadu,Coimbatore,2024-11-24T04:24:05.038517
+INST-1039,1-5785687,Shanti Institute of Technology and Management,Management and Technology Institute,Southern,Andhra Pradesh,Visakhapatnam,2025-09-24T04:24:05.038517
+INST-1040,1-4652414,Adarsh College of Engineering and Polytechnic,Management and Technology Institute,Northern,Uttarakhand,Dehradun,2024-12-13T04:24:05.038517
+INST-1041,1-1959074,Utkarsh Institute of Technology and Management,Management and Technology Institute,Northern,Uttarakhand,Dehradun,2025-10-11T04:24:05.038517
+INST-1042,1-9519948,Arya Institute of Technology and Management,Autonomous Engineering College,North-West,Punjab,Ludhiana,2024-10-15T04:24:05.038517
+INST-1043,1-7774229,Saraswati Institute of Technology and Management,Management and Technology Institute,North-West,Haryana,Gurugram,2025-11-19T04:24:05.038517
+INST-1044,1-9770838,Chanakya College of Engineering and Polytechnic,Affiliated Engineering College,Western,Gujarat,Ahmedabad,2025-08-17T04:24:05.038517
+INST-1045,1-3195773,Dronacharya Technical University Campus,Polytechnic Institute,Western,Maharashtra,Mumbai,2025-05-10T04:24:05.038517
+INST-1046,1-2677407,Bhaskaracharya Institute of Technology and Management,Management and Technology Institute,North-West,Punjab,Ludhiana,2025-10-24T04:24:05.038517
+INST-1047,1-2154126,Vivekananda Institute of Technology and Management,Affiliated Engineering College,Eastern,Bihar,Patna,2024-10-30T04:24:05.038517
+INST-1048,1-6075395,Subhash College of Engineering and Polytechnic,Management and Technology Institute,Central,Chhattisgarh,Raipur,2025-11-07T04:24:05.038517
+INST-1049,1-3253031,Netaji Institute of Technology and Management,Technical University,Western,Maharashtra,Pune,2025-08-08T04:24:05.038517
+INST-1050,1-4533779,Ashoka Technical University Campus,Autonomous Engineering College,Western,Gujarat,Ahmedabad,2025-04-24T04:24:05.038517
+INST-1051,1-1852264,Shivaji Institute of Technology and Management,Polytechnic Institute,North-West,Punjab,Ludhiana,2025-07-13T04:24:05.038517
+INST-1052,1-3194789,Tilak College of Engineering and Polytechnic,Autonomous Engineering College,Western,Maharashtra,Pune,2025-01-03T04:24:05.038517
+INST-1053,1-1162230,Gokhale Institute of Technology and Management,Technical University,North-West,Haryana,Gurugram,2025-12-12T04:24:05.038517
+INST-1054,1-7194416,Nehru Institute of Technology and Management,Management and Technology Institute,Central,Madhya Pradesh,Indore,2025-12-09T04:24:05.038517
+INST-1055,1-7117837,Shastri Technical University Campus,Affiliated Engineering College,Northern,Uttarakhand,Dehradun,2025-11-08T04:24:05.038517
+INST-1056,1-7817881,Indira College of Engineering and Polytechnic,Autonomous Engineering College,Central,Chhattisgarh,Raipur,2024-11-10T04:24:05.038517
+INST-1057,1-7917152,Rajiv Institute of Technology and Management,Autonomous Engineering College,Northern,Uttar Pradesh,Kanpur,2024-09-10T04:24:05.038517
+INST-1058,1-5163555,Mahatma Institute of Technology and Management,Autonomous Engineering College,Western,Maharashtra,Pune,2024-10-10T04:24:05.038517
+INST-1059,1-8896868,Kautilya Institute of Technology and Management,Autonomous Engineering College,Eastern,Bihar,Patna,2024-11-05T04:24:05.038517
+INST-1060,1-4818418,Aryabhata College of Engineering and Polytechnic,Technical University,Eastern,Bihar,Patna,2025-07-15T04:24:05.038517
