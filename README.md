@@ -148,3 +148,5 @@ python -m pytest backend/tests/test_backend.py -v
 
 ## 🔒 Synthetic Data & Sandbox Disclaimer
 This application has been developed solely as an engineering prototype for the Smart India Hackathon (SIH26264). All data—including institution names, permanent IDs, complaint narratives, and officer identities—is synthetic and generated for demonstration purposes. It does not connect to live AICTE government databases or disclose confidential citizen grievance records. Overlap detection is decision-support tooling designed to facilitate inter-bureau coordination, not an automated finding of institutional wrongdoing.
+#   S I H 2 6 2 6 4  
+ 
