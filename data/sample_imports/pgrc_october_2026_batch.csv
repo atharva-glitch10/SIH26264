@@ -1,0 +1,16 @@
+Complaint No,Received Date,Name of Institution,AICTE Permanent ID,Bureau,Complainant,Contact,Complaint Details,Category,Priority
+PGRC/2026/5001,03/10/2026,Aryabhata Instt. of Tech & Mgmt,,PGRC,Sneha Patil,sneha.p@example.com,"College is demanding donation of 1.5 lakh for second year continuation and refusing to give fee receipt",,
+PGRC/2026/5002,04/10/2026,CV Raman Inst of Technology & Management Indore,,PGRC,Arjun Reddy,+91-9876500011,"Semester results not declared for more than three months, students cannot apply for jobs",,
+PGRC/2026/5003,05/10/2026,,1-5918715,PGRC,Meera Nair,meera.n@example.com,"Hostel drinking water contaminated again, several students hospitalised",,
+PGRC/2026/5004,05/10/2026,Bhabha Technical Univ Campus,,PGRC,Rohit Singh,+91-9876500022,"Faculty salary pending for five months and management not responding to teachers",,
+PGRC/2026/5005,06/10/2026,Apex Institue of Technlogy and Mgmt,,PGRC,Fatima Khan,fatima.k@example.com,"Seniors are ragging first year students in the hostel and the anti ragging committee is not acting",,
+PGRC/2026/5006,07/10/2026,Sardar Patel Engg College,,PGRC,Karthik Iyer,+91-9876500033,"Original certificates withheld after admission withdrawal and college demanding fee for all four years",,
+PGRC/2026/5007,08/10/2026,Zenith Institute of Technology and Management,,PGRC,Divya Joshi,divya.j@example.com,"Library has no prescribed textbooks and computer lab systems are not working",,
+PGRC/2026/5008,09/10/2026,Fictional Inst Alpha Technology Kanpur,,PGRC,Aman Das,+91-9876500044,"Institute is collecting development fee without receipt over and above the approved fee",Fee Related Grievances,HIGH
+PGRC/2026/5009,10/10/2026,Bhabha Instt,,PGRC,Lakshmi Kumar,lakshmi.k@example.com,"Transfer certificate and migration certificate not issued even after six weeks",,
+PGRC/2026/5010,11/10/2026,Nonexistent Institute of Magic Studies,,PGRC,Suresh Sharma,+91-9876500055,"Admission cancelled without refund of advance deposit",,
+PGRC/2026/5011,32/10/2026,Premier Institute of Technology and Management,,PGRC,Pooja Patil,pooja.p@example.com,"Merit list not published and management quota seats sold",,
+PGRC/2026/5012,12/10/2026,Global Institute of Technology and Management,,PGRC,Vikram Rao,+91-9876500066,"Lateral entry diploma students denied admission despite allotment letter",,
+PGRC/2026/5013,13/10/2026,Heritage Engg College,,PGRC,Neha Singh,neha.s@example.com,"No internal complaints committee and women students face harassment from staff",,
+PGRC/2026/5014,14/10/2026,Imperial Institute of Technology and Management,,PGRC,Rahul Nair,+91-9876500077,"Practical exams cancelled and marks awarded arbitrarily by the department",,
+PGRC/2026/5001,03/10/2026,Aryabhata Instt. of Tech & Mgmt,,PGRC,Sneha Patil,sneha.p@example.com,"(Re-sent row with the same complaint number - should be skipped as already imported)",,

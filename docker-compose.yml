@@ -1,0 +1,41 @@
+# One-command demo:   docker compose up --build        ->  http://localhost:8000
+# With PostgreSQL:     DATABASE_URL=postgresql+psycopg2://aicte:aicte@db:5432/aicte \
+#                      docker compose --profile postgres up --build
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-sqlite:////var/lib/aicte/aicte_complaints.db}
+      SECRET_KEY: ${SECRET_KEY:-change-me-in-production}
+      DEMO_MODE: ${DEMO_MODE:-true}
+      INTAKE_API_KEY: ${INTAKE_API_KEY:-}
+      CORS_ORIGINS: http://localhost:8000
+    volumes:
+      - appdata:/var/lib/aicte
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    depends_on:
+      - backend
+    ports:
+      - "8000:80"
+
+  db:
+    profiles: ["postgres"]
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: aicte
+      POSTGRES_PASSWORD: aicte
+      POSTGRES_DB: aicte
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  appdata:
+  pgdata:

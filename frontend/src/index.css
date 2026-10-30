@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens. Colours are space-separated RGB so Tailwind can apply opacity.
+ * Dark mode: redefine these same variables under a `.dark` selector later; no component changes needed.
+ * Contrast (WCAG AA, checked): ink/page 16:1, muted/page 6.9:1, link/page 6.9:1, white/brand 13:1,
+ * ink on accent 8.7:1, status text on its 10% tint >= 4.9:1. Input borders (border-strong) are >= 3:1.
+ */
+:root {
+  --brand: 27 42 107;          /* #1B2A6B deep navy-indigo (primary) */
+  --brand-hover: 18 28 79;     /* #121C4F */
+  --brand-soft: 232 236 248;   /* #E8ECF8 */
+  --link: 37 71 196;           /* #2547C4 links, focus ring */
+
+  --accent: 245 165 36;        /* #F5A524 saffron: fills/badges/icons/CTA only, dark text on top */
+  --accent-hover: 232 146 12;  /* #E8920C */
+  --accent-soft: 253 241 220;  /* #FDF1DC */
+  --accent-ink: 107 63 0;      /* #6B3F00 text on accent-soft */
+
+  --page: 243 245 250;         /* #F3F5FA */
+  --surface: 255 255 255;
+  --border: 217 222 233;       /* #D9DEE9 decorative dividers */
+  --border-strong: 128 138 158;/* #808A9E form-control borders (>= 3:1) */
+  --ink: 15 23 42;             /* #0F172A */
+  --muted: 74 85 104;          /* #4A5568 */
+
+  --success: 20 108 53;        /* #146C35 */
+  --warning: 154 74 0;         /* #9A4A00 */
+  --danger: 198 34 34;         /* #C62222 */
+  --info: 29 78 216;           /* #1D4ED8 */
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+  body {
+    @apply bg-page text-ink antialiased font-sans selection:bg-brand selection:text-white;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold tracking-tight;
+  }
+  a {
+    @apply text-brand-accent;
+  }
+  :focus-visible {
+    outline: 2px solid rgb(var(--link));
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  table {
+    @apply w-full border-collapse text-sm;
+  }
+  th {
+    @apply text-left;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

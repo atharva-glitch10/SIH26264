@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-10-29T04:54:12.709509+00:00",
+  "fuzzy_backend": "rapidfuzz",
+  "classifier": {
+    "test_size": 70,
+    "accuracy": 0.929,
+    "top2_accuracy": 1.0,
+    "macro_f1": 0.929,
+    "per_category": {
+      "Academic and Examination": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "Admission Grievances": {
+        "precision": 0.833,
+        "recall": 1.0,
+        "f1": 0.909,
+        "support": 10
+      },
+      "Faculty and Staffing": {
+        "precision": 0.833,
+        "recall": 1.0,
+        "f1": 0.909,
+        "support": 10
+      },
+      "Fee Related Grievances": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.947,
+        "support": 10
+      },
+      "General Institutional": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.889,
+        "support": 10
+      },
+      "Infrastructure and Facilities": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9,
+        "support": 10
+      },
+      "Regulatory Compliance": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.947,
+        "support": 10
+      }
+    },
+    "method": "Multinomial Naive Bayes (unigrams + bigrams), trained on seed phrases only"
+  },
+  "duplicate_detection": {
+    "pairs": 35,
+    "threshold": 60.0,
+    "precision": 1.0,
+    "recall": 0.867,
+    "f1": 0.929,
+    "true_positives": 13,
+    "false_positives": 0,
+    "false_negatives": 2,
+    "true_negatives": 20,
+    "note": "Threshold chosen on this same pair set; collect real labelled pairs to confirm."
+  },
+  "institution_matching": {
+    "variants_tested": 180,
+    "auto_linked_pct": 0.85,
+    "auto_link_precision": 1.0,
+    "wrong_auto_links": 0,
+    "sent_to_review_pct": 0.111,
+    "review_top_candidate_correct_pct": 1.0,
+    "not_found_pct": 0.039,
+    "end_to_end_correct_pct": 0.961,
+    "unknown_colleges_tested": 8,
+    "unknown_colleges_wrongly_auto_linked": 0,
+    "method": "Exact ID/name/alias, then fuzzy match weighted on distinctive name words, with 10-point ambiguity guard"
+  },
+  "disclaimer": "Measured on synthetic institutions and team-written labelled complaints; re-measure on real AICTE data before deployment."
+}

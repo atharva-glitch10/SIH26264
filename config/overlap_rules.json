@@ -1,0 +1,48 @@
+{
+  "active_statuses": ["RECEIVED", "PENDING", "UNDER_PROCESS", "ESCALATED", "TRANSFERRED"],
+  "rules": {
+    "rule_a_multi_bureau": {
+      "name": "Cross-Bureau Active Cases on Same Institution",
+      "enabled": true,
+      "min_bureaus": 2,
+      "min_cases": 2,
+      "base_severity": "MEDIUM"
+    },
+    "rule_b_category_overlap": {
+      "name": "Same Institution with Shared/Related Complaint Categories",
+      "enabled": true,
+      "category_clusters": [
+        ["Regulatory Compliance", "Infrastructure and Facilities"],
+        ["Fee Related Grievances", "Admission Grievances", "General Institutional"],
+        ["Academic and Examination", "Faculty and Staffing"]
+      ],
+      "severity_boost": "HIGH"
+    },
+    "rule_c_description_similarity": {
+      "name": "Description Similarity (institution names removed)",
+      "enabled": true,
+      "similarity_threshold": 70,
+      "severity_boost": "CRITICAL"
+    }
+  },
+  "matching_thresholds": {
+    "auto_match_min_score": 90.0,
+    "ambiguity_safety_margin": 10.0,
+    "manual_review_min_score": 75.0
+  },
+  "duplicate_detection": {
+    "enabled": true,
+    "lookback_days": 180,
+    "threshold": 60.0,
+    "weights": {
+      "text_similarity": 0.7,
+      "same_complainant": 0.2,
+      "same_category": 0.07,
+      "date_proximity": 0.03
+    },
+    "date_window_days": 30
+  },
+  "classification": {
+    "auto_apply_min_confidence": 0.45
+  }
+}

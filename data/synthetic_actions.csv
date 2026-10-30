@@ -1,0 +1,686 @@
+action_id,case_id,action_type,new_status,actor_user_id,remarks,created_at
+,CASE-2026-00001,REGISTERED,RECEIVED,USR-PGRC-01,Complaint filed through National Student Grievance Portal,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00001,STATUS_CHANGE,UNDER_PROCESS,USR-PGRC-01,Prima facie violation of AICTE Fee Guidelines 2026. Official notice drafted.,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00001,STATUS_CHANGE,UNDER_PROCESS,USR-PGRC-01,Show cause notice issued to Registrar regarding certificate withholding.,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00002,REGISTERED,RECEIVED,USR-RB-01,Regulatory complaint forwarded by State Technical Education Directorate,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00002,STATUS_CHANGE,UNDER_PROCESS,USR-RB-01,Scrutiny of AICTE approval portal records and intake capacity underway.,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00005,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-10-06T04:54:10.445529+00:00
+,CASE-2026-00006,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-10-08T04:54:10.445529+00:00
+,CASE-2026-00007,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Academic and Examination,2026-10-07T04:54:10.445529+00:00
+,CASE-2026-00008,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Faculty and Staffing,2026-10-03T04:54:10.445529+00:00
+,CASE-2026-00009,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-09-16T04:54:10.445529+00:00
+,CASE-2026-00009,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00010,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-08-29T04:54:10.445529+00:00
+,CASE-2026-00010,TRANSFERRED,TRANSFERRED,USR-PGRC-02,Transferred to specialized bureau for statutory hearing,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00011,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-07-28T04:54:10.445529+00:00
+,CASE-2026-00011,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-11T04:54:10.445529+00:00
+,CASE-2026-00012,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Academic and Examination,2026-10-13T04:54:10.445529+00:00
+,CASE-2026-00013,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Fee Related Grievances,2026-07-27T04:54:10.445529+00:00
+,CASE-2026-00013,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-29T04:54:10.445529+00:00
+,CASE-2026-00014,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Regulatory Compliance,2026-07-20T04:54:10.445529+00:00
+,CASE-2026-00014,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-23T04:54:10.445529+00:00
+,CASE-2026-00015,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-10-08T04:54:10.445529+00:00
+,CASE-2026-00015,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00016,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Regulatory Compliance,2026-07-21T04:54:10.445529+00:00
+,CASE-2026-00016,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-28T04:54:10.445529+00:00
+,CASE-2026-00017,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Faculty and Staffing,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00018,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-08-09T04:54:10.445529+00:00
+,CASE-2026-00018,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-27T04:54:10.445529+00:00
+,CASE-2026-00019,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under General Institutional,2026-08-24T04:54:10.445529+00:00
+,CASE-2026-00020,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Regulatory Compliance,2026-09-17T04:54:10.445529+00:00
+,CASE-2026-00021,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-14T04:54:10.445529+00:00
+,CASE-2026-00022,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00022,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00023,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Fee Related Grievances,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00023,TRANSFERRED,TRANSFERRED,USR-RB-01,Transferred to specialized bureau for statutory hearing,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00024,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Admission Grievances,2026-10-14T04:54:10.445529+00:00
+,CASE-2026-00024,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00025,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Admission Grievances,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00026,REGISTERED,RECEIVED,USR-SUPER-01,Registration in APPROVAL division under Admission Grievances,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00027,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Fee Related Grievances,2026-08-03T04:54:10.445529+00:00
+,CASE-2026-00028,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Regulatory Compliance,2026-08-02T04:54:10.445529+00:00
+,CASE-2026-00029,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Fee Related Grievances,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00029,ESCALATED,ESCALATED,USR-APP-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00030,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Infrastructure and Facilities,2026-09-19T04:54:10.445529+00:00
+,CASE-2026-00031,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-07-30T04:54:10.445529+00:00
+,CASE-2026-00031,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-08T04:54:10.445529+00:00
+,CASE-2026-00032,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Regulatory Compliance,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00033,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00034,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-10-14T04:54:10.445529+00:00
+,CASE-2026-00035,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-13T04:54:10.445529+00:00
+,CASE-2026-00036,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00037,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-10-10T04:54:10.445529+00:00
+,CASE-2026-00038,REGISTERED,RECEIVED,USR-SUPER-01,Registration in RB division under Fee Related Grievances,2026-09-02T04:54:10.445529+00:00
+,CASE-2026-00039,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-09-26T04:54:10.445529+00:00
+,CASE-2026-00040,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Academic and Examination,2026-10-02T04:54:10.445529+00:00
+,CASE-2026-00041,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under General Institutional,2026-10-15T04:54:10.445529+00:00
+,CASE-2026-00041,TRANSFERRED,TRANSFERRED,USR-RB-02,Transferred to specialized bureau for statutory hearing,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00042,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-08-04T04:54:10.445529+00:00
+,CASE-2026-00043,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-09-26T04:54:10.445529+00:00
+,CASE-2026-00044,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-09-25T04:54:10.445529+00:00
+,CASE-2026-00045,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Admission Grievances,2026-09-15T04:54:10.445529+00:00
+,CASE-2026-00046,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Admission Grievances,2026-07-30T04:54:10.445529+00:00
+,CASE-2026-00046,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-15T04:54:10.445529+00:00
+,CASE-2026-00047,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Fee Related Grievances,2026-08-05T04:54:10.445529+00:00
+,CASE-2026-00047,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-15T04:54:10.445529+00:00
+,CASE-2026-00048,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Academic and Examination,2026-10-01T04:54:10.445529+00:00
+,CASE-2026-00049,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Regulatory Compliance,2026-09-09T04:54:10.445529+00:00
+,CASE-2026-00049,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-30T04:54:10.445529+00:00
+,CASE-2026-00050,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-08-04T04:54:10.445529+00:00
+,CASE-2026-00050,ESCALATED,ESCALATED,USR-PGRC-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-14T04:54:10.445529+00:00
+,CASE-2026-00051,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under General Institutional,2026-08-18T04:54:10.445529+00:00
+,CASE-2026-00052,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Admission Grievances,2026-08-29T04:54:10.445529+00:00
+,CASE-2026-00052,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-09T04:54:10.445529+00:00
+,CASE-2026-00053,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Faculty and Staffing,2026-09-17T04:54:10.445529+00:00
+,CASE-2026-00054,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00055,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Academic and Examination,2026-09-28T04:54:10.445529+00:00
+,CASE-2026-00055,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00056,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Fee Related Grievances,2026-09-18T04:54:10.445529+00:00
+,CASE-2026-00056,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00057,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-09-24T04:54:10.445529+00:00
+,CASE-2026-00058,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under General Institutional,2026-10-13T04:54:10.445529+00:00
+,CASE-2026-00059,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-09-17T04:54:10.445529+00:00
+,CASE-2026-00059,ESCALATED,ESCALATED,USR-PGRC-02,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00060,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-09-13T04:54:10.445529+00:00
+,CASE-2026-00061,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00062,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-08-16T04:54:10.445529+00:00
+,CASE-2026-00063,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00064,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-09-30T04:54:10.445529+00:00
+,CASE-2026-00064,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00065,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Infrastructure and Facilities,2026-09-17T04:54:10.445529+00:00
+,CASE-2026-00066,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-09-25T04:54:10.445529+00:00
+,CASE-2026-00066,ESCALATED,ESCALATED,USR-PGRC-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-14T04:54:10.445529+00:00
+,CASE-2026-00067,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-08-27T04:54:10.445529+00:00
+,CASE-2026-00067,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00068,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-09-20T04:54:10.445529+00:00
+,CASE-2026-00069,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Regulatory Compliance,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00070,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Regulatory Compliance,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00071,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Academic and Examination,2026-10-06T04:54:10.445529+00:00
+,CASE-2026-00072,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-08-14T04:54:10.445529+00:00
+,CASE-2026-00073,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Faculty and Staffing,2026-07-15T04:54:10.445529+00:00
+,CASE-2026-00073,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-04T04:54:10.445529+00:00
+,CASE-2026-00074,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under General Institutional,2026-07-18T04:54:10.445529+00:00
+,CASE-2026-00075,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Infrastructure and Facilities,2026-10-07T04:54:10.445529+00:00
+,CASE-2026-00076,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Fee Related Grievances,2026-10-01T04:54:10.445529+00:00
+,CASE-2026-00077,REGISTERED,RECEIVED,USR-SUPER-01,Registration in APPROVAL division under Faculty and Staffing,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00078,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00079,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under General Institutional,2026-10-13T04:54:10.445529+00:00
+,CASE-2026-00080,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Regulatory Compliance,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00081,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Admission Grievances,2026-10-06T04:54:10.445529+00:00
+,CASE-2026-00082,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under General Institutional,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00082,ESCALATED,ESCALATED,USR-APP-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00083,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-08-29T04:54:10.445529+00:00
+,CASE-2026-00083,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00084,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Regulatory Compliance,2026-09-12T04:54:10.445529+00:00
+,CASE-2026-00084,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-15T04:54:10.445529+00:00
+,CASE-2026-00085,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00086,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Academic and Examination,2026-07-28T04:54:10.445529+00:00
+,CASE-2026-00086,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-03T04:54:10.445529+00:00
+,CASE-2026-00087,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-07-20T04:54:10.445529+00:00
+,CASE-2026-00087,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-11T04:54:10.445529+00:00
+,CASE-2026-00088,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-08-11T04:54:10.445529+00:00
+,CASE-2026-00088,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-16T04:54:10.445529+00:00
+,CASE-2026-00089,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-09-16T04:54:10.445529+00:00
+,CASE-2026-00089,ESCALATED,ESCALATED,USR-PGRC-02,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00090,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-10-15T04:54:10.445529+00:00
+,CASE-2026-00091,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-10-06T04:54:10.445529+00:00
+,CASE-2026-00092,REGISTERED,RECEIVED,USR-SUPER-01,Registration in RB division under Infrastructure and Facilities,2026-09-29T04:54:10.445529+00:00
+,CASE-2026-00093,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under General Institutional,2026-09-29T04:54:10.445529+00:00
+,CASE-2026-00094,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Infrastructure and Facilities,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00095,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-10-13T04:54:10.445529+00:00
+,CASE-2026-00096,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Faculty and Staffing,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00097,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under General Institutional,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00098,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-08-18T04:54:10.445529+00:00
+,CASE-2026-00099,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Fee Related Grievances,2026-09-21T04:54:10.445529+00:00
+,CASE-2026-00100,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00101,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-09-28T04:54:10.445529+00:00
+,CASE-2026-00102,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Regulatory Compliance,2026-08-10T04:54:10.445529+00:00
+,CASE-2026-00103,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-08-05T04:54:10.445529+00:00
+,CASE-2026-00103,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-17T04:54:10.445529+00:00
+,CASE-2026-00104,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-09-24T04:54:10.445529+00:00
+,CASE-2026-00105,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-10-08T04:54:10.445529+00:00
+,CASE-2026-00106,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Regulatory Compliance,2026-09-02T04:54:10.445529+00:00
+,CASE-2026-00106,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-20T04:54:10.445529+00:00
+,CASE-2026-00107,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Fee Related Grievances,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00108,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Admission Grievances,2026-10-15T04:54:10.445529+00:00
+,CASE-2026-00108,TRANSFERRED,TRANSFERRED,USR-RB-01,Transferred to specialized bureau for statutory hearing,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00109,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-10-15T04:54:10.445529+00:00
+,CASE-2026-00110,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-07-15T04:54:10.445529+00:00
+,CASE-2026-00111,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-07-01T04:54:10.445529+00:00
+,CASE-2026-00111,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-07-13T04:54:10.445529+00:00
+,CASE-2026-00112,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00113,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00113,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00114,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00114,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-29T04:54:10.445529+00:00
+,CASE-2026-00115,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Infrastructure and Facilities,2026-08-22T04:54:10.445529+00:00
+,CASE-2026-00115,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-28T04:54:10.445529+00:00
+,CASE-2026-00116,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-08-05T04:54:10.445529+00:00
+,CASE-2026-00117,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-08-07T04:54:10.445529+00:00
+,CASE-2026-00117,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-09T04:54:10.445529+00:00
+,CASE-2026-00118,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under General Institutional,2026-08-18T04:54:10.445529+00:00
+,CASE-2026-00119,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under General Institutional,2026-09-10T04:54:10.445529+00:00
+,CASE-2026-00119,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-13T04:54:10.445529+00:00
+,CASE-2026-00120,REGISTERED,RECEIVED,USR-SUPER-01,Registration in RB division under Infrastructure and Facilities,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00121,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Infrastructure and Facilities,2026-07-07T04:54:10.445529+00:00
+,CASE-2026-00121,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-07-27T04:54:10.445529+00:00
+,CASE-2026-00122,REGISTERED,RECEIVED,USR-SUPER-01,Registration in APPROVAL division under Infrastructure and Facilities,2026-09-16T04:54:10.445529+00:00
+,CASE-2026-00123,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Regulatory Compliance,2026-10-15T04:54:10.445529+00:00
+,CASE-2026-00123,ESCALATED,ESCALATED,USR-APP-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00124,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Academic and Examination,2026-08-09T04:54:10.445529+00:00
+,CASE-2026-00124,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00125,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00126,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-09-07T04:54:10.445529+00:00
+,CASE-2026-00126,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00127,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Fee Related Grievances,2026-08-18T04:54:10.445529+00:00
+,CASE-2026-00128,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Fee Related Grievances,2026-09-18T04:54:10.445529+00:00
+,CASE-2026-00129,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-01T04:54:10.445529+00:00
+,CASE-2026-00130,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-10-06T04:54:10.445529+00:00
+,CASE-2026-00131,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Faculty and Staffing,2026-07-29T04:54:10.445529+00:00
+,CASE-2026-00131,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-12T04:54:10.445529+00:00
+,CASE-2026-00132,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-10-02T04:54:10.445529+00:00
+,CASE-2026-00133,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Academic and Examination,2026-09-02T04:54:10.445529+00:00
+,CASE-2026-00133,TRANSFERRED,TRANSFERRED,USR-VIG-01,Transferred to specialized bureau for statutory hearing,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00134,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00134,TRANSFERRED,TRANSFERRED,USR-PGRC-01,Transferred to specialized bureau for statutory hearing,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00135,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Infrastructure and Facilities,2026-08-05T04:54:10.445529+00:00
+,CASE-2026-00135,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-05T04:54:10.445529+00:00
+,CASE-2026-00136,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under General Institutional,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00137,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-07-07T04:54:10.445529+00:00
+,CASE-2026-00137,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-07-09T04:54:10.445529+00:00
+,CASE-2026-00138,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00139,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Fee Related Grievances,2026-09-01T04:54:10.445529+00:00
+,CASE-2026-00140,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Academic and Examination,2026-10-07T04:54:10.445529+00:00
+,CASE-2026-00141,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-09-28T04:54:10.445529+00:00
+,CASE-2026-00142,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Fee Related Grievances,2026-09-29T04:54:10.445529+00:00
+,CASE-2026-00142,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-07T04:54:10.445529+00:00
+,CASE-2026-00143,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Faculty and Staffing,2026-07-17T04:54:10.445529+00:00
+,CASE-2026-00143,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-07-31T04:54:10.445529+00:00
+,CASE-2026-00144,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00145,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00146,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-08-14T04:54:10.445529+00:00
+,CASE-2026-00146,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-19T04:54:10.445529+00:00
+,CASE-2026-00147,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00148,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Fee Related Grievances,2026-09-24T04:54:10.445529+00:00
+,CASE-2026-00149,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-09-13T04:54:10.445529+00:00
+,CASE-2026-00149,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-23T04:54:10.445529+00:00
+,CASE-2026-00150,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Admission Grievances,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00151,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-07-02T04:54:10.445529+00:00
+,CASE-2026-00151,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-12T04:54:10.445529+00:00
+,CASE-2026-00152,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-10-05T04:54:10.445529+00:00
+,CASE-2026-00153,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00154,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-08-16T04:54:10.445529+00:00
+,CASE-2026-00155,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Fee Related Grievances,2026-10-10T04:54:10.445529+00:00
+,CASE-2026-00156,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Academic and Examination,2026-07-23T04:54:10.445529+00:00
+,CASE-2026-00156,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-23T04:54:10.445529+00:00
+,CASE-2026-00157,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under General Institutional,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00158,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Infrastructure and Facilities,2026-09-04T04:54:10.445529+00:00
+,CASE-2026-00159,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-09-26T04:54:10.445529+00:00
+,CASE-2026-00160,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-08-10T04:54:10.445529+00:00
+,CASE-2026-00161,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under General Institutional,2026-09-04T04:54:10.445529+00:00
+,CASE-2026-00162,REGISTERED,RECEIVED,USR-SUPER-01,Registration in VIGILANCE division under Fee Related Grievances,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00163,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-08-17T04:54:10.445529+00:00
+,CASE-2026-00164,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-09-16T04:54:10.445529+00:00
+,CASE-2026-00165,REGISTERED,RECEIVED,USR-SUPER-01,Registration in RB division under Academic and Examination,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00166,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00166,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00167,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under General Institutional,2026-10-03T04:54:10.445529+00:00
+,CASE-2026-00168,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-09-18T04:54:10.445529+00:00
+,CASE-2026-00169,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-08-01T04:54:10.445529+00:00
+,CASE-2026-00169,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-08T04:54:10.445529+00:00
+,CASE-2026-00170,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-09-08T04:54:10.445529+00:00
+,CASE-2026-00170,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-29T04:54:10.445529+00:00
+,CASE-2026-00171,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under General Institutional,2026-09-25T04:54:10.445529+00:00
+,CASE-2026-00172,REGISTERED,RECEIVED,USR-SUPER-01,Registration in APPROVAL division under Academic and Examination,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00173,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-10-01T04:54:10.445529+00:00
+,CASE-2026-00174,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-09-04T04:54:10.445529+00:00
+,CASE-2026-00175,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00176,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-08-16T04:54:10.445529+00:00
+,CASE-2026-00176,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-29T04:54:10.445529+00:00
+,CASE-2026-00177,REGISTERED,RECEIVED,USR-SUPER-01,Registration in APPROVAL division under General Institutional,2026-10-06T04:54:10.445529+00:00
+,CASE-2026-00178,REGISTERED,RECEIVED,USR-SUPER-01,Registration in RB division under Infrastructure and Facilities,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00179,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-08-05T04:54:10.445529+00:00
+,CASE-2026-00180,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Academic and Examination,2026-09-21T04:54:10.445529+00:00
+,CASE-2026-00181,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Admission Grievances,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00182,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-09-29T04:54:10.445529+00:00
+,CASE-2026-00183,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Academic and Examination,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00183,TRANSFERRED,TRANSFERRED,USR-RB-01,Transferred to specialized bureau for statutory hearing,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00184,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Infrastructure and Facilities,2026-09-18T04:54:10.445529+00:00
+,CASE-2026-00185,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Infrastructure and Facilities,2026-10-14T04:54:10.445529+00:00
+,CASE-2026-00185,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00186,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-09-20T04:54:10.445529+00:00
+,CASE-2026-00187,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Fee Related Grievances,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00188,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Regulatory Compliance,2026-09-16T04:54:10.445529+00:00
+,CASE-2026-00189,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Faculty and Staffing,2026-08-26T04:54:10.445529+00:00
+,CASE-2026-00189,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-31T04:54:10.445529+00:00
+,CASE-2026-00190,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00190,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00191,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Faculty and Staffing,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00192,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Admission Grievances,2026-09-10T04:54:10.445529+00:00
+,CASE-2026-00193,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-09-27T04:54:10.445529+00:00
+,CASE-2026-00193,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00194,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Infrastructure and Facilities,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00195,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00195,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00196,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-09-29T04:54:10.445529+00:00
+,CASE-2026-00197,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Faculty and Staffing,2026-09-11T04:54:10.445529+00:00
+,CASE-2026-00198,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00199,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-08-30T04:54:10.445529+00:00
+,CASE-2026-00199,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-31T04:54:10.445529+00:00
+,CASE-2026-00200,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Faculty and Staffing,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00201,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-07-17T04:54:10.445529+00:00
+,CASE-2026-00202,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under General Institutional,2026-07-09T04:54:10.445529+00:00
+,CASE-2026-00203,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under General Institutional,2026-09-18T04:54:10.445529+00:00
+,CASE-2026-00203,TRANSFERRED,TRANSFERRED,USR-RB-01,Transferred to specialized bureau for statutory hearing,2026-10-14T04:54:10.445529+00:00
+,CASE-2026-00204,REGISTERED,RECEIVED,USR-SUPER-01,Registration in APPROVAL division under Regulatory Compliance,2026-09-20T04:54:10.445529+00:00
+,CASE-2026-00205,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00206,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Regulatory Compliance,2026-09-27T04:54:10.445529+00:00
+,CASE-2026-00206,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-29T04:54:10.445529+00:00
+,CASE-2026-00207,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-07-09T04:54:10.445529+00:00
+,CASE-2026-00207,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-01T04:54:10.445529+00:00
+,CASE-2026-00208,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Admission Grievances,2026-07-10T04:54:10.445529+00:00
+,CASE-2026-00209,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Fee Related Grievances,2026-09-08T04:54:10.445529+00:00
+,CASE-2026-00210,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Faculty and Staffing,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00211,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-09-13T04:54:10.445529+00:00
+,CASE-2026-00211,TRANSFERRED,TRANSFERRED,USR-APP-01,Transferred to specialized bureau for statutory hearing,2026-10-28T04:54:10.445529+00:00
+,CASE-2026-00212,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00213,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Faculty and Staffing,2026-09-21T04:54:10.445529+00:00
+,CASE-2026-00214,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00214,ESCALATED,ESCALATED,USR-PGRC-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-28T04:54:10.445529+00:00
+,CASE-2026-00215,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Infrastructure and Facilities,2026-10-07T04:54:10.445529+00:00
+,CASE-2026-00216,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-09-06T04:54:10.445529+00:00
+,CASE-2026-00216,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-09T04:54:10.445529+00:00
+,CASE-2026-00217,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-09-26T04:54:10.445529+00:00
+,CASE-2026-00217,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00218,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-08-19T04:54:10.445529+00:00
+,CASE-2026-00218,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-03T04:54:10.445529+00:00
+,CASE-2026-00219,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-09-04T04:54:10.445529+00:00
+,CASE-2026-00220,REGISTERED,RECEIVED,USR-SUPER-01,Registration in VIGILANCE division under Faculty and Staffing,2026-07-08T04:54:10.445529+00:00
+,CASE-2026-00221,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-09-07T04:54:10.445529+00:00
+,CASE-2026-00221,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-30T04:54:10.445529+00:00
+,CASE-2026-00222,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Infrastructure and Facilities,2026-07-31T04:54:10.445529+00:00
+,CASE-2026-00223,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-07-17T04:54:10.445529+00:00
+,CASE-2026-00224,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Infrastructure and Facilities,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00224,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00225,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-09-27T04:54:10.445529+00:00
+,CASE-2026-00226,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Fee Related Grievances,2026-09-26T04:54:10.445529+00:00
+,CASE-2026-00227,REGISTERED,RECEIVED,USR-SUPER-01,Registration in VIGILANCE division under Academic and Examination,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00228,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00229,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Academic and Examination,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00230,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-08-27T04:54:10.445529+00:00
+,CASE-2026-00231,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00231,TRANSFERRED,TRANSFERRED,USR-PGRC-01,Transferred to specialized bureau for statutory hearing,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00232,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-10-02T04:54:10.445529+00:00
+,CASE-2026-00232,TRANSFERRED,TRANSFERRED,USR-APP-01,Transferred to specialized bureau for statutory hearing,2026-10-10T04:54:10.445529+00:00
+,CASE-2026-00233,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-07-22T04:54:10.445529+00:00
+,CASE-2026-00234,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-09-02T04:54:10.445529+00:00
+,CASE-2026-00235,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under General Institutional,2026-09-10T04:54:10.445529+00:00
+,CASE-2026-00235,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-03T04:54:10.445529+00:00
+,CASE-2026-00236,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Infrastructure and Facilities,2026-10-05T04:54:10.445529+00:00
+,CASE-2026-00236,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-28T04:54:10.445529+00:00
+,CASE-2026-00237,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Faculty and Staffing,2026-09-30T04:54:10.445529+00:00
+,CASE-2026-00238,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under General Institutional,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00239,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Academic and Examination,2026-08-13T04:54:10.445529+00:00
+,CASE-2026-00240,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-08-14T04:54:10.445529+00:00
+,CASE-2026-00241,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Academic and Examination,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00242,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Regulatory Compliance,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00242,TRANSFERRED,TRANSFERRED,USR-PGRC-01,Transferred to specialized bureau for statutory hearing,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00243,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Fee Related Grievances,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00244,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Faculty and Staffing,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00245,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Regulatory Compliance,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00246,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Infrastructure and Facilities,2026-08-02T04:54:10.445529+00:00
+,CASE-2026-00247,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under General Institutional,2026-09-27T04:54:10.445529+00:00
+,CASE-2026-00248,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-08-02T04:54:10.445529+00:00
+,CASE-2026-00248,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-11T04:54:10.445529+00:00
+,CASE-2026-00249,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Academic and Examination,2026-07-14T04:54:10.445529+00:00
+,CASE-2026-00249,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-24T04:54:10.445529+00:00
+,CASE-2026-00250,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Academic and Examination,2026-09-24T04:54:10.445529+00:00
+,CASE-2026-00251,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Infrastructure and Facilities,2026-09-23T04:54:10.445529+00:00
+,CASE-2026-00252,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Admission Grievances,2026-10-02T04:54:10.445529+00:00
+,CASE-2026-00253,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Faculty and Staffing,2026-10-01T04:54:10.445529+00:00
+,CASE-2026-00254,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Regulatory Compliance,2026-08-16T04:54:10.445529+00:00
+,CASE-2026-00254,ESCALATED,ESCALATED,USR-APP-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-15T04:54:10.445529+00:00
+,CASE-2026-00255,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Admission Grievances,2026-08-11T04:54:10.445529+00:00
+,CASE-2026-00256,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00256,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00257,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Faculty and Staffing,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00258,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-08-02T04:54:10.445529+00:00
+,CASE-2026-00258,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-16T04:54:10.445529+00:00
+,CASE-2026-00259,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Academic and Examination,2026-08-28T04:54:10.445529+00:00
+,CASE-2026-00260,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00261,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00262,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under General Institutional,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00262,TRANSFERRED,TRANSFERRED,USR-RB-02,Transferred to specialized bureau for statutory hearing,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00263,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-09-27T04:54:10.445529+00:00
+,CASE-2026-00263,ESCALATED,ESCALATED,USR-PGRC-02,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00264,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00265,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-08-14T04:54:10.445529+00:00
+,CASE-2026-00265,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-02T04:54:10.445529+00:00
+,CASE-2026-00266,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-09-24T04:54:10.445529+00:00
+,CASE-2026-00267,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Faculty and Staffing,2026-10-09T04:54:10.445529+00:00
+,CASE-2026-00267,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00268,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-09-04T04:54:10.445529+00:00
+,CASE-2026-00269,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-09-11T04:54:10.445529+00:00
+,CASE-2026-00270,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-14T04:54:10.445529+00:00
+,CASE-2026-00270,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00271,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-09-26T04:54:10.445529+00:00
+,CASE-2026-00271,TRANSFERRED,TRANSFERRED,USR-PGRC-02,Transferred to specialized bureau for statutory hearing,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00272,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Fee Related Grievances,2026-08-03T04:54:10.445529+00:00
+,CASE-2026-00273,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Admission Grievances,2026-10-01T04:54:10.445529+00:00
+,CASE-2026-00273,TRANSFERRED,TRANSFERRED,USR-RB-02,Transferred to specialized bureau for statutory hearing,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00274,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Infrastructure and Facilities,2026-09-15T04:54:10.445529+00:00
+,CASE-2026-00275,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-08-11T04:54:10.445529+00:00
+,CASE-2026-00275,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-24T04:54:10.445529+00:00
+,CASE-2026-00276,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-08-27T04:54:10.445529+00:00
+,CASE-2026-00276,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-18T04:54:10.445529+00:00
+,CASE-2026-00277,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-07-27T04:54:10.445529+00:00
+,CASE-2026-00277,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-09T04:54:10.445529+00:00
+,CASE-2026-00278,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Academic and Examination,2026-08-02T04:54:10.445529+00:00
+,CASE-2026-00278,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-23T04:54:10.445529+00:00
+,CASE-2026-00279,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-09-23T04:54:10.445529+00:00
+,CASE-2026-00279,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00280,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Regulatory Compliance,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00280,TRANSFERRED,TRANSFERRED,USR-APP-01,Transferred to specialized bureau for statutory hearing,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00281,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-10-05T04:54:10.445529+00:00
+,CASE-2026-00281,TRANSFERRED,TRANSFERRED,USR-APP-01,Transferred to specialized bureau for statutory hearing,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00282,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Regulatory Compliance,2026-09-24T04:54:10.445529+00:00
+,CASE-2026-00282,TRANSFERRED,TRANSFERRED,USR-PGRC-01,Transferred to specialized bureau for statutory hearing,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00283,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Academic and Examination,2026-10-03T04:54:10.445529+00:00
+,CASE-2026-00284,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-08-26T04:54:10.445529+00:00
+,CASE-2026-00284,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-07T04:54:10.445529+00:00
+,CASE-2026-00285,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-09-29T04:54:10.445529+00:00
+,CASE-2026-00286,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-09-08T04:54:10.445529+00:00
+,CASE-2026-00287,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-09-15T04:54:10.445529+00:00
+,CASE-2026-00287,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00288,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-09-20T04:54:10.445529+00:00
+,CASE-2026-00288,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-08T04:54:10.445529+00:00
+,CASE-2026-00289,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-10-02T04:54:10.445529+00:00
+,CASE-2026-00290,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00291,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Regulatory Compliance,2026-09-07T04:54:10.445529+00:00
+,CASE-2026-00292,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-08-31T04:54:10.445529+00:00
+,CASE-2026-00292,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-05T04:54:10.445529+00:00
+,CASE-2026-00293,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00294,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Faculty and Staffing,2026-08-02T04:54:10.445529+00:00
+,CASE-2026-00294,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-06T04:54:10.445529+00:00
+,CASE-2026-00295,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Infrastructure and Facilities,2026-09-19T04:54:10.445529+00:00
+,CASE-2026-00296,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Academic and Examination,2026-09-30T04:54:10.445529+00:00
+,CASE-2026-00297,REGISTERED,RECEIVED,USR-SUPER-01,Registration in RB division under General Institutional,2026-10-07T04:54:10.445529+00:00
+,CASE-2026-00298,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-08-06T04:54:10.445529+00:00
+,CASE-2026-00298,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-30T04:54:10.445529+00:00
+,CASE-2026-00299,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Academic and Examination,2026-08-12T04:54:10.445529+00:00
+,CASE-2026-00299,ESCALATED,ESCALATED,USR-VIG-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00300,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-07-20T04:54:10.445529+00:00
+,CASE-2026-00300,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-30T04:54:10.445529+00:00
+,CASE-2026-00301,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Faculty and Staffing,2026-09-11T04:54:10.445529+00:00
+,CASE-2026-00302,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-08-28T04:54:10.445529+00:00
+,CASE-2026-00302,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-03T04:54:10.445529+00:00
+,CASE-2026-00303,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Admission Grievances,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00303,TRANSFERRED,TRANSFERRED,USR-VIG-01,Transferred to specialized bureau for statutory hearing,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00304,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00305,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Infrastructure and Facilities,2026-09-13T04:54:10.445529+00:00
+,CASE-2026-00306,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-08-30T04:54:10.445529+00:00
+,CASE-2026-00307,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00308,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under General Institutional,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00309,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-09-16T04:54:10.445529+00:00
+,CASE-2026-00310,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-07-24T04:54:10.445529+00:00
+,CASE-2026-00310,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-10T04:54:10.445529+00:00
+,CASE-2026-00311,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-09-30T04:54:10.445529+00:00
+,CASE-2026-00312,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Academic and Examination,2026-08-03T04:54:10.445529+00:00
+,CASE-2026-00313,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-08-08T04:54:10.445529+00:00
+,CASE-2026-00313,TRANSFERRED,TRANSFERRED,USR-PGRC-02,Transferred to specialized bureau for statutory hearing,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00314,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under General Institutional,2026-10-06T04:54:10.445529+00:00
+,CASE-2026-00315,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00316,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Fee Related Grievances,2026-09-27T04:54:10.445529+00:00
+,CASE-2026-00317,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-09-20T04:54:10.445529+00:00
+,CASE-2026-00317,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-29T04:54:10.445529+00:00
+,CASE-2026-00318,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Academic and Examination,2026-10-06T04:54:10.445529+00:00
+,CASE-2026-00318,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00319,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Fee Related Grievances,2026-08-13T04:54:10.445529+00:00
+,CASE-2026-00320,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00320,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-28T04:54:10.445529+00:00
+,CASE-2026-00321,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00322,REGISTERED,RECEIVED,USR-SUPER-01,Registration in APPROVAL division under Regulatory Compliance,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00323,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Infrastructure and Facilities,2026-09-04T04:54:10.445529+00:00
+,CASE-2026-00323,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00324,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Infrastructure and Facilities,2026-08-04T04:54:10.445529+00:00
+,CASE-2026-00325,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00326,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-07-18T04:54:10.445529+00:00
+,CASE-2026-00326,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-25T04:54:10.445529+00:00
+,CASE-2026-00327,REGISTERED,RECEIVED,USR-SUPER-01,Registration in RB division under Faculty and Staffing,2026-09-12T04:54:10.445529+00:00
+,CASE-2026-00328,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-07-07T04:54:10.445529+00:00
+,CASE-2026-00328,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-27T04:54:10.445529+00:00
+,CASE-2026-00329,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-13T04:54:10.445529+00:00
+,CASE-2026-00330,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00331,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-10-01T04:54:10.445529+00:00
+,CASE-2026-00332,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Faculty and Staffing,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00333,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00334,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Regulatory Compliance,2026-08-20T04:54:10.445529+00:00
+,CASE-2026-00335,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-10-15T04:54:10.445529+00:00
+,CASE-2026-00336,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Academic and Examination,2026-10-03T04:54:10.445529+00:00
+,CASE-2026-00336,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-05T04:54:10.445529+00:00
+,CASE-2026-00337,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Academic and Examination,2026-10-02T04:54:10.445529+00:00
+,CASE-2026-00338,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-10-03T04:54:10.445529+00:00
+,CASE-2026-00338,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00339,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00340,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under General Institutional,2026-08-27T04:54:10.445529+00:00
+,CASE-2026-00340,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-04T04:54:10.445529+00:00
+,CASE-2026-00341,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00342,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Faculty and Staffing,2026-08-08T04:54:10.445529+00:00
+,CASE-2026-00343,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Fee Related Grievances,2026-07-21T04:54:10.445529+00:00
+,CASE-2026-00344,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Fee Related Grievances,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00344,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-29T04:54:10.445529+00:00
+,CASE-2026-00345,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-09-29T04:54:10.445529+00:00
+,CASE-2026-00345,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00346,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-09-13T04:54:10.445529+00:00
+,CASE-2026-00346,TRANSFERRED,TRANSFERRED,USR-PGRC-02,Transferred to specialized bureau for statutory hearing,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00347,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00348,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Infrastructure and Facilities,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00349,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00350,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under General Institutional,2026-10-02T04:54:10.445529+00:00
+,CASE-2026-00351,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00352,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Admission Grievances,2026-10-09T04:54:10.445529+00:00
+,CASE-2026-00353,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00354,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-10-10T04:54:10.445529+00:00
+,CASE-2026-00355,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00356,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-09-20T04:54:10.445529+00:00
+,CASE-2026-00357,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Faculty and Staffing,2026-09-07T04:54:10.445529+00:00
+,CASE-2026-00358,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-08-13T04:54:10.445529+00:00
+,CASE-2026-00358,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-21T04:54:10.445529+00:00
+,CASE-2026-00359,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-10-01T04:54:10.445529+00:00
+,CASE-2026-00360,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-09-09T04:54:10.445529+00:00
+,CASE-2026-00361,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00362,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-07-31T04:54:10.445529+00:00
+,CASE-2026-00362,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-13T04:54:10.445529+00:00
+,CASE-2026-00363,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-09-18T04:54:10.445529+00:00
+,CASE-2026-00364,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00365,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Regulatory Compliance,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00366,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Academic and Examination,2026-09-09T04:54:10.445529+00:00
+,CASE-2026-00366,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-10T04:54:10.445529+00:00
+,CASE-2026-00367,REGISTERED,RECEIVED,USR-SUPER-01,Registration in RB division under Infrastructure and Facilities,2026-08-20T04:54:10.445529+00:00
+,CASE-2026-00368,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-09-02T04:54:10.445529+00:00
+,CASE-2026-00369,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under General Institutional,2026-09-20T04:54:10.445529+00:00
+,CASE-2026-00370,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00371,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-07-23T04:54:10.445529+00:00
+,CASE-2026-00371,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-15T04:54:10.445529+00:00
+,CASE-2026-00372,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-10-15T04:54:10.445529+00:00
+,CASE-2026-00373,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00374,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-10-10T04:54:10.445529+00:00
+,CASE-2026-00375,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00376,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-08-21T04:54:10.445529+00:00
+,CASE-2026-00376,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-30T04:54:10.445529+00:00
+,CASE-2026-00377,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-08-29T04:54:10.445529+00:00
+,CASE-2026-00377,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-02T04:54:10.445529+00:00
+,CASE-2026-00378,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00378,ESCALATED,ESCALATED,USR-PGRC-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00379,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Admission Grievances,2026-08-17T04:54:10.445529+00:00
+,CASE-2026-00379,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-13T04:54:10.445529+00:00
+,CASE-2026-00380,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-09-23T04:54:10.445529+00:00
+,CASE-2026-00381,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Regulatory Compliance,2026-10-03T04:54:10.445529+00:00
+,CASE-2026-00382,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Academic and Examination,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00383,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-09-01T04:54:10.445529+00:00
+,CASE-2026-00384,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Admission Grievances,2026-09-02T04:54:10.445529+00:00
+,CASE-2026-00384,ESCALATED,ESCALATED,USR-RB-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-09T04:54:10.445529+00:00
+,CASE-2026-00385,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Regulatory Compliance,2026-07-07T04:54:10.445529+00:00
+,CASE-2026-00385,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-29T04:54:10.445529+00:00
+,CASE-2026-00386,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Admission Grievances,2026-10-07T04:54:10.445529+00:00
+,CASE-2026-00387,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Fee Related Grievances,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00387,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00388,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Regulatory Compliance,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00389,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Admission Grievances,2026-09-26T04:54:10.445529+00:00
+,CASE-2026-00389,DISPOSED,DISPOSED,USR-RB-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-01T04:54:10.445529+00:00
+,CASE-2026-00390,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Regulatory Compliance,2026-10-08T04:54:10.445529+00:00
+,CASE-2026-00391,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00391,ESCALATED,ESCALATED,USR-PGRC-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00392,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-09-11T04:54:10.445529+00:00
+,CASE-2026-00393,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-09-25T04:54:10.445529+00:00
+,CASE-2026-00393,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-06T04:54:10.445529+00:00
+,CASE-2026-00394,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00394,TRANSFERRED,TRANSFERRED,USR-PGRC-01,Transferred to specialized bureau for statutory hearing,2026-10-28T04:54:10.445529+00:00
+,CASE-2026-00395,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-09-01T04:54:10.445529+00:00
+,CASE-2026-00396,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-10-05T04:54:10.445529+00:00
+,CASE-2026-00396,ESCALATED,ESCALATED,USR-PGRC-02,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00397,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-08-17T04:54:10.445529+00:00
+,CASE-2026-00397,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00398,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-09-19T04:54:10.445529+00:00
+,CASE-2026-00399,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00400,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00400,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00401,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-07-21T04:54:10.445529+00:00
+,CASE-2026-00402,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-07-11T04:54:10.445529+00:00
+,CASE-2026-00402,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-10T04:54:10.445529+00:00
+,CASE-2026-00403,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-09-23T04:54:10.445529+00:00
+,CASE-2026-00403,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00404,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Regulatory Compliance,2026-09-03T04:54:10.445529+00:00
+,CASE-2026-00404,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-29T04:54:10.445529+00:00
+,CASE-2026-00405,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-09-21T04:54:10.445529+00:00
+,CASE-2026-00406,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Academic and Examination,2026-09-28T04:54:10.445529+00:00
+,CASE-2026-00407,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Infrastructure and Facilities,2026-09-04T04:54:10.445529+00:00
+,CASE-2026-00408,REGISTERED,RECEIVED,USR-SUPER-01,Registration in APPROVAL division under Admission Grievances,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00409,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-10-08T04:54:10.445529+00:00
+,CASE-2026-00409,ESCALATED,ESCALATED,USR-PGRC-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00410,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-09-19T04:54:10.445529+00:00
+,CASE-2026-00411,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Infrastructure and Facilities,2026-09-23T04:54:10.445529+00:00
+,CASE-2026-00412,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Regulatory Compliance,2026-08-09T04:54:10.445529+00:00
+,CASE-2026-00413,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-07-12T04:54:10.445529+00:00
+,CASE-2026-00413,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-20T04:54:10.445529+00:00
+,CASE-2026-00414,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Infrastructure and Facilities,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00415,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-07-12T04:54:10.445529+00:00
+,CASE-2026-00415,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-17T04:54:10.445529+00:00
+,CASE-2026-00416,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00417,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Faculty and Staffing,2026-09-26T04:54:10.445529+00:00
+,CASE-2026-00418,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-10-14T04:54:10.445529+00:00
+,CASE-2026-00419,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00420,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00421,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00421,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-29T04:54:10.445529+00:00
+,CASE-2026-00422,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Fee Related Grievances,2026-10-08T04:54:10.445529+00:00
+,CASE-2026-00422,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00423,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Regulatory Compliance,2026-07-29T04:54:10.445529+00:00
+,CASE-2026-00423,DISPOSED,DISPOSED,USR-RB-01,Disposed following submission of satisfactory institutional compliance evidence,2026-08-19T04:54:10.445529+00:00
+,CASE-2026-00424,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Faculty and Staffing,2026-08-21T04:54:10.445529+00:00
+,CASE-2026-00425,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-08-21T04:54:10.445529+00:00
+,CASE-2026-00425,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-10T04:54:10.445529+00:00
+,CASE-2026-00426,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-09-11T04:54:10.445529+00:00
+,CASE-2026-00426,ESCALATED,ESCALATED,USR-PGRC-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00427,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-10-01T04:54:10.445529+00:00
+,CASE-2026-00427,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00428,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Regulatory Compliance,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00429,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Infrastructure and Facilities,2026-09-23T04:54:10.445529+00:00
+,CASE-2026-00430,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Academic and Examination,2026-09-20T04:54:10.445529+00:00
+,CASE-2026-00431,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Fee Related Grievances,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00431,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-14T04:54:10.445529+00:00
+,CASE-2026-00432,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-07-05T04:54:10.445529+00:00
+,CASE-2026-00432,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-08T04:54:10.445529+00:00
+,CASE-2026-00433,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00434,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Fee Related Grievances,2026-10-15T04:54:10.445529+00:00
+,CASE-2026-00435,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-07-19T04:54:10.445529+00:00
+,CASE-2026-00435,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-16T04:54:10.445529+00:00
+,CASE-2026-00436,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-08-16T04:54:10.445529+00:00
+,CASE-2026-00437,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-08-21T04:54:10.445529+00:00
+,CASE-2026-00438,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-10-08T04:54:10.445529+00:00
+,CASE-2026-00438,TRANSFERRED,TRANSFERRED,USR-PGRC-02,Transferred to specialized bureau for statutory hearing,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00439,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-07-04T04:54:10.445529+00:00
+,CASE-2026-00439,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-07-11T04:54:10.445529+00:00
+,CASE-2026-00440,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Infrastructure and Facilities,2026-10-03T04:54:10.445529+00:00
+,CASE-2026-00441,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Admission Grievances,2026-09-15T04:54:10.445529+00:00
+,CASE-2026-00442,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Fee Related Grievances,2026-09-02T04:54:10.445529+00:00
+,CASE-2026-00443,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Regulatory Compliance,2026-08-13T04:54:10.445529+00:00
+,CASE-2026-00444,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Academic and Examination,2026-09-13T04:54:10.445529+00:00
+,CASE-2026-00444,ESCALATED,ESCALATED,USR-RB-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-24T04:54:10.445529+00:00
+,CASE-2026-00445,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-09-17T04:54:10.445529+00:00
+,CASE-2026-00446,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-10-02T04:54:10.445529+00:00
+,CASE-2026-00447,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Fee Related Grievances,2026-10-17T04:54:10.445529+00:00
+,CASE-2026-00448,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00448,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00449,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Admission Grievances,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00450,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Infrastructure and Facilities,2026-09-08T04:54:10.445529+00:00
+,CASE-2026-00450,DISPOSED,DISPOSED,USR-APP-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-24T04:54:10.445529+00:00
+,CASE-2026-00451,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Academic and Examination,2026-10-08T04:54:10.445529+00:00
+,CASE-2026-00452,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-07-01T04:54:10.445529+00:00
+,CASE-2026-00452,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-08-28T04:54:10.445529+00:00
+,CASE-2026-00453,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Faculty and Staffing,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00453,TRANSFERRED,TRANSFERRED,USR-RB-02,Transferred to specialized bureau for statutory hearing,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00454,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00454,TRANSFERRED,TRANSFERRED,USR-PGRC-01,Transferred to specialized bureau for statutory hearing,2026-10-28T04:54:10.445529+00:00
+,CASE-2026-00455,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-08-05T04:54:10.445529+00:00
+,CASE-2026-00455,ESCALATED,ESCALATED,USR-PGRC-01,Escalated due to repeated non-responsiveness and potential serious compliance violation,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00456,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Academic and Examination,2026-09-21T04:54:10.445529+00:00
+,CASE-2026-00457,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Academic and Examination,2026-10-07T04:54:10.445529+00:00
+,CASE-2026-00458,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-09-26T04:54:10.445529+00:00
+,CASE-2026-00459,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00460,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Regulatory Compliance,2026-09-15T04:54:10.445529+00:00
+,CASE-2026-00461,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00462,REGISTERED,RECEIVED,USR-RB-02,Registration in RB division under Faculty and Staffing,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00463,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Faculty and Staffing,2026-08-20T04:54:10.445529+00:00
+,CASE-2026-00464,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00465,REGISTERED,RECEIVED,USR-SUPER-01,Registration in VIGILANCE division under General Institutional,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00466,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Admission Grievances,2026-07-25T04:54:10.445529+00:00
+,CASE-2026-00466,DISPOSED,DISPOSED,USR-VIG-01,Disposed following submission of satisfactory institutional compliance evidence,2026-09-01T04:54:10.445529+00:00
+,CASE-2026-00467,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-08-31T04:54:10.445529+00:00
+,CASE-2026-00468,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-09-01T04:54:10.445529+00:00
+,CASE-2026-00469,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00469,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-27T04:54:10.445529+00:00
+,CASE-2026-00470,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Regulatory Compliance,2026-10-25T04:54:10.445529+00:00
+,CASE-2026-00471,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-08-13T04:54:10.445529+00:00
+,CASE-2026-00471,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-01T04:54:10.445529+00:00
+,CASE-2026-00472,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00472,DISPOSED,DISPOSED,USR-PGRC-01,Disposed following submission of satisfactory institutional compliance evidence,2026-10-28T04:54:10.445529+00:00
+,CASE-2026-00473,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under General Institutional,2026-07-27T04:54:10.445529+00:00
+,CASE-2026-00474,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-10-12T04:54:10.445529+00:00
+,CASE-2026-00475,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Faculty and Staffing,2026-10-26T04:54:10.445529+00:00
+,CASE-2026-00476,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Academic and Examination,2026-09-20T04:54:10.445529+00:00
+,CASE-2026-00477,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Faculty and Staffing,2026-09-02T04:54:10.445529+00:00
+,CASE-2026-00478,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Regulatory Compliance,2026-09-28T04:54:10.445529+00:00
+,CASE-2026-00479,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-10-06T04:54:10.445529+00:00
+,CASE-2026-00480,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-09-30T04:54:10.445529+00:00
+,CASE-2026-00480,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00481,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under General Institutional,2026-10-18T04:54:10.445529+00:00
+,CASE-2026-00482,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Academic and Examination,2026-10-13T04:54:10.445529+00:00
+,CASE-2026-00483,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Fee Related Grievances,2026-10-22T04:54:10.445529+00:00
+,CASE-2026-00484,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Admission Grievances,2026-10-16T04:54:10.445529+00:00
+,CASE-2026-00485,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-10-08T04:54:10.445529+00:00
+,CASE-2026-00486,REGISTERED,RECEIVED,USR-APP-01,Registration in APPROVAL division under Fee Related Grievances,2026-10-04T04:54:10.445529+00:00
+,CASE-2026-00487,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Infrastructure and Facilities,2026-09-09T04:54:10.445529+00:00
+,CASE-2026-00488,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00489,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-09-07T04:54:10.445529+00:00
+,CASE-2026-00489,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-19T04:54:10.445529+00:00
+,CASE-2026-00490,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Infrastructure and Facilities,2026-10-07T04:54:10.445529+00:00
+,CASE-2026-00491,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Academic and Examination,2026-10-11T04:54:10.445529+00:00
+,CASE-2026-00492,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-09-28T04:54:10.445529+00:00
+,CASE-2026-00492,TRANSFERRED,TRANSFERRED,USR-PGRC-02,Transferred to specialized bureau for statutory hearing,2026-10-10T04:54:10.445529+00:00
+,CASE-2026-00493,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Infrastructure and Facilities,2026-09-19T04:54:10.445529+00:00
+,CASE-2026-00494,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under General Institutional,2026-10-20T04:54:10.445529+00:00
+,CASE-2026-00495,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Fee Related Grievances,2026-09-23T04:54:10.445529+00:00
+,CASE-2026-00496,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Regulatory Compliance,2026-08-24T04:54:10.445529+00:00
+,CASE-2026-00496,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-09-15T04:54:10.445529+00:00
+,CASE-2026-00497,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Admission Grievances,2026-08-01T04:54:10.445529+00:00
+,CASE-2026-00498,REGISTERED,RECEIVED,USR-SUPER-01,Registration in PGRC division under Regulatory Compliance,2026-10-13T04:54:10.445529+00:00
+,CASE-2026-00499,REGISTERED,RECEIVED,USR-VIG-01,Registration in VIGILANCE division under Regulatory Compliance,2026-09-25T04:54:10.445529+00:00
+,CASE-2026-00500,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Regulatory Compliance,2026-09-22T04:54:10.445529+00:00
+,CASE-2026-00501,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Infrastructure and Facilities,2026-10-23T04:54:10.445529+00:00
+,CASE-2026-00502,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Admission Grievances,2026-10-19T04:54:10.445529+00:00
+,CASE-2026-00503,REGISTERED,RECEIVED,USR-PGRC-02,Registration in PGRC division under Faculty and Staffing,2026-09-19T04:54:10.445529+00:00
+,CASE-2026-00503,DISPOSED,DISPOSED,USR-PGRC-02,Disposed following submission of satisfactory institutional compliance evidence,2026-10-21T04:54:10.445529+00:00
+,CASE-2026-00504,REGISTERED,RECEIVED,USR-PGRC-01,Registration in PGRC division under Fee Related Grievances,2026-08-03T04:54:10.445529+00:00
+,CASE-2026-00504,TRANSFERRED,TRANSFERRED,USR-PGRC-01,Transferred to specialized bureau for statutory hearing,2026-10-28T04:54:10.445529+00:00
+,CASE-2026-00505,REGISTERED,RECEIVED,USR-RB-01,Registration in RB division under Academic and Examination,2026-10-12T04:54:10.445529+00:00

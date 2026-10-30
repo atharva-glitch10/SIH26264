@@ -1,0 +1,36 @@
+text_a,text_b,same_complainant,same_category,days_apart,is_duplicate
+"The college is demanding capitation fee of 2 lakh for engineering admission","Capitation fee of two lakh rupees is being demanded for the engineering seat by the college",1,1,3,1
+"Teachers have not been paid salary for five months","Faculty salaries pending for the last five months and management not responding",0,1,10,1
+"Hostel drinking water is contaminated and students are falling ill","Contaminated drinking water in hostel making students sick",1,1,2,1
+"My original certificates are withheld and they demand full course fee","College withholding original certificates demanding fees for all four years",1,0,5,1
+"Institute admitted more students than sanctioned intake in computer engineering","Excess admissions beyond approved intake in CSE branch",0,1,20,1
+"Results of semester exams not declared for three months","Semester results pending for more than three months",1,1,7,1
+"No fire safety equipment in academic building","Academic block has no fire extinguishers or emergency exits",0,1,14,1
+"Scholarship not credited and college asking full fee","College demanding full fees as scholarship amount not received",1,1,1,1
+"Running MBA course without AICTE approval","MBA programme being conducted without approval of AICTE",0,1,30,1
+"Ragging of first year students in hostel","First year students being ragged by seniors in the hostel",0,0,4,1
+"Transfer certificate not issued after course completion","College not giving TC and migration certificate after graduation",1,1,6,1
+"Faculty terminated without show cause notice","Assistant professor dismissed without any notice or inquiry",1,1,9,1
+"Seat surrender deposit not refunded","Admission deposit refund denied after surrendering seat in time",1,1,2,1
+"Hidden development charges collected without receipts","Development fund collected in cash with no receipt given",0,1,12,1
+"Library lacks prescribed textbooks","Prescribed text books not available in college library",0,1,25,1
+"The college is demanding capitation fee of 2 lakh for engineering admission","Teachers have not been paid salary for five months",0,0,3,0
+"Hostel drinking water is contaminated and students are falling ill","Results of semester exams not declared for three months",0,0,10,0
+"Institute admitted more students than sanctioned intake in computer engineering","Women students face harassment and no internal complaints committee",0,0,40,0
+"No fire safety equipment in academic building","Fee charged higher than approved by fee regulating authority",0,0,5,0
+"Running MBA course without AICTE approval","Scholarship not credited and college asking full fee",0,0,60,0
+"Faculty terminated without show cause notice","Computer lab has only ten working systems for sixty students",0,0,8,0
+"Transfer certificate not issued after course completion","Classrooms have no fans and roof leaks",0,0,15,0
+"Ragging of first year students in hostel","Hostel fee increased by forty percent mid year",0,0,2,0
+"Teachers have not been paid salary for five months","Provident fund contributions of staff not deposited",0,1,20,0
+"Results of semester exams not declared for three months","Practical exams cancelled and marks given arbitrarily",0,1,10,0
+"Hidden development charges collected without receipts","Tuition fee waiver for weaker sections not given",0,1,12,0
+"Library lacks prescribed textbooks","Frequent power cuts with no generator in labs",0,1,30,0
+"Seat surrender deposit not refunded","Management quota seats sold above merit candidates",0,1,9,0
+"Excess admissions beyond approved intake in CSE branch","Mandatory disclosure on website outdated and false",0,1,18,0
+"My original certificates are withheld and they demand full course fee","Bonafide certificate requests ignored for weeks",1,0,3,0
+"College is not responding to any written representation","Teachers have not been paid salary for five months",1,0,2,0
+"Hostel toilets broken and unhygienic","Hostel fee increased by forty percent mid year",1,0,6,0
+"Faculty to student ratio below norms in civil department","No PhD qualified professor to guide research scholars",0,1,11,0
+"The institute claims NBA accreditation it does not have","College operating from temporary building instead of approved land",0,1,40,0
+"Spot round admissions given to ineligible students","Merit list not published and seats filled privately",0,1,5,0
