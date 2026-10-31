@@ -8,15 +8,21 @@ import PageHeader from '../components/ui/PageHeader';
 import Button from '../components/ui/Button';
 import Tag, { TagTone } from '../components/ui/Tag';
 import { Card } from '../components/ui/Card';
-import { Table, Th, Td, Tr } from '../components/ui/DataTable';
+import { Table, THead, Th, Td, Tr } from '../components/ui/Table';
 
-const selectClass = 'h-9 px-2.5 text-sm bg-surface border border-border rounded-sm text-ink';
+const selectClass = 'h-9 px-2.5 text-[13px] bg-white border border-line rounded-sm text-ink';
 
 const statusTone = (s: string): TagTone =>
-  s === 'UNDER_PROCESS' ? 'info' : s === 'ESCALATED' ? 'danger' : s === 'DISPOSED' ? 'success' : s === 'PENDING' ? 'warning' : 'neutral';
+  s === 'DISPOSED' || s === 'CLOSED' ? 'ok' : 'neutral';
 
 const slaTone = (s: string): TagTone =>
-  s === 'OVERDUE' ? 'danger' : s === 'APPROACHING_DEADLINE' ? 'warning' : s === 'DISPOSED' ? 'neutral' : 'success';
+  s === 'OVERDUE' ? 'bad'
+  : s === 'APPROACHING_DEADLINE' ? 'warn'
+  : s === 'DISPOSED' ? 'ok'
+  : 'neutral';
+
+const priorityTone = (p: string): TagTone =>
+  p === 'URGENT' ? 'bad' : p === 'HIGH' ? 'warn' : 'neutral';
 
 export const Cases: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -93,7 +99,7 @@ export const Cases: React.FC = () => {
                 setPage(1);
               }}
               placeholder="Search by case ID (CASE-2026-...), complaint ref, college name or keywords..."
-              className="w-full h-9 pl-9 pr-4 text-sm bg-surface border border-border rounded-sm text-ink"
+              className="w-full h-9 pl-9 pr-3 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted"
             />
           </div>
 
@@ -165,10 +171,10 @@ export const Cases: React.FC = () => {
                 setPage(1);
               }}
               aria-pressed={overdueOnly}
-              className={`h-9 px-3 text-sm font-medium rounded-sm border ${
+              className={`h-9 px-3 text-[13px] font-medium rounded-sm border ${
                 overdueOnly
-                  ? 'bg-danger text-white border-danger'
-                  : 'bg-surface text-ink border-border hover:bg-page'
+                  ? 'bg-bad text-white border-bad'
+                  : 'bg-white text-ink border-line hover:bg-page'
               }`}
             >
               Overdue SLA only
@@ -176,7 +182,7 @@ export const Cases: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-1.5 pt-3 border-t border-border text-xs">
+        <div className="flex flex-wrap items-center gap-1.5 pt-3 border-t border-line text-[12px]">
           <span className="text-muted mr-1">Categories:</span>
           {[
             'ALL',
@@ -196,7 +202,7 @@ export const Cases: React.FC = () => {
               className={`px-2 py-1 rounded-sm border ${
                 category === cat
                   ? 'bg-brand text-white border-brand font-medium'
-                  : 'bg-surface text-ink border-border hover:bg-page'
+                  : 'bg-white text-ink border-line hover:bg-page'
               }`}
             >
               {cat === 'ALL' ? 'All categories' : cat}
@@ -207,7 +213,7 @@ export const Cases: React.FC = () => {
 
       <Card className="overflow-hidden">
         <Table>
-          <thead>
+          <THead>
             <tr>
               <Th>Case reference / ID</Th>
               <Th>Target institution</Th>
@@ -215,21 +221,21 @@ export const Cases: React.FC = () => {
               <Th>Category and priority</Th>
               <Th>Current status</Th>
               <Th>SLA deadline status</Th>
-              <Th className="text-right">Action</Th>
+              <Th align="right">Action</Th>
             </tr>
-          </thead>
+          </THead>
           <tbody>
             {loading ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-muted">
+                <Td colSpan={7} className="py-12 text-center text-muted">
                   Loading cases...
-                </td>
+                </Td>
               </tr>
             ) : data.items.length === 0 ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-muted">
+                <Td colSpan={7} className="py-12 text-center text-muted">
                   No cases match the specified filters.
-                </td>
+                </Td>
               </tr>
             ) : (
               data.items.map((c) => (
@@ -238,7 +244,7 @@ export const Cases: React.FC = () => {
                     <Link to={`/cases/${c.case_id}`} className="font-medium block">
                       {c.complaint_reference}
                     </Link>
-                    <div className="text-xs text-muted">{c.case_id}</div>
+                    <div className="text-[12px] text-muted">{c.case_id}</div>
                   </Td>
                   <Td className="max-w-xs">
                     <Link
@@ -248,32 +254,30 @@ export const Cases: React.FC = () => {
                     >
                       {c.institution_name}
                     </Link>
-                    <div className="text-xs text-muted">ID: {c.institution_id}</div>
+                    <div className="text-[12px] text-muted">ID: {c.institution_id}</div>
                   </Td>
                   <Td>
                     <Tag>{c.current_bureau_id.replace('BUR-', '')}</Tag>
-                    <div className="text-xs text-muted mt-1 truncate">{c.assigned_user_name}</div>
+                    <div className="text-[12px] text-muted mt-1 truncate">{c.assigned_user_name}</div>
                   </Td>
                   <Td>
                     <div className="font-medium">{c.category}</div>
                     <div className="flex flex-wrap gap-1 mt-1">
-                      <Tag
-                        tone={c.priority === 'URGENT' ? 'danger' : c.priority === 'HIGH' ? 'warning' : 'neutral'}
-                      >
+                      <Tag tone={priorityTone(c.priority)}>
                         {c.priority}
                       </Tag>
                       {c.category_source === 'AUTO' && (
                         <Tag tone="info" title="Category suggested by the classifier">
-                          Suggested · {Math.round((c.category_confidence || 0) * 100)}%
+                          Suggested {Math.round((c.category_confidence || 0) * 100)}%
                         </Tag>
                       )}
                       {c.duplicate_of_case_id && (
-                        <Tag tone="warning" title={`Possible duplicate of ${c.duplicate_of_case_id}`}>
+                        <Tag tone="warn" title={`Possible duplicate of ${c.duplicate_of_case_id}`}>
                           Possible duplicate
                         </Tag>
                       )}
                       {c.institution_match_status === 'PENDING_REVIEW' && (
-                        <Tag tone="warning" title="Institution link needs confirmation">
+                        <Tag tone="warn" title="Institution link needs confirmation">
                           Link pending
                         </Tag>
                       )}
@@ -286,12 +290,12 @@ export const Cases: React.FC = () => {
                     <Tag tone={slaTone(c.sla_status)}>
                       {c.sla_status === 'APPROACHING_DEADLINE' ? 'Due < 7 days' : c.sla_status}
                     </Tag>
-                    <div className="text-xs text-muted mt-1">
+                    <div className="text-[12px] text-muted mt-1">
                       Target: {new Date(c.expected_disposal_at).toLocaleDateString()}
                     </div>
                   </Td>
-                  <Td className="text-right">
-                    <Link to={`/cases/${c.case_id}`} className="hover:underline">
+                  <Td align="right">
+                    <Link to={`/cases/${c.case_id}`} className="text-brand hover:underline">
                       Manage
                     </Link>
                   </Td>
@@ -301,7 +305,7 @@ export const Cases: React.FC = () => {
           </tbody>
         </Table>
 
-        <div className="px-4 py-3 border-t border-border flex items-center justify-between text-sm text-muted">
+        <div className="px-4 py-3 border-t border-line flex items-center justify-between text-[13px] text-muted">
           <div>
             Page <span className="font-medium text-ink">{data.page}</span> of{' '}
             <span className="font-medium text-ink">{data.total_pages}</span> ({data.total} total complaints)

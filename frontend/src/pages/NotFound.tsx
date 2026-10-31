@@ -11,8 +11,7 @@ export const NotFound: React.FC = () => {
         action={
           <Link
             to="/"
-            className="inline-flex items-center h-9 px-4 text-sm font-medium rounded-sm bg-brand text-white hover:bg-brand-hover"
-            style={{ color: '#fff' }}
+            className="inline-flex items-center h-9 px-4 text-[13px] font-medium rounded-sm bg-brand text-white hover:bg-brand-hover"
           >
             Return to overview
           </Link>

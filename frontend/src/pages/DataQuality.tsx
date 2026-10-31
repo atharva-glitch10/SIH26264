@@ -6,10 +6,16 @@ import PageHeader from '../components/ui/PageHeader';
 import Button from '../components/ui/Button';
 import Tag, { TagTone } from '../components/ui/Tag';
 import { Card, CardHeader, CardBody } from '../components/ui/Card';
-import { Table, Th, Td, Tr } from '../components/ui/DataTable';
-import { inputClass, labelClass, toggleClass } from '../components/ui/styles';
+import { Table, THead, Th, Td, Tr } from '../components/ui/Table';
 
-const decisionTone = (s: string): TagTone => (s === 'APPROVED' ? 'success' : s === 'REJECTED' ? 'danger' : 'warning');
+const inputClass = 'w-full h-9 px-3 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted';
+const labelClass = 'block text-[12px] font-medium text-ink mb-1';
+const toggleClass = (active: boolean) =>
+  `h-8 px-2.5 text-[12px] font-medium rounded-sm border ${
+    active ? 'bg-brand text-white border-brand' : 'bg-white text-ink border-line hover:bg-page'
+  }`;
+
+const decisionTone = (s: string): TagTone => (s === 'APPROVED' ? 'ok' : s === 'REJECTED' ? 'bad' : 'warn');
 
 export const DataQuality: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -84,7 +90,7 @@ export const DataQuality: React.FC = () => {
       <Card>
         <CardHeader
           title="Institution matcher sandbox"
-          actions={<span className="text-xs text-muted">Fuzzy token matching with ambiguity check</span>}
+          actions={<span className="text-[12px] text-muted">Fuzzy token matching with ambiguity check</span>}
         />
         <CardBody className="space-y-4">
           <form onSubmit={handleTestMatch} className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-end">
@@ -118,21 +124,21 @@ export const DataQuality: React.FC = () => {
 
           {testResult && (
             <div
-              className={`p-4 rounded-sm border text-sm space-y-2 ${
-                testResult.matched ? 'bg-success/10 border-success/30' : 'bg-warning/10 border-warning/30'
+              className={`p-4 rounded-sm border text-[13px] space-y-2 ${
+                testResult.matched ? 'bg-ok/5 border-ok/30' : 'bg-warn/5 border-warn/30'
               }`}
             >
               <div className="flex items-center justify-between">
                 <span className="font-medium">
                   {testResult.matched ? 'Auto-matched' : 'Requires manual review / flagged'}
                 </span>
-                <span className="text-xs">
+                <span className="text-[12px]">
                   Score: {testResult.confidence_score?.toFixed(1)}% ({testResult.matching_method})
                 </span>
               </div>
               <p className="leading-snug">{testResult.details}</p>
               {testResult.institution_id && (
-                <div className="text-xs">
+                <div className="text-[12px]">
                   Matched institution ID: <strong>{testResult.institution_id}</strong>
                 </div>
               )}
@@ -151,7 +157,7 @@ export const DataQuality: React.FC = () => {
                   key={st}
                   onClick={() => setStatusFilter(st)}
                   aria-pressed={statusFilter === st}
-                  className={`${toggleClass(statusFilter === st)} !h-8 !text-xs`}
+                  className={toggleClass(statusFilter === st)}
                 >
                   {st}
                 </button>
@@ -159,29 +165,29 @@ export const DataQuality: React.FC = () => {
             </div>
           }
         />
-        <p className="px-4 py-2 text-xs text-muted border-b border-border">
+        <p className="px-4 py-2 text-[12px] text-muted border-b border-line">
           Submissions scoring 75–89% or with ambiguous candidate separation are queued for registrar verification.
         </p>
 
         <Table>
-          <thead>
+          <THead>
             <tr>
               <Th>Raw input college name</Th>
               <Th>Candidate institution (matched)</Th>
-              <Th className="text-right">Score %</Th>
+              <Th align="right">Score %</Th>
               <Th>Match method</Th>
               <Th>Status</Th>
-              <Th className="text-right">Review decision</Th>
+              <Th align="right">Review decision</Th>
             </tr>
-          </thead>
+          </THead>
           <tbody>
             {loading ? (
               <tr>
-                <td colSpan={6} className="py-8 text-center text-muted">Loading queue...</td>
+                <Td colSpan={6} className="py-8 text-center text-muted">Loading queue...</Td>
               </tr>
             ) : queue.length === 0 ? (
               <tr>
-                <td colSpan={6} className="py-8 text-center text-muted">No items in queue with status {statusFilter}.</td>
+                <Td colSpan={6} className="py-8 text-center text-muted">No items in queue with status {statusFilter}.</Td>
               </tr>
             ) : (
               queue.map((item) => (
@@ -189,14 +195,14 @@ export const DataQuality: React.FC = () => {
                   <Td className="font-medium">"{item.raw_input_name}"</Td>
                   <Td>
                     <div className="font-medium">{item.candidate_institution_name}</div>
-                    <div className="text-xs text-muted">
+                    <div className="text-[12px] text-muted">
                       PID: {item.candidate_permanent_id || 'N/A'} · ID: {item.candidate_institution_id}
                     </div>
                   </Td>
-                  <Td className="text-right tabular-nums font-medium">{item.confidence_score.toFixed(1)}%</Td>
-                  <Td className="text-xs text-muted">{item.matching_method}</Td>
+                  <Td align="right" className="tabular-nums font-medium">{item.confidence_score.toFixed(1)}%</Td>
+                  <Td className="text-[12px] text-muted">{item.matching_method}</Td>
                   <Td><Tag tone={decisionTone(item.decision_status)}>{item.decision_status}</Tag></Td>
-                  <Td className="text-right">
+                  <Td align="right">
                     {item.decision_status === 'PENDING' ? (
                       <div className="flex items-center justify-end gap-1.5">
                         <Button size="sm" title="Approve match and register alias" onClick={() => handleReviewDecision(item.match_id, 'APPROVED')}>
@@ -207,7 +213,7 @@ export const DataQuality: React.FC = () => {
                         </Button>
                       </div>
                     ) : (
-                      <span className="text-xs text-muted">Decided</span>
+                      <span className="text-[12px] text-muted">Decided</span>
                     )}
                   </Td>
                 </Tr>

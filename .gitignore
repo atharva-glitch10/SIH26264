@@ -55,3 +55,6 @@ Thumbs.db
 *.db-shm
 *.db-wal
 *.db-journal
+
+# Test caches
+.pytest_cache/

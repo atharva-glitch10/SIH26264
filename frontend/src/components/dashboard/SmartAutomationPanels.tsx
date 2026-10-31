@@ -5,17 +5,13 @@ import { api } from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
 import { AutomationStats, Hotspots } from '../../types';
 import { Card, CardHeader, CardBody } from '../ui/Card';
+import { StatCard } from '../ui/StatCard';
+import Button from '../ui/Button';
 import Tag from '../ui/Tag';
 
 const Tile: React.FC<{ label: string; value: React.ReactNode; to?: string; hint?: string }> = ({ label, value, to, hint }) => {
-  const body = (
-    <div className="p-3 rounded-sm bg-page border border-border hover:border-brand-accent h-full">
-      <div className="text-xs text-muted">{label}</div>
-      <div className="text-xl font-semibold text-ink mt-1 tabular-nums">{value}</div>
-      {hint && <div className="text-xs text-muted">{hint}</div>}
-    </div>
-  );
-  return to ? <Link to={to}>{body}</Link> : body;
+  const body = <StatCard label={label} value={value} helper={hint} />;
+  return to ? <Link to={to} className="block hover:border-brand">{body}</Link> : body;
 };
 
 export const SmartAutomationPanels: React.FC = () => {
@@ -53,15 +49,15 @@ export const SmartAutomationPanels: React.FC = () => {
           title="Automation Summary"
           actions={
             can('sla:run') && (
-              <button onClick={runScan} disabled={scanning} className="text-sm text-brand-accent inline-flex items-center gap-1 hover:underline">
+              <Button variant="ghost" size="sm" onClick={runScan} disabled={scanning}>
                 <RefreshCw className={`w-3 h-3 ${scanning ? 'animate-spin' : ''}`} /> Run SLA scan
-              </button>
+              </Button>
             )
           }
         />
         <CardBody className="space-y-3">
           {stats ? (
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-3">
               <Tile label="Auto-matched to institution" value={stats.auto_linked_institutions} />
               <Tile label="Links awaiting review" value={stats.pending_institution_review} to="/data-quality" />
               <Tile label="Auto-categorised" value={stats.auto_categorized}
@@ -71,10 +67,10 @@ export const SmartAutomationPanels: React.FC = () => {
               <Tile label="Auto-escalated by SLA" value={stats.auto_escalated} />
             </div>
           ) : (
-            <div className="text-sm text-muted">Loading…</div>
+            <div className="text-[13px] text-muted">Loading…</div>
           )}
           {stats && stats.intake_channels.length > 0 && (
-            <div className="text-xs text-muted">
+            <div className="text-[12px] text-muted">
               Intake channels:{' '}
               {stats.intake_channels.map((c) => `${c.channel.replace(/_/g, ' ').toLowerCase()} ${c.count}`).join(' · ')}
             </div>
@@ -87,7 +83,7 @@ export const SmartAutomationPanels: React.FC = () => {
           title="Highest-risk institutions"
           actions={
             hot && (
-              <Link to="/institutions?sort=risk" className="text-sm hover:underline">
+              <Link to="/institutions?sort=risk" className="text-[13px] text-brand hover:underline">
                 {hot.repeat_offenders_count} repeat offenders
               </Link>
             )
@@ -95,15 +91,15 @@ export const SmartAutomationPanels: React.FC = () => {
         />
         <CardBody className="space-y-2">
           {hot?.top_institutions.map((i) => (
-            <Link key={i.institution_id} to={`/institutions/${i.institution_id}`} className="block p-2 rounded-sm border border-border hover:bg-page">
+            <Link key={i.institution_id} to={`/institutions/${i.institution_id}`} className="block p-2 rounded-sm border border-line hover:bg-page">
               <div className="flex items-center justify-between gap-2">
-                <span className="text-sm font-medium text-ink truncate">{i.canonical_name}</span>
-                <Tag tone={i.risk_level === 'HIGH' ? 'danger' : i.risk_level === 'MEDIUM' ? 'warning' : 'success'}>
+                <span className="text-[13px] font-medium text-ink truncate">{i.canonical_name}</span>
+                <Tag tone={i.risk_level === 'HIGH' ? 'bad' : i.risk_level === 'MEDIUM' ? 'warn' : 'ok'}>
                   {i.risk_score}
                 </Tag>
               </div>
-              <div className="text-xs text-muted truncate">
-                {i.is_repeat_offender && <span className="text-danger font-medium">Repeat offender · </span>}
+              <div className="text-[12px] text-muted truncate">
+                {i.is_repeat_offender && <span className="text-bad font-medium">Repeat offender · </span>}
                 {i.risk_factors.join(' · ')}
               </div>
             </Link>
@@ -115,12 +111,12 @@ export const SmartAutomationPanels: React.FC = () => {
         <CardHeader title="State hotspots (active cases)" />
         <CardBody className="space-y-2">
           {hot?.states.slice(0, 8).map((s) => (
-            <div key={s.state} className="text-xs">
+            <div key={s.state} className="text-[12px]">
               <div className="flex justify-between text-muted">
                 <span>{s.state} <span>· {s.region}</span></span>
                 <span className="font-medium text-ink tabular-nums">
                   {s.active_cases}
-                  {s.overdue_cases > 0 && <span className="text-danger font-normal"> ({s.overdue_cases} overdue)</span>}
+                  {s.overdue_cases > 0 && <span className="text-bad font-normal"> ({s.overdue_cases} overdue)</span>}
                 </span>
               </div>
               <div className="h-1.5 bg-page rounded-sm">

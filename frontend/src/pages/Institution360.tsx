@@ -39,14 +39,14 @@ export const Institution360: React.FC = () => {
   };
 
   if (loading) {
-    return <div className="flex items-center justify-center min-h-[50vh] text-sm text-muted">Loading institution profile and case history…</div>;
+    return <div className="flex items-center justify-center min-h-[50vh] text-[13px] text-muted">Loading institution profile and case history…</div>;
   }
 
   if (!data) {
     return (
       <EmptyState
         title="Institution not found"
-        action={<Link to="/institutions" className="text-sm hover:underline">Return to directory</Link>}
+        action={<Link to="/institutions" className="text-[13px] text-brand hover:underline">Return to directory</Link>}
       />
     );
   }
@@ -62,13 +62,13 @@ export const Institution360: React.FC = () => {
           <span className="flex flex-wrap items-center gap-2">
             <span>{institution.institution_type} · {institution.region} Region</span>
             <Tag tone={riskTone(institution.risk_level)}>Risk {institution.risk_score ?? 0} / 100</Tag>
-            {institution.is_repeat_offender && <Tag tone="danger">Repeat offender</Tag>}
+            {institution.is_repeat_offender && <Tag tone="bad">Repeat offender</Tag>}
           </span>
         }
         actions={
           <Link
             to={`/cases?search=${encodeURIComponent(institution.canonical_name)}`}
-            className="text-sm hover:underline"
+            className="text-[13px] text-brand hover:underline"
           >
             Filter all cases for this institution
           </Link>
@@ -76,18 +76,18 @@ export const Institution360: React.FC = () => {
       />
 
       <Card>
-        <CardBody className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+        <CardBody className="grid grid-cols-1 md:grid-cols-3 gap-6 text-[13px]">
           <dl className="space-y-2">
-            <div><dt className="text-xs text-muted">AICTE permanent ID</dt><dd className="font-medium">{institution.aicte_permanent_id || 'NOT_ASSIGNED'}</dd></div>
-            <div><dt className="text-xs text-muted">Internal ID</dt><dd className="font-medium">{institution.institution_id}</dd></div>
-            <div><dt className="text-xs text-muted">Location</dt><dd>{institution.district ? `${institution.district}, ` : ''}{institution.state}</dd></div>
-            {institution.contact_email && <div><dt className="text-xs text-muted">Email</dt><dd>{institution.contact_email}</dd></div>}
-            {institution.contact_phone && <div><dt className="text-xs text-muted">Phone</dt><dd>{institution.contact_phone}</dd></div>}
-            <div><dt className="text-xs text-muted">Registered in system</dt><dd>{new Date(institution.created_at).toLocaleDateString()}</dd></div>
+            <div><dt className="text-[12px] text-muted">AICTE permanent ID</dt><dd className="font-medium">{institution.aicte_permanent_id || 'NOT_ASSIGNED'}</dd></div>
+            <div><dt className="text-[12px] text-muted">Internal ID</dt><dd className="font-medium">{institution.institution_id}</dd></div>
+            <div><dt className="text-[12px] text-muted">Location</dt><dd>{institution.district ? `${institution.district}, ` : ''}{institution.state}</dd></div>
+            {institution.contact_email && <div><dt className="text-[12px] text-muted">Email</dt><dd>{institution.contact_email}</dd></div>}
+            {institution.contact_phone && <div><dt className="text-[12px] text-muted">Phone</dt><dd>{institution.contact_phone}</dd></div>}
+            <div><dt className="text-[12px] text-muted">Registered in system</dt><dd>{new Date(institution.created_at).toLocaleDateString()}</dd></div>
           </dl>
 
           <div>
-            <div className="text-xs text-muted mb-1">Why this score</div>
+            <div className="text-[12px] text-muted mb-1">Risk factors</div>
             {institution.risk_factors && institution.risk_factors.length > 0 ? (
               <ul className="list-disc pl-5 space-y-0.5">
                 {institution.risk_factors.map((f) => <li key={f}>{f}</li>)}
@@ -99,14 +99,14 @@ export const Institution360: React.FC = () => {
 
           <div className="space-y-3">
             <div>
-              <div className="text-xs text-muted mb-1">Participating bureaus and cells</div>
+              <div className="text-[12px] text-muted mb-1">Participating bureaus and cells</div>
               <div className="flex flex-wrap gap-1.5">
                 {institution.participating_bureaus?.map((b) => <Tag key={b}>{b.replace('BUR-', '')}</Tag>)}
               </div>
             </div>
             {aliases && aliases.length > 0 && (
               <div>
-                <div className="text-xs text-muted mb-1">Known aliases</div>
+                <div className="text-[12px] text-muted mb-1">Known aliases</div>
                 <div className="flex flex-wrap gap-1.5">
                   {aliases.map((al: any) => <Tag key={al.alias_id}>{al.alias_name}</Tag>)}
                 </div>
@@ -117,75 +117,87 @@ export const Institution360: React.FC = () => {
       </Card>
 
       {overlap_alerts && overlap_alerts.length > 0 && (
-        <div className="p-4 rounded-md border border-warning/40 bg-warning/5 flex items-start justify-between gap-4">
+        <div className="p-4 rounded-md border border-warn/30 bg-warn/5 flex items-start justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="text-sm font-semibold">
+              <h3 className="text-[13px] font-semibold">
                 Active potential overlapping cases flagged ({overlap_alerts[0].alert_id})
               </h3>
-              <Tag tone="warning">{overlap_alerts[0].status}</Tag>
+              <Tag tone="warn">{overlap_alerts[0].status}</Tag>
             </div>
-            <p className="text-sm text-muted mt-1">{overlap_alerts[0].explanation}</p>
-            <p className="text-sm mt-2">
+            <p className="text-[13px] text-muted mt-1">{overlap_alerts[0].explanation}</p>
+            <p className="text-[13px] mt-2">
               <span className="font-medium">Recommended coordination:</span> {overlap_alerts[0].recommended_action}
             </p>
           </div>
-          <Link to="/overlaps" className="shrink-0 text-sm hover:underline">Open overlap hub</Link>
+          <Link to="/overlaps" className="shrink-0 text-[13px] text-brand hover:underline">Open overlap hub</Link>
         </div>
       )}
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-        <StatCard label="Total grievances" value={cases.length} />
-        <StatCard label="Under process" value={cases.filter(c => c.status === 'UNDER_PROCESS').length} />
-        <StatCard label="Pending scrutiny" value={cases.filter(c => c.status === 'PENDING' || c.status === 'RECEIVED').length} />
-        <StatCard label="Disposed cases" value={cases.filter(c => c.status === 'DISPOSED' || c.status === 'CLOSED').length} />
-        <StatCard label="Escalations" value={cases.filter(c => c.status === 'ESCALATED').length} />
-        <StatCard label="Overdue SLA" value={cases.filter(c => c.is_overdue).length} />
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <StatCard
+          label="Active cases"
+          value={cases.filter(c => c.status !== 'DISPOSED' && c.status !== 'CLOSED').length}
+        />
+        <StatCard
+          label="Overdue"
+          value={cases.filter(c => c.is_overdue).length}
+          tone="bad"
+        />
+        <StatCard
+          label="Bureaus involved"
+          value={institution.participating_bureaus?.length ?? 0}
+        />
+        <StatCard
+          label="Risk score"
+          value={`${institution.risk_score ?? 0} / 100`}
+          tone={institution.risk_level === 'HIGH' ? 'bad' : institution.risk_level === 'MEDIUM' ? 'warn' : 'default'}
+        />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <Card className="lg:col-span-2">
           <CardHeader
             title="Institution case dossier"
-            actions={<span className="text-xs text-muted">{cases.length} total records</span>}
+            actions={<span className="text-[12px] text-muted">{cases.length} total records</span>}
           />
-          <div className="divide-y divide-border">
+          <div className="divide-y divide-line">
             {cases.map((c) => (
               <div key={c.case_id} className="p-4 flex items-start justify-between gap-4 hover:bg-page">
                 <div className="space-y-1">
                   <div className="flex flex-wrap items-center gap-2">
-                    <Link to={`/cases/${c.case_id}`} className="font-medium text-sm">
+                    <Link to={`/cases/${c.case_id}`} className="font-medium text-[13px] text-brand hover:underline">
                       {c.complaint_reference}
                     </Link>
                     <Tag>{c.current_bureau_id.replace('BUR-', '')}</Tag>
                     <Tag tone={priorityTone(c.priority)}>{c.priority}</Tag>
                     <Tag tone={statusTone(c.status)}>{c.status}</Tag>
                   </div>
-                  <p className="text-sm leading-relaxed">{c.description}</p>
-                  <div className="text-xs text-muted">
+                  <p className="text-[13px] leading-relaxed">{c.description}</p>
+                  <div className="text-[12px] text-muted">
                     Category: {c.category} · Received: {new Date(c.received_at).toLocaleDateString()} ·{' '}
-                    <span className={c.is_overdue ? 'text-danger font-medium' : ''}>
+                    <span className={c.is_overdue ? 'text-bad font-medium' : ''}>
                       {c.is_overdue ? 'Overdue deadline' : `SLA: ${c.days_pending}d pending`}
                     </span>
                   </div>
                 </div>
-                <Link to={`/cases/${c.case_id}`} className="text-sm hover:underline shrink-0">Open</Link>
+                <Link to={`/cases/${c.case_id}`} className="text-[13px] text-brand hover:underline shrink-0">Open</Link>
               </div>
             ))}
           </div>
         </Card>
 
         <Card>
-          <CardHeader title="Unified institutional timeline" actions={<span className="text-xs text-muted">Most recent first</span>} />
-          <ul className="divide-y divide-border">
+          <CardHeader title="Unified institutional timeline" actions={<span className="text-[12px] text-muted">Most recent first</span>} />
+          <ul className="divide-y divide-line">
             {timeline.slice(0, 15).map((act, idx) => (
-              <li key={idx} className="flex gap-3 p-4 text-sm">
-                <div className="w-20 shrink-0 text-xs text-muted">{new Date(act.created_at).toLocaleDateString()}</div>
+              <li key={idx} className="flex gap-3 p-4 text-[13px]">
+                <div className="w-20 shrink-0 text-[12px] text-muted">{new Date(act.created_at).toLocaleDateString()}</div>
                 <div className="min-w-0">
                   <div className="font-medium">{act.action_type}</div>
-                  <div className="text-xs text-muted">Case: {act.case_id}</div>
+                  <div className="text-[12px] text-muted">Case: {act.case_id}</div>
                   <p className="mt-1 leading-snug">{act.remarks}</p>
-                  {act.next_action && <div className="mt-1 text-xs text-muted">Next: {act.next_action}</div>}
+                  {act.next_action && <div className="mt-1 text-[12px] text-muted">Next: {act.next_action}</div>}
                 </div>
               </li>
             ))}

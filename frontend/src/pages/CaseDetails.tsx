@@ -10,7 +10,11 @@ import Tag from '../components/ui/Tag';
 import Modal from '../components/ui/Modal';
 import EmptyState from '../components/ui/EmptyState';
 import { Card, CardHeader, CardBody } from '../components/ui/Card';
-import { inputClass, labelClass, priorityTone, slaTone, statusTone } from '../components/ui/styles';
+import { priorityTone, slaTone, statusTone } from '../components/ui/styles';
+
+const inputClass = 'w-full h-9 px-3 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted';
+const textareaClass = 'w-full px-3 py-2 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted';
+const labelClass = 'block text-[12px] font-medium text-ink mb-1';
 
 export const CaseDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -126,14 +130,14 @@ export const CaseDetails: React.FC = () => {
   };
 
   if (loading) {
-    return <div className="flex items-center justify-center min-h-[50vh] text-sm text-muted">Loading case file and action history…</div>;
+    return <div className="flex items-center justify-center min-h-[50vh] text-[13px] text-muted">Loading case file and action history…</div>;
   }
 
   if (!caseData) {
     return (
       <EmptyState
         title="Case record not found"
-        action={<Link to="/cases" className="text-sm hover:underline">Return to case register</Link>}
+        action={<Link to="/cases" className="text-[13px] text-brand hover:underline">Return to case register</Link>}
       />
     );
   }
@@ -151,18 +155,19 @@ export const CaseDetails: React.FC = () => {
           <span className="flex flex-wrap items-center gap-2">
             <Tag tone={statusTone(caseData.status)}>{caseData.status}</Tag>
             <Tag tone={priorityTone(caseData.priority)}>{caseData.priority} priority</Tag>
-            <span className="font-mono text-xs">{caseData.case_id}</span>
+            <span className="font-mono text-[12px]">{caseData.case_id}</span>
           </span>
         }
         actions={
           <>
             {!canAct && (
-              <span className="text-xs text-muted border border-border rounded-sm px-2.5 py-1.5">
+              <span className="text-[12px] text-muted border border-line rounded-sm px-2.5 py-1.5">
                 View only · handled by {caseData.current_bureau_id.replace('BUR-', '')}
               </span>
             )}
             {canAct && caseData.status === 'DISPOSED' && (
               <Button
+                variant="secondary"
                 onClick={async () => {
                   try {
                     await api.closeCase(caseData.case_id);
@@ -190,19 +195,19 @@ export const CaseDetails: React.FC = () => {
 
       <Card>
         <CardBody className="space-y-3">
-          <div className="text-sm">
-            <Link to={`/institutions/${caseData.institution_id}`} className="text-base font-semibold">
+          <div className="text-[13px]">
+            <Link to={`/institutions/${caseData.institution_id}`} className="text-base font-semibold text-brand hover:underline">
               {caseData.institution_name}
             </Link>
-            <span className="ml-2 text-xs text-muted">({caseData.institution_id})</span>
+            <span className="ml-2 text-[12px] text-muted">({caseData.institution_id})</span>
           </div>
-          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-            <div><dt className="text-xs text-muted">Category</dt><dd className="font-medium">{caseData.category}</dd></div>
-            <div><dt className="text-xs text-muted">Received</dt><dd className="font-medium">{new Date(caseData.received_at).toLocaleDateString()}</dd></div>
-            <div><dt className="text-xs text-muted">Handling bureau</dt><dd className="font-medium">{caseData.current_bureau_name}</dd></div>
-            <div><dt className="text-xs text-muted">Assigned officer</dt><dd className="font-medium">{caseData.assigned_user_name}</dd></div>
+          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-[13px]">
+            <div><dt className="text-[12px] text-muted">Category</dt><dd className="font-medium">{caseData.category}</dd></div>
+            <div><dt className="text-[12px] text-muted">Received</dt><dd className="font-medium">{new Date(caseData.received_at).toLocaleDateString()}</dd></div>
+            <div><dt className="text-[12px] text-muted">Handling bureau</dt><dd className="font-medium">{caseData.current_bureau_name}</dd></div>
+            <div><dt className="text-[12px] text-muted">Assigned officer</dt><dd className="font-medium">{caseData.assigned_user_name}</dd></div>
           </dl>
-          <div className="flex flex-wrap items-center justify-between gap-2 border-t border-border pt-3 text-sm">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line pt-3 text-[13px]">
             <div>
               <span className="font-medium">SLA resolution target:</span> {new Date(caseData.expected_disposal_at).toLocaleDateString()}
               {' '}({caseData.days_pending} days elapsed since filing).
@@ -232,17 +237,17 @@ export const CaseDetails: React.FC = () => {
           <Card>
             <CardHeader title="Complaint allegation and overview" />
             <CardBody className="space-y-4">
-              <p className="text-sm leading-relaxed bg-page p-3 rounded-sm border border-border">
+              <p className="text-[13px] leading-relaxed bg-page p-3 rounded-sm border border-line">
                 {caseData.description}
               </p>
-              <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="grid grid-cols-2 gap-4 text-[13px]">
                 <div>
-                  <span className="text-xs text-muted block">Last recorded action</span>
+                  <span className="text-[12px] text-muted block">Last recorded action</span>
                   <span className="font-medium block mt-0.5">{caseData.last_action_summary || 'None recorded'}</span>
-                  <span className="text-xs text-muted">{new Date(caseData.last_action_at).toLocaleString()}</span>
+                  <span className="text-[12px] text-muted">{new Date(caseData.last_action_at).toLocaleString()}</span>
                 </div>
                 <div>
-                  <span className="text-xs text-muted block">Next required action</span>
+                  <span className="text-[12px] text-muted block">Next required action</span>
                   <span className="font-medium block mt-0.5">{caseData.next_action || 'Pending officer review'}</span>
                 </div>
               </div>
@@ -254,30 +259,30 @@ export const CaseDetails: React.FC = () => {
               title="Related and cross-bureau linked cases"
               actions={
                 caseData.active_overlap_alert_id && (
-                  <Link to="/overlaps" className="text-sm hover:underline">
+                  <Link to="/overlaps" className="text-[13px] text-brand hover:underline">
                     View overlap alert {caseData.active_overlap_alert_id}
                   </Link>
                 )
               }
             />
             {caseData.related_cases && caseData.related_cases.length > 0 ? (
-              <div className="divide-y divide-border">
+              <div className="divide-y divide-line">
                 {caseData.related_cases.map((rel) => {
                   const target = rel.related_case;
                   return (
                     <div key={rel.relationship_id} className="p-4 flex items-start justify-between gap-4">
                       <div className="space-y-1">
                         <div className="flex items-center gap-2">
-                          <Link to={`/cases/${target?.case_id}`} className="font-medium text-sm">
+                          <Link to={`/cases/${target?.case_id}`} className="font-medium text-[13px] text-brand hover:underline">
                             {target?.complaint_reference || rel.related_case_id}
                           </Link>
                           <Tag>{target?.current_bureau_id.replace('BUR-', '')}</Tag>
                           <Tag tone="info">{rel.relationship_type}</Tag>
                         </div>
-                        <p className="text-sm">{target?.description}</p>
-                        <div className="text-xs text-muted">Linkage reason: {rel.reason}</div>
+                        <p className="text-[13px]">{target?.description}</p>
+                        <div className="text-[12px] text-muted">Linkage reason: {rel.reason}</div>
                       </div>
-                      <Link to={`/cases/${target?.case_id}`} className="text-sm hover:underline shrink-0">
+                      <Link to={`/cases/${target?.case_id}`} className="text-[13px] text-brand hover:underline shrink-0">
                         Open case
                       </Link>
                     </div>
@@ -291,24 +296,24 @@ export const CaseDetails: React.FC = () => {
         </div>
 
         <Card>
-          <CardHeader title="Action history and audit trail" actions={<span className="text-xs text-muted">{caseData.actions?.length || 0} events</span>} />
-          <ul className="divide-y divide-border">
+          <CardHeader title="Action history and audit trail" actions={<span className="text-[12px] text-muted">{caseData.actions?.length || 0} events</span>} />
+          <ul className="divide-y divide-line">
             {caseData.actions?.map((act) => (
-              <li key={act.action_id} className="flex gap-3 p-4 text-sm">
-                <div className="w-20 shrink-0 text-xs text-muted">
+              <li key={act.action_id} className="flex gap-3 p-4 text-[13px]">
+                <div className="w-32 shrink-0 text-[12px] text-muted">
                   <div>{new Date(act.created_at).toLocaleDateString()}</div>
                   <div>{new Date(act.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
                 </div>
                 <div className="space-y-1 min-w-0">
                   <div className="font-medium">{act.action_type}</div>
-                  <div className="text-xs text-muted">
+                  <div className="text-[12px] text-muted">
                     Actor: {act.actor_user_id}
                     {act.previous_status && act.previous_status !== act.new_status && (
                       <span className="ml-2 text-ink">{act.previous_status} → {act.new_status}</span>
                     )}
                   </div>
                   <p className="leading-relaxed">{act.remarks}</p>
-                  {act.next_action && <div className="text-xs text-muted">Next step: {act.next_action}</div>}
+                  {act.next_action && <div className="text-[12px] text-muted">Next step: {act.next_action}</div>}
                 </div>
               </li>
             ))}
@@ -341,7 +346,7 @@ export const CaseDetails: React.FC = () => {
               value={assignRemarks}
               onChange={(e) => setAssignRemarks(e.target.value)}
               placeholder="Directives for preliminary scrutiny or notice issuance..."
-              className={inputClass}
+              className={textareaClass}
             />
           </div>
         </form>
@@ -371,7 +376,7 @@ export const CaseDetails: React.FC = () => {
               value={transferReason}
               onChange={(e) => setTransferReason(e.target.value)}
               placeholder="Explain why jurisdiction belongs to receiving Bureau..."
-              className={inputClass}
+              className={textareaClass}
             />
           </div>
         </form>
@@ -392,10 +397,10 @@ export const CaseDetails: React.FC = () => {
               value={escalateReason}
               onChange={(e) => setEscalateReason(e.target.value)}
               placeholder="Specify statutory violation severity, non-responsiveness, or executive directive needed..."
-              className={inputClass}
+              className={textareaClass}
             />
           </div>
-          <p className="text-xs text-muted">
+          <p className="text-[12px] text-muted">
             Escalation will set Priority to URGENT and notify Senior Management & Member Secretary office.
           </p>
         </form>
@@ -426,7 +431,7 @@ export const CaseDetails: React.FC = () => {
               value={disposalSummary}
               onChange={(e) => setDisposalSummary(e.target.value)}
               placeholder="Record formal disposal findings, committee directives, and closure timestamps..."
-              className={inputClass}
+              className={textareaClass}
             />
           </div>
         </form>

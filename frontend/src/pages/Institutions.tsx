@@ -8,8 +8,18 @@ import Button from '../components/ui/Button';
 import Tag from '../components/ui/Tag';
 import Modal from '../components/ui/Modal';
 import { Card } from '../components/ui/Card';
-import { Table, Th, Td, Tr } from '../components/ui/DataTable';
-import { inputClass, labelClass, riskTone, selectClass, toggleClass } from '../components/ui/styles';
+import { Table, THead, Th, Td, Tr } from '../components/ui/Table';
+
+const inputClass = 'w-full h-9 px-3 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted';
+const labelClass = 'block text-[12px] font-medium text-ink mb-1';
+const selectClass = 'h-9 px-2.5 text-[13px] bg-white border border-line rounded-sm text-ink';
+const toggleClass = (active: boolean) =>
+  `h-9 px-3 text-[13px] font-medium rounded-sm border ${
+    active ? 'bg-brand text-white border-brand' : 'bg-white text-ink border-line hover:bg-page'
+  }`;
+
+const riskLabel = (level?: string) =>
+  level ? level.charAt(0) + level.slice(1).toLowerCase() : 'Unknown';
 
 export const Institutions: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -113,7 +123,7 @@ export const Institutions: React.FC = () => {
               setPage(1);
             }}
             placeholder="Search by college name, AICTE permanent ID (e.g. 1-4329811) or INST ID..."
-            className="w-full h-9 pl-9 pr-4 text-sm bg-surface border border-border rounded-sm text-ink"
+            className="w-full h-9 pl-9 pr-3 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted"
           />
         </div>
 
@@ -181,77 +191,79 @@ export const Institutions: React.FC = () => {
 
       <Card className="overflow-hidden">
         <Table>
-          <thead>
+          <THead>
             <tr>
               <Th>Permanent ID / internal ID</Th>
               <Th>Canonical institution name</Th>
               <Th>Region and state</Th>
-              <Th>Active / overdue cases</Th>
+              <Th align="right">Active / overdue cases</Th>
               <Th>Connected bureaus</Th>
               <Th>Attention level</Th>
-              <Th className="text-right">Action</Th>
+              <Th align="right">Action</Th>
             </tr>
-          </thead>
+          </THead>
           <tbody>
             {loading ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-muted">Loading institutions directory...</td>
+                <Td colSpan={7} className="py-12 text-center text-muted">Loading institutions directory...</Td>
               </tr>
             ) : data.items.length === 0 ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-muted">No institutions match the filter criteria.</td>
+                <Td colSpan={7} className="py-12 text-center text-muted">No institutions match the filter criteria.</Td>
               </tr>
             ) : (
               data.items.map((inst) => (
                 <Tr key={inst.institution_id}>
                   <Td>
                     <div className="font-medium">{inst.aicte_permanent_id || 'PENDING'}</div>
-                    <div className="text-xs text-muted">{inst.institution_id}</div>
+                    <div className="text-[12px] text-muted">{inst.institution_id}</div>
                   </Td>
                   <Td>
-                    <Link to={`/institutions/${inst.institution_id}`} className="font-medium block">
+                    <Link to={`/institutions/${inst.institution_id}`} className="font-medium block text-brand hover:underline">
                       {inst.canonical_name}
                     </Link>
-                    <span className="text-xs text-muted">{inst.institution_type}</span>
+                    <span className="text-[12px] text-muted">{inst.institution_type}</span>
                   </Td>
                   <Td>
                     <div>{inst.region} Region</div>
-                    <div className="text-xs text-muted">{inst.state}</div>
+                    <div className="text-[12px] text-muted">{inst.state}</div>
                   </Td>
-                  <Td>
-                    <div className="flex items-center gap-2">
+                  <Td align="right">
+                    <div className="flex items-center justify-end gap-2">
                       <span className="font-medium tabular-nums">{inst.active_cases_count} active</span>
-                      {inst.overdue_cases_count > 0 && <Tag tone="danger">{inst.overdue_cases_count} overdue</Tag>}
+                      {inst.overdue_cases_count > 0 && <Tag tone="bad">{inst.overdue_cases_count} overdue</Tag>}
                     </div>
-                    <div className="text-xs text-muted mt-0.5">{inst.pending_cases_count} awaiting scrutiny</div>
+                    <div className="text-[12px] text-muted mt-0.5">{inst.pending_cases_count} awaiting scrutiny</div>
                   </Td>
                   <Td>
                     <div className="flex flex-wrap gap-1">
                       {inst.participating_bureaus && inst.participating_bureaus.length > 0 ? (
                         inst.participating_bureaus.map((b) => <Tag key={b}>{b.replace('BUR-', '')}</Tag>)
                       ) : (
-                        <span className="text-muted text-xs">None</span>
+                        <span className="text-muted text-[12px]">None</span>
                       )}
                     </div>
                     {inst.has_active_overlap && (
                       <div className="mt-1">
-                        <Tag tone="warning">Overlap alert active</Tag>
+                        <Tag tone="warn">Overlap alert active</Tag>
                       </div>
                     )}
                   </Td>
                   <Td>
-                    <Tag tone={riskTone(inst.risk_level)}>
-                      {inst.risk_level} · {inst.risk_score ?? 0}
-                    </Tag>
-                    {inst.is_repeat_offender && <div className="mt-1 text-xs font-medium text-danger">Repeat offender</div>}
+                    <div className="flex flex-wrap items-center gap-1">
+                      <Tag tone={inst.risk_level === 'HIGH' ? 'bad' : inst.risk_level === 'MEDIUM' ? 'warn' : 'ok'}>
+                        {riskLabel(inst.risk_level)} · {inst.risk_score ?? 0}
+                      </Tag>
+                      {inst.is_repeat_offender && <Tag tone="bad">Repeat offender</Tag>}
+                    </div>
                     {inst.risk_factors && inst.risk_factors.length > 0 && (
-                      <div className="mt-0.5 text-xs text-muted max-w-[220px] truncate" title={inst.risk_factors.join('\n')}>
+                      <div className="mt-0.5 text-[12px] text-muted max-w-[220px] truncate" title={inst.risk_factors.join('\n')}>
                         {inst.risk_factors[0]}
                       </div>
                     )}
                   </Td>
-                  <Td className="text-right">
-                    <Link to={`/institutions/${inst.institution_id}`} className="hover:underline">
+                  <Td align="right">
+                    <Link to={`/institutions/${inst.institution_id}`} className="text-brand hover:underline">
                       Institution 360
                     </Link>
                   </Td>
@@ -261,7 +273,7 @@ export const Institutions: React.FC = () => {
           </tbody>
         </Table>
 
-        <div className="px-4 py-3 border-t border-border flex items-center justify-between text-sm text-muted">
+        <div className="px-4 py-3 border-t border-line flex items-center justify-between text-[13px] text-muted">
           <div>
             Page <span className="font-medium text-ink">{data.page}</span> of{' '}
             <span className="font-medium text-ink">{data.total_pages}</span> ({data.total} institutions)
@@ -290,7 +302,7 @@ export const Institutions: React.FC = () => {
       >
         <form id="form-register-inst" onSubmit={handleRegister} className="space-y-4">
           {registerSuccess && (
-            <div className="p-3 rounded-sm bg-success/10 border border-success/30 text-sm text-success">{registerSuccess}</div>
+            <div className="p-3 rounded-sm bg-ok/5 border border-ok/30 text-[13px] text-ok">{registerSuccess}</div>
           )}
 
           <div>

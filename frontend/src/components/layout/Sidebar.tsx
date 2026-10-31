@@ -41,43 +41,42 @@ export const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   return (
-    <aside className="w-64 bg-surface border-r border-border flex flex-col h-screen shrink-0 sticky top-0 z-30">
-      <div className="px-4 h-14 border-b border-border flex flex-col justify-center">
-        <div className="text-lg font-bold text-brand leading-tight">AICTE</div>
-        <p className="text-xs text-muted leading-tight">Complaint Monitoring System</p>
+    <aside className="w-60 bg-white border-r border-line flex flex-col h-screen shrink-0 sticky top-0 z-30">
+      <div className="h-14 px-4 border-b border-line flex flex-col justify-center">
+        <div className="text-[13px] font-semibold text-brand leading-tight">AICTE</div>
+        <p className="text-[12px] text-muted leading-tight">Complaint Monitoring System</p>
       </div>
 
-      <nav className="flex-1 py-4 overflow-y-auto">
+      <nav className="flex-1 py-2 overflow-y-auto">
         {groups.map((group) => (
-          <div key={group.label} className="mb-4">
-            <div className="px-4 pb-1 text-xs font-medium text-muted">{group.label}</div>
+          <div key={group.label}>
+            <div className="px-3 mt-4 mb-1 text-[11px] uppercase text-muted">{group.label}</div>
             {group.items.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
                 end={item.to === '/'}
                 className={({ isActive }) =>
-                  `flex items-center justify-between py-2 pr-4 pl-[13px] border-l-[3px] text-sm ${
+                  `flex items-center justify-between gap-2 px-3 h-9 text-[13px] rounded-sm border-l-[3px] ${
                     isActive
-                      ? 'border-brand bg-brand-soft text-brand font-medium'
-                      : 'border-transparent text-ink hover:bg-page'
+                      ? 'bg-brand-soft text-brand font-medium border-brand'
+                      : 'text-ink border-transparent hover:bg-page'
                   }`
                 }
               >
-                <span>{t(item.name)}</span>
-                {item.count ? <span className="text-xs text-muted tabular-nums">{item.count}</span> : null}
+                <span className="truncate">{t(item.name)}</span>
+                {item.count ? (
+                  <span className="text-[12px] text-muted tabular-nums text-right">{item.count}</span>
+                ) : null}
               </NavLink>
             ))}
           </div>
         ))}
       </nav>
 
-      <div className="px-4 py-3 border-t border-border text-xs text-muted flex items-center gap-2">
-        <a href="#help" className="hover:underline">Help</a>
-        <span>·</span>
-        <Link to="/terms" className="hover:underline">Terms of Use</Link>
-        <span>·</span>
-        <Link to="/privacy" className="hover:underline">Privacy</Link>
+      <div className="px-4 py-3 border-t border-line flex flex-col gap-1 text-[12px] text-muted">
+        <Link to="/terms" className="hover:text-ink">Terms of Use</Link>
+        <Link to="/privacy" className="hover:text-ink">Privacy Notice</Link>
       </div>
     </aside>
   );

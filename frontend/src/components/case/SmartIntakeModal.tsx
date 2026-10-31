@@ -5,6 +5,7 @@ import { useAuth } from '../../context/AuthContext';
 import { IntakePayload, IntakePreview, IntakeResult } from '../../types';
 import Modal from '../ui/Modal';
 import Button from '../ui/Button';
+import { Card } from '../ui/Card';
 
 const CATEGORIES = [
   'Academic and Examination',
@@ -104,18 +105,17 @@ export const SmartIntakeModal: React.FC<Props> = ({ onClose, onRegistered }) => 
     }
   };
 
-  const input = 'w-full px-3 py-2 text-sm bg-surface border border-border rounded-sm text-ink';
-  const label = 'block text-xs font-medium text-ink mb-1';
-  const panel = 'p-3 rounded-sm bg-surface border border-border';
-  const panelTitle = 'text-xs text-muted';
+  const input = 'w-full h-9 px-3 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted';
+  const area = 'w-full px-3 py-2 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted';
+  const label = 'block text-[12px] font-medium text-ink mb-1';
+  const panelTitle = 'text-[12px] text-muted';
 
   const footer = result ? (
     <>
       <Button variant="ghost" onClick={onClose}>Close</Button>
       <Link
         to={`/cases/${result.case_id}`}
-        className="inline-flex items-center justify-center h-9 px-4 text-sm font-medium rounded-sm bg-brand text-white hover:bg-brand-hover"
-        style={{ color: '#fff' }}
+        className="inline-flex items-center justify-center h-9 px-4 text-[13px] font-medium rounded-sm bg-brand text-white hover:bg-brand-hover"
       >
         Open case
       </Link>
@@ -130,22 +130,22 @@ export const SmartIntakeModal: React.FC<Props> = ({ onClose, onRegistered }) => 
   );
 
   return (
-    <Modal open onClose={onClose} title="Register complaint · Smart intake" size="lg" flush footer={footer}>
+    <Modal open onClose={onClose} title="Register complaint" width="lg" flush footer={footer}>
       {result ? (
         <div className="p-4 space-y-4">
-          <div className="p-3 rounded-sm bg-success/10 border border-success/30 text-sm text-success">
+          <div className="p-3 rounded-sm bg-ok/5 border border-ok/30 text-[13px] text-ok">
             Registered{' '}
             <Link to={`/cases/${result.case_id}`} className="font-mono font-semibold underline">{result.complaint_reference}</Link>
             {' '}· SLA due {new Date(result.expected_disposal_at).toLocaleDateString()}
           </div>
-          <ul className="text-sm text-ink space-y-2">
+          <ul className="text-[13px] text-ink space-y-2">
             <li>Linked to <strong>{result.institution.canonical_name}</strong> ({result.institution.match_status.replace(/_/g, ' ').toLowerCase()}, {Math.round(result.institution.score)}%)</li>
             <li>Category <strong>{result.category.value}</strong>{result.category.source === 'AUTO' && ` (suggested, ${pct(result.category.confidence)} confidence)`} · Priority <strong>{result.priority.value}</strong>{result.priority.source === 'AUTO' && ` (${result.priority.reason})`}</li>
             {result.duplicate && (
-              <li className="text-warning">Possible duplicate of <Link className="underline font-mono" to={`/cases/${result.duplicate.case_id}`}>{result.duplicate.case_id}</Link> in {result.duplicate.bureau_id} ({Math.round(result.duplicate.score)}%)</li>
+              <li className="text-warn">Possible duplicate of <Link className="underline font-mono" to={`/cases/${result.duplicate.case_id}`}>{result.duplicate.case_id}</Link> in {result.duplicate.bureau_id} ({Math.round(result.duplicate.score)}%)</li>
             )}
             {result.overlap_alert_id && (
-              <li className="text-warning">Cross-bureau overlap alert {result.overlap_alert_id} is open for this institution</li>
+              <li className="text-warn">Cross-bureau overlap alert {result.overlap_alert_id} is open for this institution</li>
             )}
           </ul>
         </div>
@@ -164,7 +164,7 @@ export const SmartIntakeModal: React.FC<Props> = ({ onClose, onRegistered }) => 
             </div>
             <div>
               <label className={label}>Complaint text *</label>
-              <textarea required minLength={10} rows={4} value={form.description} onChange={(e) => set('description', e.target.value)} placeholder="Paste or type the complaint as received…" className={input} />
+              <textarea required minLength={10} rows={4} value={form.description} onChange={(e) => set('description', e.target.value)} placeholder="Paste or type the complaint as received…" className={area} />
             </div>
             <div className="grid grid-cols-3 gap-3">
               <div>
@@ -207,61 +207,61 @@ export const SmartIntakeModal: React.FC<Props> = ({ onClose, onRegistered }) => 
                 <input value={form.external_reference} onChange={(e) => set('external_reference', e.target.value)} placeholder="e.g. CPGRAMS no." className={input} />
               </div>
             </div>
-            {error && <div className="text-sm text-danger bg-danger/10 border border-danger/30 rounded-sm p-2">{error}</div>}
+            {error && <div className="text-[13px] text-bad bg-bad/5 border border-bad/30 rounded-sm p-2">{error}</div>}
           </div>
 
-          <aside className="md:col-span-2 bg-page border-l border-border p-4 space-y-3 text-sm">
+          <aside className="md:col-span-2 bg-page border-l border-line p-4 space-y-3 text-[13px]">
             <div className="font-semibold text-ink">
-              Suggestions {previewing && <span className="text-muted font-normal">· checking…</span>}
+              System suggestions {previewing && <span className="text-muted font-normal">· checking…</span>}
             </div>
             {!preview && <div className="text-muted">Start typing the institution and complaint to see the suggested link, category, priority and duplicate check.</div>}
             {preview && (
               <>
-                <div className={panel}>
+                <Card className="p-3">
                   <div className={panelTitle}>Institution</div>
                   {preview.institution ? (
                     <>
                       <div className="font-medium text-ink mt-0.5">{preview.institution.canonical_name}</div>
-                      <div className={preview.institution.match_status === 'PENDING_REVIEW' ? 'text-warning' : 'text-success'}>
+                      <div className={preview.institution.match_status === 'PENDING_REVIEW' ? 'text-warn' : 'text-ok'}>
                         {preview.institution.match_status === 'PENDING_REVIEW' ? 'Needs officer confirmation' : 'Confident match'} · {Math.round(preview.institution.score)}%
                       </div>
-                      <div className="text-xs text-muted mt-0.5">{preview.institution.details}</div>
+                      <div className="text-[12px] text-muted mt-0.5">{preview.institution.details}</div>
                     </>
                   ) : (
-                    <div className="text-danger mt-0.5">{preview.institution_error || 'Not identified yet'}</div>
+                    <div className="text-bad mt-0.5">{preview.institution_error || 'Not identified yet'}</div>
                   )}
-                </div>
+                </Card>
                 {preview.category && (
-                  <div className={panel}>
+                  <Card className="p-3">
                     <div className={panelTitle}>Category</div>
                     {preview.category.source === 'AUTO' ? (
                       <>
                         <div className="font-medium text-ink mt-0.5">{preview.category.value} <span className="text-muted font-normal">· Suggested {pct(preview.category.confidence)}</span></div>
-                        {preview.category.evidence.length > 0 && <div className="text-xs text-muted">because of: {preview.category.evidence.join(', ')}</div>}
-                        {preview.category.alternatives[0] && <div className="text-xs text-muted">next best: {preview.category.alternatives[0].category} ({pct(preview.category.alternatives[0].confidence)})</div>}
+                        {preview.category.evidence.length > 0 && <div className="text-[12px] text-muted">because of: {preview.category.evidence.join(', ')}</div>}
+                        {preview.category.alternatives[0] && <div className="text-[12px] text-muted">next best: {preview.category.alternatives[0].category} ({pct(preview.category.alternatives[0].confidence)})</div>}
                       </>
                     ) : (
                       <div className="text-ink mt-0.5">Officer selected · suggested {preview.category.suggested} ({pct(preview.category.suggested_confidence)})</div>
                     )}
-                  </div>
+                  </Card>
                 )}
                 {preview.priority && (
-                  <div className={panel}>
+                  <Card className="p-3">
                     <div className={panelTitle}>Suggested priority</div>
                     <div className="font-medium text-ink mt-0.5">{preview.priority.priority}</div>
-                    <div className="text-xs text-muted">{preview.priority.reason}</div>
-                  </div>
+                    <div className="text-[12px] text-muted">{preview.priority.reason}</div>
+                  </Card>
                 )}
                 {preview.possible_duplicates.length > 0 && (
-                  <div className="p-3 rounded-sm bg-warning/10 border border-warning/30 text-ink">
-                    <div className="text-xs font-medium text-warning">Possible duplicates</div>
+                  <Card className="p-3 border-warn/30 bg-warn/5 text-ink">
+                    <div className="text-[12px] font-medium text-warn">Possible duplicates</div>
                     {preview.possible_duplicates.map((d) => (
                       <div key={d.case_id} className="mt-1">
                         <Link to={`/cases/${d.case_id}`} target="_blank" className="font-mono underline">{d.case_id}</Link> · {d.bureau_id.replace('BUR-', '')} · {Math.round(d.score)}%
-                        <div className="text-xs text-muted">{d.reasons.join(', ')}</div>
+                        <div className="text-[12px] text-muted">{d.reasons.join(', ')}</div>
                       </div>
                     ))}
-                  </div>
+                  </Card>
                 )}
               </>
             )}

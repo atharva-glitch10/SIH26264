@@ -3,20 +3,27 @@ import PageHeader from '../components/ui/PageHeader';
 import Tag, { TagTone } from '../components/ui/Tag';
 import { Card, CardHeader, CardBody } from '../components/ui/Card';
 
-const Rules: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="p-3 rounded-sm bg-page border border-border space-y-1 text-sm">{children}</div>
+const Rules: React.FC<{ items: { term: string; detail: string }[] }> = ({ items }) => (
+  <dl className="rounded-sm border border-line divide-y divide-line text-[13px]">
+    {items.map((item) => (
+      <div key={item.term} className="px-3 py-2">
+        <dt className="font-semibold text-ink">{item.term}</dt>
+        <dd className="text-muted">{item.detail}</dd>
+      </div>
+    ))}
+  </dl>
 );
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
   <Card>
     <CardHeader title={title} />
-    <CardBody className="space-y-3 text-sm">{children}</CardBody>
+    <CardBody className="space-y-3 text-[13px]">{children}</CardBody>
   </Card>
 );
 
 const SLA: { label: string; days: number; tone: TagTone }[] = [
-  { label: 'Urgent', days: 15, tone: 'danger' },
-  { label: 'High', days: 30, tone: 'warning' },
+  { label: 'Urgent', days: 15, tone: 'bad' },
+  { label: 'High', days: 30, tone: 'warn' },
   { label: 'Medium', days: 45, tone: 'neutral' },
   { label: 'Low', days: 60, tone: 'neutral' },
 ];
@@ -31,70 +38,80 @@ export const SettingsPage: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Section title="Workflow state transitions">
-          <Rules>
-            <div><strong>RECEIVED</strong> → PENDING, UNDER_PROCESS, TRANSFERRED</div>
-            <div><strong>PENDING</strong> → UNDER_PROCESS, TRANSFERRED, ESCALATED</div>
-            <div><strong>UNDER_PROCESS</strong> → TRANSFERRED, ESCALATED, DISPOSED</div>
-            <div><strong>TRANSFERRED</strong> → PENDING, UNDER_PROCESS, ESCALATED</div>
-            <div><strong>ESCALATED</strong> → UNDER_PROCESS, DISPOSED</div>
-            <div><strong>DISPOSED</strong> → CLOSED, UNDER_PROCESS (Reopen)</div>
-          </Rules>
-          <p className="text-xs text-muted">
+          <Rules
+            items={[
+              { term: 'RECEIVED', detail: 'PENDING, UNDER_PROCESS, TRANSFERRED' },
+              { term: 'PENDING', detail: 'UNDER_PROCESS, TRANSFERRED, ESCALATED' },
+              { term: 'UNDER_PROCESS', detail: 'TRANSFERRED, ESCALATED, DISPOSED' },
+              { term: 'TRANSFERRED', detail: 'PENDING, UNDER_PROCESS, ESCALATED' },
+              { term: 'ESCALATED', detail: 'UNDER_PROCESS, DISPOSED' },
+              { term: 'DISPOSED', detail: 'CLOSED, UNDER_PROCESS (Reopen)' },
+            ]}
+          />
+          <p className="text-[12px] text-muted">
             Transitions are validated on the backend API. Arbitrary status modifications without action records are rejected.
           </p>
         </Section>
 
         <Section title="SLA resolution windows">
-          <div className="grid grid-cols-2 gap-2">
+          <dl className="rounded-sm border border-line divide-y divide-line text-[13px]">
             {SLA.map((s) => (
-              <div key={s.label} className="p-2 rounded-sm border border-border flex items-center justify-between">
-                <Tag tone={s.tone}>{s.label}</Tag>
-                <span className="font-medium">{s.days} days</span>
+              <div key={s.label} className="px-3 py-2 flex items-center justify-between">
+                <dt><Tag tone={s.tone}>{s.label}</Tag></dt>
+                <dd className="font-medium tabular-nums">{s.days} days</dd>
               </div>
             ))}
-          </div>
-          <p className="text-xs text-muted">
+          </dl>
+          <p className="text-[12px] text-muted">
             Approaching deadline warnings fire within 7 days and 3 days of target disposal date.
           </p>
         </Section>
 
         <Section title="Overlap engine triggers">
-          <Rules>
-            <div><strong>Rule A:</strong> ≥ 2 active cases on same institution across ≥ 2 Bureaus (MEDIUM; HIGH if any case is High/Urgent)</div>
-            <div><strong>Rule B:</strong> A cross-bureau pair shares the same or a related category cluster (HIGH)</div>
-            <div><strong>Rule C:</strong> Cross-bureau descriptions ≥ 70% similar after removing the institution name (CRITICAL)</div>
-            <div><strong>Rule D:</strong> One open alert per institution + bureau set; re-scans update it instead of duplicating</div>
-          </Rules>
+          <Rules
+            items={[
+              { term: 'Rule A', detail: '≥ 2 active cases on same institution across ≥ 2 Bureaus (MEDIUM; HIGH if any case is High/Urgent)' },
+              { term: 'Rule B', detail: 'A cross-bureau pair shares the same or a related category cluster (HIGH)' },
+              { term: 'Rule C', detail: 'Cross-bureau descriptions ≥ 70% similar after removing the institution name (CRITICAL)' },
+              { term: 'Rule D', detail: 'One open alert per institution + bureau set; re-scans update it instead of duplicating' },
+            ]}
+          />
         </Section>
 
         <Section title="Matching safety margins">
-          <Rules>
-            <div><strong>AICTE Permanent ID match:</strong> 100% direct link</div>
-            <div><strong>Canonical exact match:</strong> 100% direct link</div>
-            <div><strong>Verified alias:</strong> 98% direct link</div>
-            <div><strong>Score ≥ 90%:</strong> auto-match if the next candidate is ≥ 10 points lower</div>
-            <div><strong>Score 75 - 89% or ambiguous:</strong> case created as "pending review" and routed to the verification queue</div>
-            <div><strong>Fuzzy score:</strong> 70% distinctive name words + 30% full name; abbreviations (Engg, Instt, Mgmt…) expanded</div>
-          </Rules>
+          <Rules
+            items={[
+              { term: 'AICTE Permanent ID match', detail: '100% direct link' },
+              { term: 'Canonical exact match', detail: '100% direct link' },
+              { term: 'Verified alias', detail: '98% direct link' },
+              { term: 'Score ≥ 90%', detail: 'auto-match if the next candidate is ≥ 10 points lower' },
+              { term: 'Score 75 - 89% or ambiguous', detail: 'case created as "pending review" and routed to the verification queue' },
+              { term: 'Fuzzy score', detail: '70% distinctive name words + 30% full name; abbreviations (Engg, Instt, Mgmt…) expanded' },
+            ]}
+          />
         </Section>
 
         <Section title="Intake: categorisation and duplicates">
-          <Rules>
-            <div><strong>Category:</strong> Naive Bayes classifier suggests a category with confidence; officer corrections retrain it</div>
-            <div><strong>Priority hint:</strong> safety terms (ragging, fire, assault…) → URGENT; capitation, withheld certificates… → HIGH</div>
-            <div><strong>Duplicate score:</strong> 70% paraphrase-tolerant text similarity + 20% same complainant + 7% same category + 3% date proximity</div>
-            <div><strong>Flag at:</strong> ≥ 60 (look-back 180 days, all bureaus) · proposed link, officer confirms or dismisses</div>
-          </Rules>
+          <Rules
+            items={[
+              { term: 'Category', detail: 'Naive Bayes classifier suggests a category with confidence; officer corrections retrain it' },
+              { term: 'Priority hint', detail: 'safety terms (ragging, fire, assault…) → URGENT; capitation, withheld certificates… → HIGH' },
+              { term: 'Duplicate score', detail: '70% paraphrase-tolerant text similarity + 20% same complainant + 7% same category + 3% date proximity' },
+              { term: 'Flag at', detail: '≥ 60 (look-back 180 days, all bureaus) · proposed link, officer confirms or dismisses' },
+            ]}
+          />
         </Section>
 
         <Section title="Background SLA monitor (every 15 min)">
-          <Rules>
-            <div><strong>Reminders:</strong> 7, 3 and 1 day before the SLA deadline</div>
-            <div><strong>Breach alert:</strong> once a case passes its deadline</div>
-            <div><strong>Stagnant case:</strong> no action for 14 days (repeats every 14 days)</div>
-            <div><strong>Transfer not acknowledged:</strong> still TRANSFERRED after 5 days</div>
-            <div><strong>Auto-escalation:</strong> when elapsed time reaches 1.5× the SLA window</div>
-          </Rules>
+          <Rules
+            items={[
+              { term: 'Reminders', detail: '7, 3 and 1 day before the SLA deadline' },
+              { term: 'Breach alert', detail: 'once a case passes its deadline' },
+              { term: 'Stagnant case', detail: 'no action for 14 days (repeats every 14 days)' },
+              { term: 'Transfer not acknowledged', detail: 'still TRANSFERRED after 5 days' },
+              { term: 'Auto-escalation', detail: 'when elapsed time reaches 1.5× the SLA window' },
+            ]}
+          />
         </Section>
       </div>
     </div>

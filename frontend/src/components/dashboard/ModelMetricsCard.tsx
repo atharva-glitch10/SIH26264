@@ -2,17 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { api } from '../../services/api';
 import { ModelMetrics } from '../../types';
 import { Card, CardHeader, CardBody } from '../ui/Card';
+import { StatCard } from '../ui/StatCard';
 
 const pct = (v?: number | null) => (v == null ? '—' : `${(v * 100).toFixed(1)}%`);
 
 const Metric: React.FC<{ title: string; big: string; lines: string[] }> = ({ title, big, lines }) => (
-  <div className="p-4 rounded-sm bg-page border border-border">
-    <div className="text-sm text-muted">{title}</div>
-    <div className="text-2xl font-semibold text-ink mt-1">{big}</div>
-    {lines.map((l) => (
-      <div key={l} className="text-xs text-muted">{l}</div>
-    ))}
-  </div>
+  <StatCard label={title} value={big} helper={lines.join(' · ')} />
 );
 
 export const ModelMetricsCard: React.FC = () => {
@@ -27,10 +22,10 @@ export const ModelMetricsCard: React.FC = () => {
       <CardHeader title="Measured accuracy of automated matching" />
       <CardBody className="space-y-3">
         {!m.available ? (
-          <div className="text-sm text-muted">No evaluation yet. {m.message}</div>
+          <div className="text-[13px] text-muted">No evaluation yet. {m.message}</div>
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {m.classifier && (
                 <Metric
                   title="Complaint categorisation"
@@ -63,7 +58,7 @@ export const ModelMetricsCard: React.FC = () => {
                 />
               )}
             </div>
-            <div className="text-xs text-muted">
+            <div className="text-[12px] text-muted">
               {m.disclaimer} Generated {m.generated_at ? new Date(m.generated_at).toLocaleString() : ''} · matcher backend: {m.fuzzy_backend}.
             </div>
           </>

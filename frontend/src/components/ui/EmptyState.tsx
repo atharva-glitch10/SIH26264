@@ -1,24 +1,21 @@
 import type { ReactNode } from "react";
-import type { LucideIcon } from "lucide-react";
 
-interface EmptyStateProps {
+export interface EmptyStateProps {
   title: string;
-  description?: ReactNode;
+  description?: string;
   action?: ReactNode;
-  icon?: LucideIcon;
+  /** @deprecated Legacy icon slot; ignored by the current design. */
+  icon?: unknown;
 }
 
-export default function EmptyState({ title, description, action, icon: Icon }: EmptyStateProps) {
+export function EmptyState({ title, description, action }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center px-4 py-12 text-center">
-      {Icon && (
-        <span className="mb-3 flex h-12 w-12 items-center justify-center rounded-md bg-accent-soft text-accent-ink">
-          <Icon className="h-6 w-6" aria-hidden />
-        </span>
-      )}
-      <p className="text-base font-semibold text-ink">{title}</p>
-      {description && <p className="mt-1 max-w-sm text-sm text-muted">{description}</p>}
+      <p className="text-sm font-semibold text-ink">{title}</p>
+      {description && <p className="mt-1 max-w-sm text-[12px] text-muted">{description}</p>}
       {action && <div className="mt-4">{action}</div>}
     </div>
   );
 }
+
+export default EmptyState;

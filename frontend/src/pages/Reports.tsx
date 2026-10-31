@@ -5,7 +5,7 @@ import PageHeader from '../components/ui/PageHeader';
 import Button from '../components/ui/Button';
 import StatCard from '../components/ui/StatCard';
 import { Card, CardHeader } from '../components/ui/Card';
-import { Table, Th, Td, Tr } from '../components/ui/DataTable';
+import { Table, THead, Th, Td, Tr } from '../components/ui/Table';
 
 export const Reports: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -36,7 +36,7 @@ export const Reports: React.FC = () => {
   };
 
   if (loading) {
-    return <div className="flex items-center justify-center min-h-[50vh] text-sm text-muted">Generating analytics and consolidated reports…</div>;
+    return <div className="flex items-center justify-center min-h-[50vh] text-[13px] text-muted">Generating analytics and consolidated reports…</div>;
   }
 
   const { summary, disposal_rate_percentage, bureau_workload, region_distribution } = reportsData;
@@ -51,37 +51,37 @@ export const Reports: React.FC = () => {
 
       <ModelMetricsCard />
 
-      <div className="p-3 rounded-sm bg-page border border-border text-sm">
+      <div className="p-3 rounded-sm bg-page border border-line text-[13px]">
         <span className="font-medium">Report verification note:</span> figures are compiled from the local prototype repository.
         Disposal rate = (disposed cases / total registered cases) × 100. The denominator reflects historical registered records in the database.
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <StatCard
           label="Disposal performance"
           value={`${disposal_rate_percentage}%`}
           helper={`${summary.disposed_cases} of ${summary.total_cases} total complaints resolved`}
         />
-        <StatCard label="Overdue caseload" value={summary.overdue_cases} helper="Cases past statutory SLA deadline" />
+        <StatCard label="Overdue caseload" value={summary.overdue_cases} helper="Cases past statutory SLA deadline" tone="bad" />
         <StatCard label="Multi-bureau hotspots" value={summary.multi_bureau_institutions_count} helper="Colleges with split bureau investigations" />
-        <StatCard label="Open overlap alerts" value={summary.unresolved_overlap_alerts} helper="Active coordination alerts awaiting closure" />
+        <StatCard label="Open overlap alerts" value={summary.unresolved_overlap_alerts} helper="Active coordination alerts awaiting closure" tone="warn" />
       </div>
 
       <Card className="overflow-hidden">
         <CardHeader title="Bureau-wise grievance and disposal performance" />
         <Table>
-          <thead>
+          <THead>
             <tr>
               <Th>Bureau / cell code</Th>
               <Th>Bureau description</Th>
-              <Th className="text-right">Total volume</Th>
-              <Th className="text-right">Under process</Th>
-              <Th className="text-right">Disposed</Th>
-              <Th className="text-right">Escalated</Th>
-              <Th className="text-right">Overdue</Th>
-              <Th className="text-right">Disposal rate</Th>
+              <Th align="right">Total volume</Th>
+              <Th align="right">Under process</Th>
+              <Th align="right">Disposed</Th>
+              <Th align="right">Escalated</Th>
+              <Th align="right">Overdue</Th>
+              <Th align="right">Disposal rate</Th>
             </tr>
-          </thead>
+          </THead>
           <tbody>
             {bureau_workload.map((b: any) => {
               const rate = b.total_cases > 0 ? Math.round((b.disposed_cases / b.total_cases) * 100) : 0;
@@ -89,12 +89,12 @@ export const Reports: React.FC = () => {
                 <Tr key={b.bureau_id}>
                   <Td className="font-medium">{b.bureau_code}</Td>
                   <Td>{b.bureau_name}</Td>
-                  <Td className="text-right tabular-nums">{b.total_cases}</Td>
-                  <Td className="text-right tabular-nums">{b.under_process_cases}</Td>
-                  <Td className="text-right tabular-nums">{b.disposed_cases}</Td>
-                  <Td className="text-right tabular-nums">{b.escalated_cases}</Td>
-                  <Td className="text-right tabular-nums">{b.overdue_cases}</Td>
-                  <Td className="text-right tabular-nums font-medium">{rate}%</Td>
+                  <Td align="right" className="tabular-nums">{b.total_cases}</Td>
+                  <Td align="right" className="tabular-nums">{b.under_process_cases}</Td>
+                  <Td align="right" className="tabular-nums">{b.disposed_cases}</Td>
+                  <Td align="right" className="tabular-nums">{b.escalated_cases}</Td>
+                  <Td align="right" className="tabular-nums">{b.overdue_cases}</Td>
+                  <Td align="right" className="tabular-nums font-medium">{rate}%</Td>
                 </Tr>
               );
             })}
@@ -103,27 +103,27 @@ export const Reports: React.FC = () => {
       </Card>
 
       <Card className="overflow-hidden">
-        <CardHeader title="Regional distribution and compliance" actions={<span className="text-xs text-muted">Across 7 AICTE regional councils</span>} />
+        <CardHeader title="Regional distribution and compliance" actions={<span className="text-[12px] text-muted">Across 7 AICTE regional councils</span>} />
         <Table>
-          <thead>
+          <THead>
             <tr>
               <Th>Regional council</Th>
-              <Th className="text-right">Colleges monitored</Th>
-              <Th className="text-right">Cumulative complaints</Th>
-              <Th className="text-right">Active complaints</Th>
-              <Th className="text-right">Average complaints per college</Th>
+              <Th align="right">Colleges monitored</Th>
+              <Th align="right">Cumulative complaints</Th>
+              <Th align="right">Active complaints</Th>
+              <Th align="right">Average complaints per college</Th>
             </tr>
-          </thead>
+          </THead>
           <tbody>
             {region_distribution.map((r: any) => {
               const avg = r.institutions_count > 0 ? (r.count / r.institutions_count).toFixed(1) : '0';
               return (
                 <Tr key={r.region}>
                   <Td className="font-medium">{r.region} Region</Td>
-                  <Td className="text-right tabular-nums">{r.institutions_count}</Td>
-                  <Td className="text-right tabular-nums">{r.count}</Td>
-                  <Td className="text-right tabular-nums">{r.active_cases}</Td>
-                  <Td className="text-right tabular-nums font-medium">{avg}</Td>
+                  <Td align="right" className="tabular-nums">{r.institutions_count}</Td>
+                  <Td align="right" className="tabular-nums">{r.count}</Td>
+                  <Td align="right" className="tabular-nums">{r.active_cases}</Td>
+                  <Td align="right" className="tabular-nums font-medium">{avg}</Td>
                 </Tr>
               );
             })}

@@ -6,9 +6,9 @@ import { DemoAccount } from '../types';
 import { useT } from '../i18n';
 import Button from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
-import { Table, Th, Td, Tr } from '../components/ui/DataTable';
+import { Table, THead, Th, Td, Tr } from '../components/ui/Table';
 
-const inputClass = 'mt-1 w-full h-9 px-3 text-sm bg-surface border border-border rounded-sm text-ink';
+const inputClass = 'mt-1 w-full h-9 px-3 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted';
 
 export const Login: React.FC = () => {
   const { user, login } = useAuth();
@@ -51,27 +51,28 @@ export const Login: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-page">
-      <div className="bg-brand text-white p-10 lg:p-16 flex flex-col justify-center">
-        <p className="text-sm text-white/80">All India Council for Technical Education</p>
-        <h1 className="mt-2 text-2xl font-semibold">Complaint Monitoring System</h1>
-        <p className="mt-4 max-w-md text-sm leading-relaxed text-white/90">
-          A single view of every complaint about an institution, whichever Bureau or Cell received it.
+    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-page">
+      <div className="bg-brand text-white p-10 flex flex-col justify-center">
+        <p className="text-[13px] opacity-80">All India Council for Technical Education</p>
+        <h1 className="mt-2 text-2xl font-semibold">Institution Complaint Monitoring System</h1>
+        <p className="mt-4 max-w-md text-[13px] leading-relaxed opacity-80">
+          A single view of every complaint about an institution, whichever Bureau or Cell received it,
+          with deadlines and ownership recorded in one place.
         </p>
-        <ul className="mt-8 space-y-2 text-sm text-white/90 list-disc pl-5 max-w-md">
-          <li>Complaints are linked to institutions and checked for duplicates and overlaps.</li>
-          <li>Service-level deadlines are tracked, with alerts for overdue cases.</li>
-          <li>Access is role-based and every action is recorded in an audit log.</li>
+        <ul className="mt-6 space-y-2 text-[13px] opacity-80 list-disc pl-5 max-w-md">
+          <li>Single view of complaints across RB, PGRC and other cells</li>
+          <li>Role-based access with full audit trail</li>
+          <li>Automatic institution linking and duplicate checks</li>
         </ul>
       </div>
 
-      <div className="p-6 lg:p-16 flex items-center">
+      <div className="p-6 md:p-10 flex items-center">
         <Card className="w-full max-w-md p-6 mx-auto">
           <h2 className="text-xl font-semibold text-ink">{t('login.title')}</h2>
-          <p className="text-sm text-muted mt-1">{t('login.subtitle')}</p>
+          <p className="text-[13px] text-muted mt-1">{t('login.subtitle')}</p>
           <form onSubmit={submit} className="mt-6 space-y-4">
             <label className="block">
-              <span className="text-sm font-medium text-ink">{t('login.username')}</span>
+              <span className="text-[13px] font-medium text-ink">{t('login.username')}</span>
               <input
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
@@ -82,7 +83,7 @@ export const Login: React.FC = () => {
               />
             </label>
             <label className="block">
-              <span className="text-sm font-medium text-ink">{t('login.password')}</span>
+              <span className="text-[13px] font-medium text-ink">{t('login.password')}</span>
               <input
                 type="password"
                 value={password}
@@ -92,7 +93,7 @@ export const Login: React.FC = () => {
                 required
               />
             </label>
-            <label className="flex items-start gap-2 text-sm text-ink">
+            <label className="flex items-start gap-2 text-[13px] text-ink">
               <input
                 type="checkbox"
                 checked={agreed}
@@ -105,48 +106,44 @@ export const Login: React.FC = () => {
               </span>
             </label>
             {error && (
-              <div className="text-sm text-danger bg-danger/10 border border-danger/30 rounded-sm p-2">{error}</div>
+              <div className="text-[13px] text-bad bg-bad/5 border border-bad/30 rounded-sm p-2">{error}</div>
             )}
             <Button type="submit" disabled={busy || !agreed} className="w-full">
               {busy ? t('login.submitting') : t('login.submit')}
             </Button>
           </form>
 
-          <div className="mt-4 text-sm text-muted text-center">
+          <div className="mt-4 text-[13px] text-muted text-center">
             {t('login.complainant')}{' '}
             <Link to="/track" className="font-medium hover:underline">{t('login.track')}</Link>
           </div>
 
           {demo && demo.accounts.length > 0 && (
-            <div className="mt-6 border-t border-border pt-4">
-              <p className="text-xs text-muted">
-                Demo officers (synthetic data) · password{' '}
+            <div className="mt-6 border-t border-line pt-4">
+              <p className="text-[12px] text-muted">
+                Demo password (synthetic data){' '}
                 <span className="font-mono text-ink">{demo.demo_password}</span>
               </p>
-              <div className="mt-2 max-h-48 overflow-y-auto border border-border rounded-sm">
+              <div className="mt-2 max-h-48 overflow-y-auto border border-line rounded-sm">
                 <Table>
-                  <thead>
+                  <THead>
                     <tr>
-                      <Th className="px-3">Officer</Th>
-                      <Th className="px-3">Role</Th>
-                      <Th className="px-3">Bureau</Th>
-                      <Th className="px-3"><span className="sr-only">Use</span></Th>
+                      <Th>Officer</Th>
+                      <Th>Role</Th>
+                      <Th>Bureau</Th>
+                      <Th><span className="sr-only">Use</span></Th>
                     </tr>
-                  </thead>
+                  </THead>
                   <tbody>
                     {demo.accounts.map((acc) => (
                       <Tr key={acc.user_id}>
-                        <Td className="px-3 py-1.5">{acc.display_name}</Td>
-                        <Td className="px-3 py-1.5 text-muted">{roleLabel(acc.role)}</Td>
-                        <Td className="px-3 py-1.5 text-muted">{acc.bureau_id ? acc.bureau_id.replace('BUR-', '') : '—'}</Td>
-                        <Td className="px-3 py-1.5">
-                          <button
-                            type="button"
-                            onClick={() => fillDemo(acc)}
-                            className="text-brand-accent hover:underline"
-                          >
+                        <Td className="py-1.5">{acc.display_name}</Td>
+                        <Td className="py-1.5 text-muted">{roleLabel(acc.role)}</Td>
+                        <Td className="py-1.5 text-muted">{acc.bureau_id ? acc.bureau_id.replace('BUR-', '') : '—'}</Td>
+                        <Td className="py-1.5">
+                          <Button type="button" variant="ghost" size="sm" onClick={() => fillDemo(acc)}>
                             Use
-                          </button>
+                          </Button>
                         </Td>
                       </Tr>
                     ))}

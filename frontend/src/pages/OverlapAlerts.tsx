@@ -8,10 +8,19 @@ import Button from '../components/ui/Button';
 import Tag, { TagTone } from '../components/ui/Tag';
 import Modal from '../components/ui/Modal';
 import { Card, CardHeader, CardBody } from '../components/ui/Card';
-import { inputClass, labelClass, priorityTone, selectClass, statusTone, toggleClass } from '../components/ui/styles';
+import { priorityTone, statusTone } from '../components/ui/styles';
 
-const severityTone = (s?: string): TagTone => (s === 'CRITICAL' ? 'danger' : s === 'HIGH' ? 'warning' : 'neutral');
-const alertStatusTone = (s?: string): TagTone => (s === 'RESOLVED' ? 'success' : s === 'DISMISSED' ? 'neutral' : 'warning');
+const inputClass = 'w-full h-9 px-3 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted';
+const areaClass = 'w-full px-3 py-2 text-[13px] bg-white border border-line rounded-sm text-ink placeholder:text-muted';
+const labelClass = 'block text-[12px] font-medium text-ink mb-1';
+const selectClass = 'h-9 px-2.5 text-[13px] bg-white border border-line rounded-sm text-ink';
+const toggleClass = (active: boolean) =>
+  `h-8 px-2.5 text-[12px] font-medium rounded-sm border ${
+    active ? 'bg-brand text-white border-brand' : 'bg-white text-ink border-line hover:bg-page'
+  }`;
+
+const severityTone = (s?: string): TagTone => (s === 'CRITICAL' ? 'bad' : s === 'HIGH' ? 'warn' : 'neutral');
+const alertStatusTone = (s?: string): TagTone => (s === 'RESOLVED' ? 'ok' : s === 'DISMISSED' ? 'neutral' : 'warn');
 
 export const OverlapAlerts: React.FC = () => {
   const { currentRole, refreshSummary } = useOutletContext<{ currentRole: string; refreshSummary: () => void }>();
@@ -171,7 +180,7 @@ export const OverlapAlerts: React.FC = () => {
         }
       />
 
-      <Card className="p-3 flex flex-wrap items-center justify-between gap-3 text-sm">
+      <Card className="p-3 flex flex-wrap items-center justify-between gap-3 text-[13px]">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-muted">Lifecycle:</span>
           {['ALL', 'NEW', 'COORDINATION_REQUIRED', 'LINKED_ACKNOWLEDGED', 'RESOLVED', 'DISMISSED'].map((st) => (
@@ -179,7 +188,7 @@ export const OverlapAlerts: React.FC = () => {
               key={st}
               onClick={() => setStatusFilter(st)}
               aria-pressed={statusFilter === st}
-              className={`${toggleClass(statusFilter === st)} !h-8 !text-xs`}
+              className={toggleClass(statusFilter === st)}
             >
               {st}
             </button>
@@ -201,11 +210,11 @@ export const OverlapAlerts: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         <Card className="lg:col-span-4 overflow-hidden flex flex-col max-h-[800px]">
           <CardHeader title={`Flagged institutions (${alerts.length})`} />
-          <div className="overflow-y-auto divide-y divide-border flex-1">
+          <div className="overflow-y-auto divide-y divide-line flex-1">
             {loading ? (
-              <div className="p-8 text-center text-sm text-muted">Loading alerts...</div>
+              <div className="p-8 text-center text-[13px] text-muted">Loading alerts...</div>
             ) : alerts.length === 0 ? (
-              <div className="p-8 text-center text-sm text-muted">No overlap alerts found.</div>
+              <div className="p-8 text-center text-[13px] text-muted">No overlap alerts found.</div>
             ) : (
               alerts.map((alt) => {
                 const isSelected = alt.alert_id === selectedAlertId;
@@ -218,11 +227,11 @@ export const OverlapAlerts: React.FC = () => {
                     }`}
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted">{alt.alert_id}</span>
+                      <span className="text-[12px] text-muted">{alt.alert_id}</span>
                       <Tag tone={severityTone(alt.severity)}>{alt.severity}</Tag>
                     </div>
-                    <h4 className="font-medium text-sm mt-1 leading-snug line-clamp-2">{alt.institution_name}</h4>
-                    <div className="mt-2 flex items-center justify-between text-xs text-muted">
+                    <h4 className="font-medium text-[13px] mt-1 leading-snug line-clamp-2">{alt.institution_name}</h4>
+                    <div className="mt-2 flex items-center justify-between text-[12px] text-muted">
                       <span>{alt.cases_count} cases · {alt.participating_bureaus.join(', ')}</span>
                       <Tag>{alt.status}</Tag>
                     </div>
@@ -235,7 +244,7 @@ export const OverlapAlerts: React.FC = () => {
 
         <div className="lg:col-span-8 space-y-6">
           {detailLoading ? (
-            <Card className="p-12 text-center text-muted text-sm">Loading side-by-side case inspection...</Card>
+            <Card className="p-12 text-center text-muted text-[13px]">Loading side-by-side case inspection...</Card>
           ) : selectedAlertDetail ? (
             <div className="space-y-6">
               <Card>
@@ -248,7 +257,7 @@ export const OverlapAlerts: React.FC = () => {
                         <Tag>{selectedAlertDetail.participating_bureaus.join(' & ')} concurrent</Tag>
                       </div>
                       <h2 className="text-lg font-semibold">{selectedAlertDetail.institution_name}</h2>
-                      <p className="text-xs text-muted">
+                      <p className="text-[12px] text-muted">
                         Institution ID: {selectedAlertDetail.institution_id} · Permanent ID: {selectedAlertDetail.aicte_permanent_id || 'PENDING'}
                       </p>
                     </div>
@@ -265,16 +274,16 @@ export const OverlapAlerts: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-sm border border-warning/30 bg-warning/5 space-y-2 text-sm">
+                  <div className="p-4 rounded-sm border border-warn/30 bg-warn/5 space-y-2 text-[13px]">
                     <div className="font-medium">Detection finding</div>
                     <p className="leading-relaxed">{selectedAlertDetail.explanation}</p>
-                    <div className="pt-2 border-t border-warning/30">
+                    <div className="pt-2 border-t border-warn/30">
                       <span className="font-medium">Recommended inter-bureau step:</span> {selectedAlertDetail.recommended_action}
                     </div>
                   </div>
 
                   {selectedAlertDetail.resolution_reason && (
-                    <div className="bg-page p-3 rounded-sm border border-border text-sm space-y-1">
+                    <div className="bg-page p-3 rounded-sm border border-line text-[13px] space-y-1">
                       <span className="font-medium">Recorded resolution / justification</span>
                       <p className="text-muted">{selectedAlertDetail.resolution_reason}</p>
                     </div>
@@ -284,18 +293,18 @@ export const OverlapAlerts: React.FC = () => {
 
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-sm font-semibold">Side-by-side inter-bureau case comparison</h3>
-                  <span className="text-xs text-muted">Comparing {selectedAlertDetail.cases?.length || 0} active matters</span>
+                  <h3 className="text-[13px] font-semibold">Side-by-side inter-bureau case comparison</h3>
+                  <span className="text-[12px] text-muted">Comparing {selectedAlertDetail.cases?.length || 0} active matters</span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {selectedAlertDetail.cases?.map((c, idx) => (
                     <Card key={c.case_id}>
-                      <div className="flex items-center justify-between border-b border-border px-4 py-3">
-                        <span className="text-sm font-medium">Case {idx + 1}: {c.complaint_reference}</span>
+                      <div className="flex items-center justify-between border-b border-line px-4 py-3">
+                        <span className="text-[13px] font-medium">Case {idx + 1}: {c.complaint_reference}</span>
                         <Tag>{c.bureau_code}</Tag>
                       </div>
-                      <CardBody className="space-y-3 text-sm">
+                      <CardBody className="space-y-3 text-[13px]">
                         <dl className="space-y-1.5">
                           <div className="flex justify-between gap-3"><dt className="text-muted">Status</dt><dd><Tag tone={statusTone(c.status)}>{c.status}</Tag></dd></div>
                           <div className="flex justify-between gap-3"><dt className="text-muted">Priority</dt><dd><Tag tone={priorityTone(c.priority)}>{c.priority}</Tag></dd></div>
@@ -303,18 +312,18 @@ export const OverlapAlerts: React.FC = () => {
                           <div className="flex justify-between gap-3"><dt className="text-muted">Assigned officer</dt><dd>{c.assigned_user_name || 'Unassigned'}</dd></div>
                           <div className="flex justify-between gap-3"><dt className="text-muted">Date of receipt</dt><dd>{new Date(c.received_at).toLocaleDateString()}</dd></div>
                         </dl>
-                        <div className="pt-2 border-t border-border space-y-2">
+                        <div className="pt-2 border-t border-line space-y-2">
                           <div>
-                            <span className="text-xs text-muted block">Last action</span>
+                            <span className="text-[12px] text-muted block">Last action</span>
                             <p className="mt-0.5 leading-snug">{c.last_action_summary || 'N/A'}</p>
                           </div>
                           <div>
-                            <span className="text-xs text-muted block">Next required action</span>
+                            <span className="text-[12px] text-muted block">Next required action</span>
                             <p className="mt-0.5 leading-snug">{c.next_action || 'Pending'}</p>
                           </div>
                         </div>
-                        <div className="pt-2 border-t border-border text-right">
-                          <Link to={`/cases/${c.case_id}`} className="hover:underline">View full case file</Link>
+                        <div className="pt-2 border-t border-line text-right">
+                          <Link to={`/cases/${c.case_id}`} className="text-brand hover:underline">View full case file</Link>
                         </div>
                       </CardBody>
                     </Card>
@@ -323,7 +332,7 @@ export const OverlapAlerts: React.FC = () => {
               </div>
             </div>
           ) : (
-            <Card className="p-12 text-center text-muted text-sm">
+            <Card className="p-12 text-center text-muted text-[13px]">
               Select an overlap alert from the left panel to inspect participating cases.
             </Card>
           )}
@@ -356,7 +365,7 @@ export const OverlapAlerts: React.FC = () => {
           </div>
           <div>
             <label className={labelClass}>Linkage justification / coordination plan *</label>
-            <textarea required rows={3} value={linkReason} onChange={(e) => setLinkReason(e.target.value)} className={inputClass} />
+            <textarea required rows={3} value={linkReason} onChange={(e) => setLinkReason(e.target.value)} className={areaClass} />
           </div>
         </form>
       </Modal>
@@ -379,7 +388,7 @@ export const OverlapAlerts: React.FC = () => {
           </div>
           <div>
             <label className={labelClass}>Resolution explanation *</label>
-            <textarea required rows={4} value={resolutionReason} onChange={(e) => setResolutionReason(e.target.value)} className={inputClass} />
+            <textarea required rows={4} value={resolutionReason} onChange={(e) => setResolutionReason(e.target.value)} className={areaClass} />
           </div>
         </form>
       </Modal>
@@ -399,7 +408,7 @@ export const OverlapAlerts: React.FC = () => {
               value={dismissJustification}
               onChange={(e) => setDismissJustification(e.target.value)}
               placeholder="Explain why these complaints represent distinct non-overlapping matters not requiring joint inter-bureau proceedings..."
-              className={inputClass}
+              className={areaClass}
             />
           </div>
         </form>
