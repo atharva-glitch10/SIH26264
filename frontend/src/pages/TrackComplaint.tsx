@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Search, Shield, ArrowRight, Building, Clock, CheckCircle2, AlertCircle, Calendar } from 'lucide-react';
 import { api } from '../services/api';
 import { PublicStatus } from '../types';
 
 const fmt = (iso: string | null) => 
   (iso ? new Date(iso).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }) : '—');
+=======
+import { Search } from 'lucide-react';
+import { api } from '../services/api';
+import { PublicStatus } from '../types';
+
+const fmt = (iso: string | null) => (iso ? new Date(iso).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }) : '—');
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 
 export const TrackComplaint: React.FC = () => {
   const [reference, setReference] = useState('');
@@ -21,12 +29,17 @@ export const TrackComplaint: React.FC = () => {
     try {
       setResult(await api.getPublicStatus(reference.trim()));
     } catch (err: any) {
+<<<<<<< HEAD
       setError(err.response?.status === 404 ? 'No complaint found for this reference number.' : 'Could not fetch status. Please verify the reference number.');
+=======
+      setError(err.response?.status === 404 ? 'No complaint found for this reference number.' : 'Could not fetch status. Please try again.');
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
     } finally {
       setBusy(false);
     }
   };
 
+<<<<<<< HEAD
   const getStatusBadge = (status: string) => {
     const s = status.toUpperCase();
     if (s === 'DISPOSED' || s === 'RESOLVED' || s === 'CLOSED') {
@@ -180,6 +193,55 @@ export const TrackComplaint: React.FC = () => {
       <footer className="border-t border-slate-800/80 bg-slate-950/60 px-6 py-4 text-center text-xs text-slate-500">
         All India Council for Technical Education (AICTE) · Nelson Mandela Marg, Vasant Kunj, New Delhi-110070
       </footer>
+=======
+  const rows: [string, string][] = result
+    ? [
+        ['Status', result.status.replace(/_/g, ' ')],
+        ['Handling bureau', result.bureau_code || '—'],
+        ['Received on', fmt(result.received_at)],
+        ['Resolution due by', fmt(result.sla_due_at)],
+        ['Latest update', result.last_action_summary || '—'],
+      ]
+    : [];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 flex items-center justify-center p-6">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8">
+        <h1 className="text-xl font-bold text-slate-900">Track your complaint</h1>
+        <p className="text-xs text-slate-500 mt-1">Enter the reference number you received, e.g. AICTE/PGRC/2026/00005.</p>
+        <form onSubmit={submit} className="mt-6 flex gap-2">
+          <input
+            value={reference}
+            onChange={(e) => setReference(e.target.value)}
+            className="flex-1 px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+            placeholder="Complaint reference number"
+            required
+          />
+          <button
+            type="submit"
+            disabled={busy}
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg disabled:opacity-60"
+          >
+            <Search className="w-4 h-4" />
+            {busy ? 'Checking…' : 'Track'}
+          </button>
+        </form>
+        {error && <div className="mt-4 text-xs text-rose-700 bg-rose-50 border border-rose-200 rounded-lg p-2">{error}</div>}
+        {result && (
+          <dl className="mt-4 border border-slate-200 rounded-xl divide-y divide-slate-100 text-xs">
+            {rows.map(([k, v]) => (
+              <div key={k} className="flex justify-between gap-4 px-3 py-2">
+                <dt className="text-slate-500">{k}</dt>
+                <dd className="font-medium text-slate-900 text-right">{v}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+        <div className="mt-6 text-xs text-center">
+          <Link to="/login" className="text-teal-700 hover:underline">Officer sign in</Link>
+        </div>
+      </div>
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
     </div>
   );
 };

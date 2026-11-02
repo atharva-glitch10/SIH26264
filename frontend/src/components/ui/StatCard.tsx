@@ -1,11 +1,15 @@
 import type { ReactNode } from "react";
 import { Card } from "./Card";
+<<<<<<< HEAD
 import { cn } from "../../lib/cn";
+=======
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 
 export interface StatCardProps {
   label: string;
   value: ReactNode;
   helper?: string;
+<<<<<<< HEAD
   tone?: "default" | "bad" | "warn" | "ok";
   delta?: ReactNode;
   icon?: ReactNode;
@@ -58,6 +62,28 @@ export function StatCard({ label, value, helper, tone = "default", delta, icon }
         )}
       </div>
       {helper && <p className="mt-1.5 text-xs text-slate-500 line-clamp-1">{helper}</p>}
+=======
+  tone?: "default" | "bad" | "warn";
+  /** @deprecated Legacy inline emphasis rendered next to the value. */
+  delta?: ReactNode;
+}
+
+const valueTone: Record<NonNullable<StatCardProps["tone"]>, string> = {
+  default: "text-ink",
+  bad: "text-bad",
+  warn: "text-warn",
+};
+
+export function StatCard({ label, value, helper, tone = "default", delta }: StatCardProps) {
+  return (
+    <Card className="p-4">
+      <p className="text-[12px] text-muted">{label}</p>
+      <div className="mt-1 flex items-baseline gap-2">
+        <span className={`text-2xl font-semibold ${valueTone[tone]}`}>{value}</span>
+        {delta && <span className="text-[12px] text-muted">{delta}</span>}
+      </div>
+      {helper && <p className="mt-1 text-[12px] text-muted">{helper}</p>}
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
     </Card>
   );
 }

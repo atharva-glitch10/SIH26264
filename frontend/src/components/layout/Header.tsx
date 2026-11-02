@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 import { Bell, ChevronDown, Search, Globe, LogOut, X, Sparkles } from 'lucide-react';
+=======
+import { Bell, ChevronDown, X } from 'lucide-react';
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 import { api } from '../../services/api';
 import { NotificationItem } from '../../types';
 import { roleLabel, useAuth } from '../../context/AuthContext';
@@ -53,16 +57,25 @@ export const Header: React.FC = () => {
     }
   };
 
+<<<<<<< HEAD
   const unreadCount = notifications.filter((n) => !n.read_at).length;
+=======
+  const unreadCount = notifications.filter(n => !n.read_at).length;
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 
   const markAsRead = async (n: NotificationItem) => {
     try {
       if (!n.read_at) {
         await api.markNotificationRead(n.notification_id);
+<<<<<<< HEAD
         setNotifications((prev) =>
           prev.map((x) =>
             x.notification_id === n.notification_id ? { ...x, read_at: new Date().toISOString() } : x
           )
+=======
+        setNotifications(prev =>
+          prev.map(x => (x.notification_id === n.notification_id ? { ...x, read_at: new Date().toISOString() } : x))
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
         );
       }
       const link = referenceLink(n);
@@ -77,6 +90,7 @@ export const Header: React.FC = () => {
 
   const bureau = user?.bureau_id ? user.bureau_id.replace('BUR-', '') : '';
 
+<<<<<<< HEAD
   // Get user initials for avatar
   const initials = user?.display_name
     ? user.display_name
@@ -123,11 +137,38 @@ export const Header: React.FC = () => {
           >
             <Globe className="w-3.5 h-3.5 text-slate-400" />
             <span>{lang === 'en' ? 'हिन्दी' : 'English'}</span>
+=======
+  return (
+    <header className="sticky top-0 z-20">
+      <div className="text-[12px] text-muted bg-page border-b border-line px-5 py-1">
+        Demonstration environment · synthetic data
+      </div>
+
+      <div className="h-14 px-5 bg-white border-b border-line flex items-center justify-between gap-4">
+        <form onSubmit={handleSearchSubmit} className="flex-1 max-w-[420px]">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search case reference, institution or Permanent ID"
+            className="h-9 w-full border border-line rounded-sm px-3 text-[13px] bg-white text-ink placeholder:text-muted"
+          />
+        </form>
+
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setLang(lang === 'en' ? 'hi' : 'en')}
+            title={t('header.language')}
+            className="h-8 px-3 rounded-sm border border-line text-[13px] text-ink hover:bg-page"
+          >
+            {lang === 'en' ? 'हिन्दी' : 'English'}
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
           </button>
 
           {/* Notifications */}
           <div className="relative">
             <button
+<<<<<<< HEAD
               onClick={() => {
                 setShowNotifications(!showNotifications);
                 setShowUserMenu(false);
@@ -161,10 +202,32 @@ export const Header: React.FC = () => {
                 <div className="max-h-80 overflow-y-auto divide-y divide-slate-100">
                   {notifications.length === 0 ? (
                     <div className="p-6 text-center text-xs text-slate-500">{t('header.noAlerts')}</div>
+=======
+              onClick={() => { setShowNotifications(!showNotifications); setShowUserMenu(false); }}
+              className="h-8 px-2 flex items-center gap-1.5 rounded-sm text-muted hover:bg-page"
+              title={t('header.alertsTitle')}
+            >
+              <Bell className="w-4 h-4" />
+              {unreadCount > 0 && <span className="text-[12px] text-muted tabular-nums">{unreadCount}</span>}
+            </button>
+
+            {showNotifications && (
+              <div className="absolute right-0 mt-2 w-80 bg-white border border-line rounded-md shadow-lg z-50 overflow-hidden">
+                <div className="px-4 py-2.5 border-b border-line flex items-center justify-between text-[13px] font-semibold text-ink">
+                  <span>{t('header.notifications')}</span>
+                  <button onClick={() => setShowNotifications(false)} className="text-muted hover:text-ink">
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+                <div className="max-h-72 overflow-y-auto divide-y divide-line">
+                  {notifications.length === 0 ? (
+                    <div className="p-4 text-center text-[13px] text-muted">{t('header.noAlerts')}</div>
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
                   ) : (
                     notifications.map((n) => (
                       <div
                         key={n.notification_id}
+<<<<<<< HEAD
                         className={`p-3.5 text-xs hover:bg-slate-50 cursor-pointer transition-colors ${
                           !n.read_at ? 'bg-blue-50/40' : ''
                         }`}
@@ -174,16 +237,29 @@ export const Header: React.FC = () => {
                           {n.message.replace(/^\[[A-Z0-9-]+\]\s*/, '')}
                         </p>
                         <div className="mt-2 flex items-center justify-between text-[11px] text-slate-400">
+=======
+                        className={`p-3 text-[13px] hover:bg-page cursor-pointer ${!n.read_at ? 'bg-brand-soft' : ''}`}
+                        onClick={() => markAsRead(n)}
+                      >
+                        <p className={`text-ink leading-snug ${!n.read_at ? 'font-medium' : ''}`}>
+                          {n.message.replace(/^\[[A-Z0-9-]+\]\s*/, '')}
+                        </p>
+                        <div className="mt-1.5 flex items-center gap-2 text-[12px] text-muted">
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
                           <Tag tone={ALERT_TONE[n.alert_type] ?? 'neutral'}>
                             {n.alert_type.replace(/_/g, ' ').toLowerCase()}
                           </Tag>
                           <span>
+<<<<<<< HEAD
                             {new Date(n.created_at).toLocaleString([], {
                               day: '2-digit',
                               month: 'short',
                               hour: '2-digit',
                               minute: '2-digit',
                             })}
+=======
+                            {new Date(n.created_at).toLocaleString([], { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
                           </span>
                         </div>
                       </div>
@@ -194,6 +270,7 @@ export const Header: React.FC = () => {
             )}
           </div>
 
+<<<<<<< HEAD
           {/* User Profile */}
           <div className="relative">
             <button
@@ -229,6 +306,29 @@ export const Header: React.FC = () => {
                   className="w-full px-3 py-2 text-left text-xs font-medium text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-2"
                 >
                   <LogOut className="w-3.5 h-3.5" />
+=======
+          {/* User menu */}
+          <div className="relative">
+            <button
+              onClick={() => { setShowUserMenu(!showUserMenu); setShowNotifications(false); }}
+              className="h-10 px-2 flex items-center gap-2 rounded-sm hover:bg-page text-left"
+            >
+              <span className="leading-tight">
+                <span className="block text-[13px] font-medium text-ink">{user?.display_name}</span>
+                <span className="block text-[12px] text-muted">
+                  {roleLabel(user?.role)}{bureau ? ` · ${bureau}` : ''}
+                </span>
+              </span>
+              <ChevronDown className="w-4 h-4 text-muted" />
+            </button>
+
+            {showUserMenu && (
+              <div className="absolute right-0 mt-2 w-40 bg-white border border-line rounded-md shadow-lg z-50 py-1">
+                <button
+                  onClick={logout}
+                  className="w-full px-4 py-2 text-left text-[13px] text-ink hover:bg-page"
+                >
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
                   {t('header.signOut')}
                 </button>
               </div>
@@ -239,5 +339,8 @@ export const Header: React.FC = () => {
     </header>
   );
 };
+<<<<<<< HEAD
 
 export default Header;
+=======
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9

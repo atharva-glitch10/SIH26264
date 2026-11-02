@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+<<<<<<< HEAD
 import {
   LayoutDashboard,
   Building2,
@@ -12,6 +13,8 @@ import {
   Sliders,
   Sparkles,
 } from 'lucide-react';
+=======
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 import { TKey, useT } from '../../i18n';
 
 interface SidebarProps {
@@ -22,9 +25,13 @@ interface SidebarProps {
 interface NavEntry {
   name: TKey;
   to: string;
+<<<<<<< HEAD
   icon: React.ComponentType<{ className?: string }>;
   count?: number;
   countTone?: 'bad' | 'warn';
+=======
+  count?: number;
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -32,20 +39,31 @@ export const Sidebar: React.FC<SidebarProps> = ({
   overdueCasesCount = 0
 }) => {
   const { t } = useT();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
   const groups: { label: string; items: NavEntry[] }[] = [
     {
       label: 'Monitoring',
       items: [
+<<<<<<< HEAD
         { name: 'nav.overview', to: '/', icon: LayoutDashboard },
         { name: 'nav.institutions', to: '/institutions', icon: Building2 },
         { name: 'nav.allCases', to: '/cases', icon: FileText, count: overdueCasesCount, countTone: 'bad' },
         { name: 'nav.overlapAlerts', to: '/overlaps', icon: GitMerge, count: unresolvedOverlapsCount, countTone: 'warn' },
+=======
+        { name: 'nav.overview', to: '/' },
+        { name: 'nav.institutions', to: '/institutions' },
+        { name: 'nav.allCases', to: '/cases', count: overdueCasesCount },
+        { name: 'nav.overlapAlerts', to: '/overlaps', count: unresolvedOverlapsCount },
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
       ],
     },
     {
       label: 'Operations',
       items: [
+<<<<<<< HEAD
         { name: 'nav.workflow', to: '/workflow', icon: GitBranch },
         { name: 'nav.import', to: '/import', icon: UploadCloud },
         { name: 'nav.dataQuality', to: '/data-quality', icon: ShieldCheck },
@@ -124,10 +142,52 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 </NavLink>
               );
             })}
+=======
+        { name: 'nav.workflow', to: '/workflow' },
+        { name: 'nav.import', to: '/import' },
+        { name: 'nav.dataQuality', to: '/data-quality' },
+      ],
+    },
+    { label: 'Insights', items: [{ name: 'nav.reports', to: '/reports' }] },
+    { label: 'Administration', items: [{ name: 'nav.settings', to: '/settings' }] },
+  ];
+
+  return (
+    <aside className="w-60 bg-white border-r border-line flex flex-col h-screen shrink-0 sticky top-0 z-30">
+      <div className="h-14 px-4 border-b border-line flex flex-col justify-center">
+        <div className="text-[13px] font-semibold text-brand leading-tight">AICTE</div>
+        <p className="text-[12px] text-muted leading-tight">Complaint Monitoring System</p>
+      </div>
+
+      <nav className="flex-1 py-2 overflow-y-auto">
+        {groups.map((group) => (
+          <div key={group.label}>
+            <div className="px-3 mt-4 mb-1 text-[11px] uppercase text-muted">{group.label}</div>
+            {group.items.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                end={item.to === '/'}
+                className={({ isActive }) =>
+                  `flex items-center justify-between gap-2 px-3 h-9 text-[13px] rounded-sm border-l-[3px] ${
+                    isActive
+                      ? 'bg-brand-soft text-brand font-medium border-brand'
+                      : 'text-ink border-transparent hover:bg-page'
+                  }`
+                }
+              >
+                <span className="truncate">{t(item.name)}</span>
+                {item.count ? (
+                  <span className="text-[12px] text-muted tabular-nums text-right">{item.count}</span>
+                ) : null}
+              </NavLink>
+            ))}
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
           </div>
         ))}
       </nav>
 
+<<<<<<< HEAD
       {/* Footer Info */}
       <div className="p-4 border-t border-slate-100 bg-slate-50/50 flex flex-col gap-2 text-xs">
         <div className="flex items-center justify-between text-slate-500 text-[11px]">
@@ -143,9 +203,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <span>·</span>
           <Link to="/track" className="hover:text-slate-600 transition-colors">Tracker</Link>
         </div>
+=======
+      <div className="px-4 py-3 border-t border-line flex flex-col gap-1 text-[12px] text-muted">
+        <Link to="/terms" className="hover:text-ink">Terms of Use</Link>
+        <Link to="/privacy" className="hover:text-ink">Privacy Notice</Link>
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
       </div>
     </aside>
   );
 };
+<<<<<<< HEAD
 
 export default Sidebar;
+=======
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9

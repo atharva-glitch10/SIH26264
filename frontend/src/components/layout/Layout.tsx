@@ -10,6 +10,10 @@ import { TermsAcceptanceModal } from '../legal/TermsAcceptanceModal';
 
 export const Layout: React.FC = () => {
   const { user } = useAuth();
+<<<<<<< HEAD
+=======
+  // Pages pass this as actor_user_id; the backend now always uses the signed-in officer from the token.
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
   const currentRole = user?.user_id || '';
   const [summary, setSummary] = useState<DashboardSummary | null>(null);
 
@@ -36,7 +40,11 @@ export const Layout: React.FC = () => {
       />
       <div className="flex-1 flex flex-col min-w-0">
         <Header />
+<<<<<<< HEAD
         <main className="flex-1 p-6 lg:p-8 overflow-y-auto">
+=======
+        <main className="flex-1 p-6 overflow-y-auto">
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
           <Outlet context={{ currentRole, currentUser: user, refreshSummary: fetchSummary }} />
         </main>
         <Footer />
@@ -45,5 +53,8 @@ export const Layout: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
 export default Layout;
+=======
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9

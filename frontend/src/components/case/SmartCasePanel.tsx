@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { AlertTriangle, Sparkles, Building2, User, Radio, Check } from 'lucide-react';
+=======
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 import { api } from '../../services/api';
 import { CaseDetail } from '../../types';
 import { Card, CardHeader, CardBody } from '../ui/Card';
@@ -17,8 +20,12 @@ const CATEGORIES = [
   'General Institutional',
 ];
 
+<<<<<<< HEAD
 const selectClass =
   'h-9 px-3 text-xs bg-white border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/15 focus:border-blue-500 shadow-xs cursor-pointer';
+=======
+const selectClass = 'h-9 px-2.5 text-[13px] bg-white border border-line rounded-sm text-ink';
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 
 interface Props {
   caseData: CaseDetail;
@@ -26,6 +33,7 @@ interface Props {
   onChanged: () => void;
 }
 
+<<<<<<< HEAD
 const Pair: React.FC<{ label: string; icon?: React.ReactNode; children: React.ReactNode }> = ({
   label,
   icon,
@@ -37,6 +45,12 @@ const Pair: React.FC<{ label: string; icon?: React.ReactNode; children: React.Re
       {label}
     </dt>
     <dd className="text-xs text-slate-900 leading-normal">{children}</dd>
+=======
+const Pair: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
+  <div>
+    <dt className="text-[12px] text-muted">{label}</dt>
+    <dd className="mt-0.5">{children}</dd>
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
   </div>
 );
 
@@ -61,6 +75,7 @@ export const SmartCasePanel: React.FC<Props> = ({ caseData, canAct, onChanged })
 
   return (
     <Card>
+<<<<<<< HEAD
       <CardHeader
         title="Smart Intake & Classification Dossier"
         description="Automated entity linking, NLP categorisation confidence, and duplicate detection findings"
@@ -107,6 +122,28 @@ export const SmartCasePanel: React.FC<Props> = ({ caseData, canAct, onChanged })
                   onClick={() => run(() => api.decideDuplicate(caseData.case_id, 'DISMISSED'))}
                   className="bg-white"
                 >
+=======
+      <CardHeader title="Intake details" />
+      <CardBody className="space-y-3">
+        {caseData.duplicate_of_case_id && (
+          <div className="p-3 rounded-sm border border-line text-[13px] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span className="flex items-start gap-2">
+              <Tag tone="warn">Possible duplicate</Tag>
+              <span>
+                Possible repeat of{' '}
+                <Link className="font-mono font-medium underline" to={`/cases/${caseData.duplicate_of_case_id}`}>
+                  {caseData.duplicate_of_case_id}
+                </Link>{' '}
+                ({Math.round(caseData.duplicate_score || 0)}% match). Check before issuing a separate notice.
+              </span>
+            </span>
+            {canAct && (
+              <div className="flex gap-2 shrink-0">
+                <Button size="sm" disabled={busy} onClick={() => run(() => api.decideDuplicate(caseData.case_id, 'CONFIRMED'))}>
+                  Confirm duplicate
+                </Button>
+                <Button size="sm" variant="secondary" disabled={busy} onClick={() => run(() => api.decideDuplicate(caseData.case_id, 'DISMISSED'))}>
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
                   Not a duplicate
                 </Button>
               </div>
@@ -114,6 +151,7 @@ export const SmartCasePanel: React.FC<Props> = ({ caseData, canAct, onChanged })
           </div>
         )}
 
+<<<<<<< HEAD
         {/* 4 Metadata Intelligence Cards */}
         <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
           <Pair label="Institution Link" icon={<Building2 className="w-3.5 h-3.5 text-blue-600" />}>
@@ -170,12 +208,43 @@ export const SmartCasePanel: React.FC<Props> = ({ caseData, canAct, onChanged })
                       {c}
                     </option>
                   ))}
+=======
+        <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-[13px]">
+          <Pair label="Institution link">
+            <div className={`font-medium ${matchStatus === 'PENDING_REVIEW' ? 'text-warn' : matchStatus === 'REJECTED' ? 'text-bad' : 'text-ok'}`}>
+              {matchStatus.replace(/_/g, ' ')}
+              {caseData.institution_match_score != null && ` · ${Math.round(caseData.institution_match_score)}%`}
+            </div>
+            {caseData.raw_institution_name && (
+              <div className="text-[12px] text-muted mt-0.5">Written as: “{caseData.raw_institution_name}”</div>
+            )}
+            {matchStatus === 'PENDING_REVIEW' && (
+              <Link to="/data-quality" className="text-[12px] text-brand underline">Confirm in data quality review queue</Link>
+            )}
+          </Pair>
+
+          <Pair label="Category">
+            <div className="font-medium">
+              {caseData.category}{' '}
+              <span className="text-muted font-normal">
+                {autoCategory ? `· suggested (${Math.round((caseData.category_confidence || 0) * 100)}%)` : '· confirmed by officer'}
+              </span>
+            </div>
+            {canAct && (
+              <div className="flex gap-1.5 mt-1.5">
+                <select value={category} onChange={(e) => setCategory(e.target.value)} className={`${selectClass} flex-1`}>
+                  {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
                 </select>
                 <Button
                   size="sm"
                   disabled={busy}
                   onClick={() => run(() => api.updateCase(caseData.case_id, { category }))}
+<<<<<<< HEAD
                   className="px-2.5 h-9 text-xs"
+=======
+                  title="Confirming improves future suggestions"
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
                 >
                   {autoCategory && category === caseData.category ? 'Confirm' : 'Save'}
                 </Button>
@@ -183,6 +252,7 @@ export const SmartCasePanel: React.FC<Props> = ({ caseData, canAct, onChanged })
             )}
           </Pair>
 
+<<<<<<< HEAD
           <Pair label="Complainant Identity" icon={<User className="w-3.5 h-3.5 text-slate-600" />}>
             <div className="font-semibold text-slate-900">{caseData.complainant_name || 'Anonymous / Confidential'}</div>
             {caseData.complainant_contact && (
@@ -197,11 +267,24 @@ export const SmartCasePanel: React.FC<Props> = ({ caseData, canAct, onChanged })
                 Ref: {caseData.external_reference}
               </div>
             )}
+=======
+          <Pair label="Complainant">
+            <div>{caseData.complainant_name || 'Not recorded'}</div>
+            {caseData.complainant_contact && <div className="text-[12px] text-muted">{caseData.complainant_contact}</div>}
+          </Pair>
+
+          <Pair label="Intake channel">
+            <div>{(caseData.intake_channel || 'MANUAL').replace(/_/g, ' ')}</div>
+            {caseData.external_reference && <div className="text-[12px] text-muted font-mono">Source ref: {caseData.external_reference}</div>}
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
           </Pair>
         </dl>
       </CardBody>
     </Card>
   );
 };
+<<<<<<< HEAD
 
 export default SmartCasePanel;
+=======
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9

@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { RefreshCw, ArrowUpRight, AlertTriangle, Building, MapPin, Zap } from 'lucide-react';
+=======
+import { RefreshCw } from 'lucide-react';
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 import { api } from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
 import { AutomationStats, Hotspots } from '../../types';
 import { Card, CardHeader, CardBody } from '../ui/Card';
+<<<<<<< HEAD
 import Button from '../ui/Button';
 import Tag from '../ui/Tag';
 
@@ -34,6 +39,15 @@ const Tile: React.FC<{ label: string; value: React.ReactNode; to?: string; hint?
   ) : (
     content
   );
+=======
+import { StatCard } from '../ui/StatCard';
+import Button from '../ui/Button';
+import Tag from '../ui/Tag';
+
+const Tile: React.FC<{ label: string; value: React.ReactNode; to?: string; hint?: string }> = ({ label, value, to, hint }) => {
+  const body = <StatCard label={label} value={value} helper={hint} />;
+  return to ? <Link to={to} className="block hover:border-brand">{body}</Link> : body;
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 };
 
 export const SmartAutomationPanels: React.FC = () => {
@@ -52,10 +66,14 @@ export const SmartAutomationPanels: React.FC = () => {
     setScanning(true);
     try {
       const res = await api.runSlaScan();
+<<<<<<< HEAD
       const created = Object.values(res.notifications_created || {}).reduce(
         (a: number, b: any) => a + Number(b),
         0
       );
+=======
+      const created = Object.values(res.notifications_created || {}).reduce((a: number, b: any) => a + Number(b), 0);
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
       alert(`SLA monitor: ${created} new alert(s), ${res.auto_escalated?.length || 0} auto-escalation(s).`);
       load();
     } catch (err: any) {
@@ -69,6 +87,7 @@ export const SmartAutomationPanels: React.FC = () => {
 
   return (
     <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+<<<<<<< HEAD
       {/* Automation Summary */}
       <Card>
         <CardHeader
@@ -79,10 +98,20 @@ export const SmartAutomationPanels: React.FC = () => {
               <Button variant="secondary" size="sm" onClick={runScan} disabled={scanning} className="text-xs">
                 <RefreshCw className={`w-3.5 h-3.5 ${scanning ? 'animate-spin' : ''}`} />
                 Run SLA scan
+=======
+      <Card>
+        <CardHeader
+          title="Automation Summary"
+          actions={
+            can('sla:run') && (
+              <Button variant="ghost" size="sm" onClick={runScan} disabled={scanning}>
+                <RefreshCw className={`w-3 h-3 ${scanning ? 'animate-spin' : ''}`} /> Run SLA scan
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
               </Button>
             )
           }
         />
+<<<<<<< HEAD
         <CardBody className="space-y-3.5">
           {stats ? (
             <div className="grid grid-cols-2 gap-2.5">
@@ -94,11 +123,21 @@ export const SmartAutomationPanels: React.FC = () => {
                 hint={stats.avg_category_confidence != null ? `avg confidence ${stats.avg_category_confidence}%` : undefined}
                 to="/cases?flag=AUTO_CATEGORY"
               />
+=======
+        <CardBody className="space-y-3">
+          {stats ? (
+            <div className="grid grid-cols-2 gap-3">
+              <Tile label="Auto-matched to institution" value={stats.auto_linked_institutions} />
+              <Tile label="Links awaiting review" value={stats.pending_institution_review} to="/data-quality" />
+              <Tile label="Auto-categorised" value={stats.auto_categorized}
+                    hint={stats.avg_category_confidence != null ? `avg confidence ${stats.avg_category_confidence}%` : undefined} to="/cases?flag=AUTO_CATEGORY" />
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
               <Tile label="Possible duplicates" value={stats.duplicates_flagged} to="/cases?flag=DUPLICATE" />
               <Tile label="Open SLA alerts" value={stats.sla_alerts_open} />
               <Tile label="Auto-escalated by SLA" value={stats.auto_escalated} />
             </div>
           ) : (
+<<<<<<< HEAD
             <div className="text-xs text-slate-500 py-4 text-center">Loading automation metrics…</div>
           )}
           {stats && stats.intake_channels.length > 0 && (
@@ -109,11 +148,20 @@ export const SmartAutomationPanels: React.FC = () => {
                   {c.channel.replace(/_/g, ' ').toLowerCase()}: <strong className="font-bold">{c.count}</strong>
                 </span>
               ))}
+=======
+            <div className="text-[13px] text-muted">Loading…</div>
+          )}
+          {stats && stats.intake_channels.length > 0 && (
+            <div className="text-[12px] text-muted">
+              Intake channels:{' '}
+              {stats.intake_channels.map((c) => `${c.channel.replace(/_/g, ' ').toLowerCase()} ${c.count}`).join(' · ')}
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
             </div>
           )}
         </CardBody>
       </Card>
 
+<<<<<<< HEAD
       {/* Highest-risk institutions */}
       <Card>
         <CardHeader
@@ -122,11 +170,20 @@ export const SmartAutomationPanels: React.FC = () => {
           actions={
             hot && (
               <Link to="/institutions?sort=risk" className="text-xs font-semibold text-blue-600 hover:underline">
+=======
+      <Card>
+        <CardHeader
+          title="Highest-risk institutions"
+          actions={
+            hot && (
+              <Link to="/institutions?sort=risk" className="text-[13px] text-brand hover:underline">
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
                 {hot.repeat_offenders_count} repeat offenders
               </Link>
             )
           }
         />
+<<<<<<< HEAD
         <CardBody className="space-y-2.5">
           {hot?.top_institutions.map((i) => (
             <Link
@@ -155,12 +212,27 @@ export const SmartAutomationPanels: React.FC = () => {
                   <span className="text-rose-600 font-semibold mr-1">Repeat offender ·</span>
                 )}
                 <span>{i.risk_factors.join(' · ')}</span>
+=======
+        <CardBody className="space-y-2">
+          {hot?.top_institutions.map((i) => (
+            <Link key={i.institution_id} to={`/institutions/${i.institution_id}`} className="block p-2 rounded-sm border border-line hover:bg-page">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[13px] font-medium text-ink truncate">{i.canonical_name}</span>
+                <Tag tone={i.risk_level === 'HIGH' ? 'bad' : i.risk_level === 'MEDIUM' ? 'warn' : 'ok'}>
+                  {i.risk_score}
+                </Tag>
+              </div>
+              <div className="text-[12px] text-muted truncate">
+                {i.is_repeat_offender && <span className="text-bad font-medium">Repeat offender · </span>}
+                {i.risk_factors.join(' · ')}
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
               </div>
             </Link>
           ))}
         </CardBody>
       </Card>
 
+<<<<<<< HEAD
       {/* State Hotspots */}
       <Card>
         <CardHeader title="State Hotspots" description="Geographical distribution of active complaints" />
@@ -183,6 +255,22 @@ export const SmartAutomationPanels: React.FC = () => {
                   className="h-full rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300"
                   style={{ width: `${(s.active_cases / maxState) * 100}%` }}
                 />
+=======
+      <Card>
+        <CardHeader title="State hotspots (active cases)" />
+        <CardBody className="space-y-2">
+          {hot?.states.slice(0, 8).map((s) => (
+            <div key={s.state} className="text-[12px]">
+              <div className="flex justify-between text-muted">
+                <span>{s.state} <span>· {s.region}</span></span>
+                <span className="font-medium text-ink tabular-nums">
+                  {s.active_cases}
+                  {s.overdue_cases > 0 && <span className="text-bad font-normal"> ({s.overdue_cases} overdue)</span>}
+                </span>
+              </div>
+              <div className="h-1.5 bg-page rounded-sm">
+                <div className="h-1.5 rounded-sm bg-brand" style={{ width: `${(s.active_cases / maxState) * 100}%` }} />
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
               </div>
             </div>
           ))}
@@ -191,5 +279,8 @@ export const SmartAutomationPanels: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
 export default SmartAutomationPanels;
+=======
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9

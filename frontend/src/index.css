@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+<<<<<<< HEAD
   html {
     color-scheme: light;
   }
@@ -27,6 +28,23 @@
   }
   a {
     @apply transition-colors duration-150;
+=======
+  body {
+    @apply bg-page text-ink font-sans text-[14px] antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid #0B6E99;
+    outline-offset: 2px;
+  }
+  h1 {
+    @apply text-xl font-semibold text-ink;
+  }
+  h2 {
+    @apply text-base font-semibold text-ink;
+  }
+  a {
+    @apply text-accent;
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -42,15 +60,24 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
+<<<<<<< HEAD
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
   border-radius: 9999px;
+=======
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+<<<<<<< HEAD
 
 /* Subtle modern utility classes */
 .glass-header {
@@ -62,3 +89,5 @@
 .table-row-hover {
   transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
+=======
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9

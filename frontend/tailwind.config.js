@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         brand: {
           50: '#F0F4FA',
           100: '#DCE5F3',
@@ -64,6 +65,18 @@ export default {
         xl: '16px',
         '2xl': '20px',
       },
+=======
+        brand: { DEFAULT: '#1F3A5F', hover: '#16304F', soft: '#EEF2F7' },
+        accent: '#0B6E99',
+        page: '#F5F6F8',
+        line: '#D9DEE5',
+        ink: '#1A202C',
+        muted: '#5A6472',
+        ok: '#2F7D4F', warn: '#A36A00', bad: '#B42318', info: '#0B6E99',
+      },
+      fontFamily: { sans: ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'sans-serif'] },
+      borderRadius: { sm: '4px', md: '6px' },
+>>>>>>> 899c50d0477d5fe78ec9d8460645c73c230fb4b9
     },
   },
   plugins: [],
