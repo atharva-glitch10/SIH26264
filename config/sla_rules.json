@@ -1,0 +1,14 @@
+{
+  "sla_days_by_priority": {
+    "URGENT": 15,
+    "HIGH": 30,
+    "MEDIUM": 45,
+    "LOW": 60
+  },
+  "reminder_windows_days": [7, 3, 1],
+  "stagnant_case_threshold_days": 14,
+  "transfer_acknowledgment_days": 5,
+  "auto_escalation_enabled": true,
+  "escalation_threshold_ratio": 2.0,
+  "_comment": "A case is auto-escalated once elapsed time >= escalation_threshold_ratio x its SLA window (2.0 = 100% beyond the deadline)."
+}

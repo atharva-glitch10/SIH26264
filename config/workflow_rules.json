@@ -1,0 +1,36 @@
+{
+  "bureaus": [
+    { "code": "RB", "name": "Regulation Bureau", "description": "Handles regulatory compliance, affiliations, norms & standard enforcement" },
+    { "code": "PGRC", "name": "Public Grievance Redressal Cell", "description": "Handles student, faculty, and public grievances" },
+    { "code": "APPROVAL", "name": "Approval Bureau", "description": "Handles annual intake approvals, course variations, and NOC" },
+    { "code": "VIGILANCE", "name": "Vigilance Cell", "description": "Handles ethical complaints, capitation fee violations, and inquiry boards" }
+  ],
+  "statuses": [
+    "RECEIVED",
+    "PENDING",
+    "UNDER_PROCESS",
+    "TRANSFERRED",
+    "ESCALATED",
+    "DISPOSED",
+    "CLOSED"
+  ],
+  "allowed_transitions": {
+    "RECEIVED": ["PENDING", "UNDER_PROCESS", "TRANSFERRED"],
+    "PENDING": ["UNDER_PROCESS", "TRANSFERRED", "ESCALATED"],
+    "UNDER_PROCESS": ["TRANSFERRED", "ESCALATED", "DISPOSED"],
+    "TRANSFERRED": ["PENDING", "UNDER_PROCESS", "ESCALATED"],
+    "ESCALATED": ["UNDER_PROCESS", "DISPOSED"],
+    "DISPOSED": ["CLOSED", "UNDER_PROCESS"],
+    "CLOSED": []
+  },
+  "categories": [
+    "Academic and Examination",
+    "Infrastructure and Facilities",
+    "Faculty and Staffing",
+    "Regulatory Compliance",
+    "Admission Grievances",
+    "Fee Related Grievances",
+    "General Institutional"
+  ],
+  "priorities": ["LOW", "MEDIUM", "HIGH", "URGENT"]
+}
